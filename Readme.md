@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Egor P](https://up.htmlacademy.ru/htmlcss/26/user/782001).
-* Наставник: [Дмитрий Мирошниченко](https://github.com/dean992008ы).
+* Наставник: [Дмитрий Мирошниченко](https://htmlacademy.ru/profile/id591417).
 
 ---
 
