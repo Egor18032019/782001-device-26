@@ -1,1 +1,93 @@
-xxx
+/* подключить шрифты*/
+
+body {
+padding: 0;
+margin: 0;
+background-color: white;
+font-family: Gilrou,Open Sans,"Arial",sans-serif;
+}
+.header__page{
+  margin: 40px 140px;
+  width: 1160px;
+  height: 299px;
+  opacity: 0.5;
+  background-color: #f0c52e;
+}
+.container {
+  width: 1160px;
+  padding: 0;
+  margin: 0 auto;
+}
+.header__logo {
+  padding-left: 59px;
+
+}
+.header--device{
+  width: 163px;
+  height: 35px;
+  object-fit: contain;
+}
+.header__top{
+display: flex;
+align-items: baseline;
+padding-left: 56px;
+min-height: 16px;
+}
+.header__search{
+  padding-right: 90px;
+}
+.header-search-image{
+border: none;
+width: 16px;
+height: 16px;
+background: url("../img/search.png") center no-repeat;
+padding-left: 16px;
+}
+.header-search-text {
+  border: none;
+  width: 118px;
+    height: 15px;
+  background-color: #f0c52e;
+    font-family: OpenSans;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: 0.15px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.3);
+}
+.header-login{
+  padding-right: 90px;
+}
+.header__catalog{
+  padding: 0;
+  width: 214px;
+  height: 12px;
+}
+.header--catalog{
+  padding-left: 60px;
+  padding-top: 27px;
+   font-family: Gilroy, "Arial",sans-serif;
+   font-size: 18px;
+   font-weight: 800;
+   font-style: normal;
+   font-stretch: normal;
+   line-height: 1.33;
+   letter-spacing: 3.6px;
+   text-align: left;
+   color: #000000;
+   list-style: none;
+}
+.header--catalog>li {
+  position:relative;
+}
+.header--catalog-sub{
+  position:absolute;
+  display: none;
+  z-index: 4;
+}
+.header--catalog > li:hover .header--catalog-sub {
+  display: block;
+}
