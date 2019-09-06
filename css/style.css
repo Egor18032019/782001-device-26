@@ -1,4 +1,9 @@
 /* подключить шрифты*/
+@font-face {
+
+  font-family: "Open Sans";
+  src: url("fonts/opensans.woff") format("woff");
+}
 
 body {
 padding: 0;
@@ -9,7 +14,7 @@ font-family: Gilrou,Open Sans,"Arial",sans-serif;
 .header__page{
   margin: 40px 140px;
   width: 1160px;
-  height: 299px;
+  height: 186px;
   opacity: 0.5;
   background-color: #f0c52e;
 }
@@ -60,7 +65,12 @@ padding-left: 16px;
 }
 .header-login{
   padding-right: 90px;
+
 }
+.header-contrast{
+  padding-right:
+}
+
 .header__catalog{
   padding: 0;
   width: 214px;
@@ -90,4 +100,11 @@ padding-left: 16px;
 }
 .header--catalog > li:hover .header--catalog-sub {
   display: block;
+}
+
+.popular-back li {
+  display: inline-block;
+}
+.popular-back .popular {
+  display: red;
 }
