@@ -9,56 +9,60 @@
 
 <body>
   <header>
-    <div class="header__page">
-      <div class="container clearfix">
-        <a class="header__logo">
-          <img class="header--device" src="img/device.png" alt="logotip DEVICE" width="163px" height="35px">
-        </a>
 
-        <div class="header__top">
-          <div class="header__search">
-            <form action="" method="get">
-              <button class="header-search-image" type="submit"></button>
-              <input name="s" class="header-search-text" placeholder="Поиск по сайту" type="search">
-            </form>
-          </div>
+    <div class="container">
+      <a class="header__logo" href="index.html">
+        <img class="header--device" src="img/device.png" alt="logotip DEVICE" width="163px" height="35px">
+      </a>
 
-          <div class="header-login">
-            <img src="img/user.png" alt="Login">
-            <button type="button" name="login">Войти</button>
-          </div>
-
-          <div class="header-contrast">
-            <img src="img/compare.png" alt="Contrast item">
-            <a href="#">Сравнить</a>
-          </div>
-
-          <div class="header-basket">
-            <img src="img/cart.png" alt="basket">
-            <a href="#">Корзина</a>
-          </div>
+      <div class="header__top">
+        <div class="header__search">
+          <form action="" method="get">
+            <button class="header-search-image" type="submit"></button>
+            <input name="s" class="header-search-text" placeholder="Поиск по сайту" type="search">
+          </form>
         </div>
 
-        <nav class="header__catalog">
-          <ul class="header--catalog">
-            <li> КАТАЛОГ
-              <ul class="header--catalog-sub">
-                <li><a href="#">Виртуальная реальность </a></li>
-                <li><a href="#">Моноподы для селфи</a></li>
-                <li><a href="#">Экшен-камеры</a></li>
-                <li><a href="#"> Финтес-браслеты</a></li>
-                <li><a href="#"> Умные часы </a></li>
-                <li><a href="#"> Квадрокоптеры </a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
+        <ul class="header__navigation">
 
+
+          <li class="header-login">
+            <img src="img/user.png" alt="Login">
+            <button type="button" name="login">Войти</button>
+          </li>
+
+          <li class="header-contrast">
+            <img src="img/compare.png" alt="Contrast item">
+            <a href="#">Сравнить</a>
+          </li>
+
+          <li class="header-basket">
+            <img src="img/cart.png" alt="basket">
+            <a href="#">Корзина</a>
+          </li>
       </div>
+      </ul>
+
+      <nav class="header__catalog">
+        <ul class="header--catalog">
+          <li> КАТАЛОГ
+            <ul class="header--catalog-sub">
+              <li><a href="#">Виртуальная реальность </a></li>
+              <li><a href="catalogMonopod.html">Моноподы для селфи</a></li>
+              <li><a href="#">Экшен-камеры</a></li>
+              <li><a href="#"> Финтес-браслеты</a></li>
+              <li><a href="#"> Умные часы </a></li>
+              <li><a href="#"> Квадрокоптеры </a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+
     </div>
   </header>
   <main>
-    <h1> Магазин интернет-гаджетов DEVICE</h1>
+    <h1 class="visually-hidden"> Магазин интернет-гаджетов DEVICE</h1>
     <article class="main">
       <div class="container">
         <p><em>Делай селфи,как Бен Стиллер!</em> </p>
@@ -73,24 +77,54 @@
         <h2>Список товаров по категориям</h2>
         <ul class="popular-back">
           <li class="popular">
-            <a href="#"><img src="img/popular-1.png" alt="Виртуальная реальность">
-              <h3>Виртуальная реальность</h3>
+            <p>
+              <a href="#"><img src="img/popular-1.png" alt="Виртуальная реальность" width="97px" height="55px">
+            </p>
             </a>
+            <p> <a href="#">Виртуальная реальность</a></p>
+
           </li>
           <li class="popular">
-            <a href="#"><img src="img/popular-2.png" alt="2" Монопод для селфи>
-              <h3>Монопод для селфи</h3>
-            </a></li>
-          <li class="popular"><img src="img/popular-3.png" alt="3"><a href="#">
-              <h3>Экшен-камеры</h3>
-            </a>
+            <p>
+              <a href="catalogMonopod.html"><img src="img/popular-2.png" alt="Монопод для селфи" width="86px" height="117px">
+              </a>
+            </p>
+
+            <p> <a href="catalogMonopod.html"> Монопод для селфи</a> </p>
           </li>
-          <li class="popular"><img src="img/popular-4.png" alt="4"><a href="#">
-              <h3>Финтес-браслеты</h3>
-            </a>
+          <li class="popular">
+            <p>
+              <a href="#"><img src="img/popular-3.png" alt="Экшен-камеры" width="71px" height="87px"></a>
+            </p>
+            <p><a href="#">Экшен-камеры</a></p>
+
           </li>
-          <li class="popular"><img src="img/popular-5.png" alt="5"><a href="#">Умные часы</a></li>
-          <li class="popular"><img src="img/poppular-6.png" alt="6"><a href="#">Квадрокоптеры</a></li>
+          <li class="popular">
+            <p>
+              <a href="#">
+                <img src="img/popular-4.png" alt="Финтес-браслеты" width="107px" height="65px"> </a>
+            </p>
+            <p><a href="#">Финтес-браслеты</a></p>
+          </li>
+
+          <li class="popular">
+            <p>
+              <a href="#">
+                <img src="img/popular-5.png" alt="Умные часы" width="55px" height="98px">
+              </a>
+            </p>
+            <p>
+              <a href="#">Умные часы</a>
+            </p>
+          </li>
+          <li class="popular">
+            <p>
+              <a href="#"> <img src="img/poppular-6.png" alt="Квадрокоптеры" width="132px" height="69px"></a>
+            </p>
+
+            <p><a href="#">Квадрокоптеры</a></p>
+
+          </li>
         </ul>
       </div>
     </section>
@@ -105,7 +139,7 @@
 
   <aside class="logotips">
     <div>
-      <h2>Логотопы товаров(4штуки)</h2>
+      <h2 class="visually-hidden">Логотопы товаров</h2>
     </div>
   </aside>
 
@@ -178,15 +212,15 @@
 
     <a href="https://htmlacademy.ru/intensive/htmlcss">Логотип Академии</a>
   </footer>
-
+  <!-- секции для модальных оконо(popup)--->
   <section class="contacts-about-us-open">
     Контакты полность
     <button type="button" name="button">Закрыть</button>
   </section>
   <section class="contacts-about-write">
-    <form class="feedback-form" action="/keksby-mail" method="post">
+    <form class="feedback-form" action="mail" method="post">
       <div class="feedback-form-group">
-        <label for="fullname">Представьтесь, пожалуйста:</label>
+        <label for="fullname">Ваше имя:</label>
         <input type="text" name="fullname" id="fullname">
       </div>
       <input type="submit" class="btn" value="Отправить">
