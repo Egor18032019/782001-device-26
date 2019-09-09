@@ -7,59 +7,59 @@
 </head>
 
 <body>
-  <header>
+    <header>
 
-    <div class="container">
-      <a class="header__logo" href="index.html">
-        <img class="header--device" src="img/device.png" alt="logotip DEVICE" width="163px" height="35px">
-      </a>
 
-      <div class="header__top">
-        <div class="header__search">
-          <form action="" method="get">
+        <a class="header__logo">
+          <img class="header--device" src="img/device.png" alt="logotip DEVICE" width="163px" height="35px">
+        </a>
+    
+        <div class="header__top">
+    
+          <form class="header__search" action="" method="get">
             <button class="header-search-image" type="submit"></button>
             <input name="s" class="header-search-text" placeholder="Поиск по сайту" type="search">
           </form>
+    
+    
+          <ul class="header__navigation">
+    
+    
+            <li class="header-login">
+    
+              <a href="#">Войти</a>
+            </li>
+    
+            <li class="header-contrast">
+              <img src="img/compare.png" alt="Contrast item">
+              <a href="#">Сравнить</a>
+            </li>
+    
+            <li class="header-basket">
+              <img src="img/cart.png" alt="basket">
+              <a href="#">Корзина</a>
+            </li>
+          </ul>
         </div>
-
-        <ul class="header__navigation">
-
-
-          <li class="header-login">
-            <img src="img/user.png" alt="Login">
-            <button type="button" name="login">Войти</button>
-          </li>
-
-          <li class="header-contrast">
-            <img src="img/compare.png" alt="Contrast item">
-            <a href="#">Сравнить</a>
-          </li>
-
-          <li class="header-basket">
-            <img src="img/cart.png" alt="basket">
-            <a href="#">Корзина</a>
-          </li>
-      </div>
-      </ul>
-
-      <nav class="header__catalog">
-        <ul class="header--catalog">
-          <li> КАТАЛОГ
-            <ul class="header--catalog-sub">
-              <li><a href="#">Виртуальная реальность </a></li>
-              <li><a href="catalogMonopod.html">Моноподы для селфи</a></li>
-              <li><a href="#">Экшен-камеры</a></li>
-              <li><a href="#"> Финтес-браслеты</a></li>
-              <li><a href="#"> Умные часы </a></li>
-              <li><a href="#"> Квадрокоптеры </a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-
-
-    </div>
-  </header>
+        <nav class="header__catalog">
+          <ul class="header--catalog">
+            <li> КАТАЛОГ
+              <ul class="header--catalog-sub">
+                <li><a href="#">Виртуальная реальность </a></li>
+                <li><a href="catalogMonopod.html">Моноподы для селфи</a></li>
+                <li><a href="#">Экшен-камеры</a></li>
+                <li><a href="#"> Финтес-браслеты</a></li>
+                <li><a href="#"> Умные часы </a></li>
+                <li><a href="#"> Квадрокоптеры </a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+    
+    
+    
+      </header>
+    
   <main>
     <h1>Моноподы для селфи</h1>
     <ul class="breadcrumbs">
@@ -77,15 +77,17 @@
       <div class="catalog__monopods">
         <ul class="monopods">
           <li class="monopod">
-            <!--  сылка должна быть на картинке и на тексте ? а на цене товара та же самая сылка или другая ?-->
+             
             <p class="monopod-image">
               <a href="#"><img src="img/item-1-jpg.png" srcset="img/item-1-jpg@2x.png 2x,
              img/item-1-jpg@3x.png 3x" class="item-1jpg" alt="Любительская селфи палка" width="360px" height="380px"></a>
             </p>
 
-            <h2 class="monopod-type"><a href="#">
+            <h3 class="monopod-type"><a href="#">
                 Любительская селфи-палка</a>
               <span class="monopod-price">500руб</span> </h2>
+              <button>В КОРЗИНУ</button>
+              <button>Добавить к сравнению</button>
           </li>
 
           <li class="monopod">
@@ -95,9 +97,11 @@
              img/item-2-jpg@3x.png 3x" class="item-2jpg">
               </a>
             </p>
-            <h2 class="monopod-type"><a href="#">
+            <h3 class="monopod-type"><a href="#">
                 Профессиональная селфи-палка
                 <span class="monopod-price">1500руб</span></a></h2>
+                <button>В КОРЗИНУ</button>
+                <button>Добавить к сравнению</button>
           </li>
           <li class="monopod">
             <p class="monopod-image">
@@ -106,8 +110,10 @@
              img/item-3-jpg@3x.png 3x" class="item-3jpg">
               </a>
             </p>
-            <h2 class="monopod-type"><a href="#">
+            <h3 class="monopod-type"><a href="#">
                 Непотопляемая селфи-палка <span>2 500 руб</span></a></h2>
+                <button>В КОРЗИНУ</button>
+                <button>Добавить к сравнению</button>
           </li>
           <li class="monopod monopod-new">
             <p class="monopod-image">
@@ -116,19 +122,21 @@
                  img/item-4-jpg@3x.png 3x" class="item-4jpg">
               </a>
             </p>
-            <h2 class="monopod-type"><a href="#">
+            <h3 class="monopod-type"><a href="#">
                 Селфи-палка «Следуй за мной»<span>4 900 руб</span></a></h2>
+                <button>В КОРЗИНУ</button>
+                <button>Добавить к сравнению</button>
           </li>
         </ul>
 
         <!-- странички-->
         <ul class="pagination-list">
-          <!-- как кнопки назад и впереД делать?-->
-          <a href="">НАЗАД</a>
+          
+          <li><a href="">НАЗАД</a></li>
           <li class="pagination-item pagination-item-current"><a>1</a></li>
-          <li class="pagination-item"><a href="№">2</a></li>
-          <li class="pagination-item"><a href="№">3</a></li>
-          <a href="#">ВПЕРЁД</a>
+          <li class="pagination-item"><a href="#">2</a></li>
+          <li class="pagination-item"><a href="#">3</a></li>
+         <li> <a href="#">ВПЕРЁД</a></li>
         </ul>
 
       </div>
@@ -140,43 +148,42 @@
 
   <footer>
 
-    <div class="footer-logo">
-      <img src="img/device.png" alt="DEVICE">
-    </div>
-
-    <div class="footer-top">
-      <ul>
-        <li class="footer-login">
-          <img src="img/user.png" alt="Login" width="13px" height="12px">
-          Войти</li>
-        <li class="footer-contrast">
-          <img src="img/compare.png" alt="contrast" width="10px" height="10px">
-          Сравнить</li>
-        <li class="footer-basket"> <img src="img/cart.png" alt="Здесь покупки">
-          Корзина</li>
-      </ul>
-    </div>
-    <div class="footer-center">
-      <address>г. Москва, ул. Строителей, 15</address>
-      <ul>
-        <li>Доставка</li>
-        <li>Гарантия</li>
-        <li>Контакты</li>
-      </ul>
-      <p>Тел.: +7 (495) 495-95-95</p>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-line">Желтая линия</p>
-      <ul>
-        <li><a href="#" class="footer-social vk">Вконтакте</a></li>
-        <li><a href="#" class="footer-social in">Инстаграм</a></li>
-        <li><a href="#" class="footer-social te">Телеграм</a></li>
-      </ul>
-    </div>
-
-    <a href="https://htmlacademy.ru/intensive/htmlcss">Логотип Академии</a>
-  </footer>
-
+      <div class="footer-logo">
+        <a><img src="img/device.png" alt="DEVICE"></a>
+      </div>
+  
+      <div class="footer-top">
+        <ul>
+          <li class="footer-login">
+            <a href="#">Войти</a></li>
+          <li class="footer-contrast">
+            <a href="#"> Сравнить</a>
+          </li>
+          <li class="footer-basket">
+            <a href="#">Корзина</a></li>
+        </ul>
+      </div>
+      <div class="footer-center">
+        <address>г. Москва, ул. Строителей, 15</address>
+        <ul>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a> </li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <p class="footer-telephone"><a href="tel:+7 (495) 495-95-95">Тел.:+7(495)495-95-95</a> </p>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-line">Желтая линия</p>
+        <ul>
+          <li><a href="#" class="footer-social vk">Вконтакте</a></li>
+          <li><a href="#" class="footer-social in">Инстаграм</a></li>
+          <li><a href="#" class="footer-social te">Телеграм</a></li>
+        </ul>
+      </div>
+  
+      <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">Логотип Академии</a>
+    </footer>
+  
 
 </body>
 

@@ -14,16 +14,12 @@ font-family: Gilrou,Open Sans,"Arial",sans-serif;
 header {
   background-color: #f0c52e;
   opacity: 0.5;
-}
-.container {
   margin: 40px 140px;
   width: 1160px;
   height: 186px;
-
-
   padding: 0;
-  margin: 0 auto;
 }
+
 .header__logo {
   padding-left: 59px;
 
