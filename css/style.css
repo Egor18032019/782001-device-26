@@ -68,6 +68,12 @@ padding-left: 16px;
   padding-right: 90px;
 
 }
+.header-login-image{
+  display: inline-block;
+  width:13px;
+  height:12px;
+  background: url("../img/user.png") center no-repeat;
+}
 .header-contrast{
   padding-right: 90px;
 }
