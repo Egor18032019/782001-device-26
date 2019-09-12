@@ -42,9 +42,10 @@
         </li>
       </ul>
     </div>
+
     <nav class="header__catalog">
       <ul class="header--catalog">
-        <li> КАТАЛОГ
+        <li> КАТАЛОГ ТОВАРОВ
           <ul class="header--catalog-sub">
             <li><a href="#">Виртуальная реальность </a></li>
             <li><a href="catalogMonopod.html">Моноподы для селфи</a></li>
@@ -57,7 +58,11 @@
       </ul>
     </nav>
 
-
+<div class="header-servis">
+  <p class="header-servis-dostavka"><a href="#">Доставка</a></p>
+  <p class="header-servis-garant"><a href="#">Гарантия</a></p>
+  <p class="header-servis-contacts"><a href="#">Контакты</a></p>
+</div>
 
   </header>
   <main>
@@ -71,12 +76,18 @@
 
       <ul>
         <li class="slides-fist">
+          <p class="slides-first-number">01</p>
+          <img src="img/slider-1-png.jpg"
+     srcset="img/slider-1-png@2x.jpg 2x,
+             img/slider-1-png@3x.jpg 3x"
+     class="slider-1png" alt="Монопод Бена Стиллера">
+
           <p>Делай селфи,как Бен Стиллер!</p>
 
           <p> Самая длинная палка для селфи доступна в нашем магазине.
             Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
-          <a href="#" class="slides-detail">ПОДРОБНЕЕ</a>
+          <a href="#" class="slides-detail">Подробнее</a>
           <table>
             <tr>
               <td>8,5 м</td>
@@ -91,6 +102,12 @@
           </table>
         </li>
         <li class="slides-two">
+          <p class="sliders-two-number">02</p>
+          <img src="img/slider-2-png.jpg"
+     srcset="img/slider-2-png@2x.jpg 2x,
+             img/slider-2-png@3x.jpg 3x"
+     class="slider-2png">
+
           <h2>Худеем правильно!</h2>
           <p>Мотивирующие фитнес-браслеты помогут найти в себе силы
             не пропускать занятия и соблюдать диету.</p>
@@ -103,8 +120,14 @@
               <td>Без подзарядки</td>
             </tr>
           </table>
-        </li>
-        <li>
+        </li> 
+        <li class="slider-three">
+            <img src="img/slider-3-png.jpg"
+            srcset="img/slider-3-png@2x.jpg 2x,
+                    img/slider-3-png@3x.jpg 3x"
+            class="slider-3png">
+       
+          <p class="sliders-three-number">03</p>
           <h2>Порхает как бабочка, жалит как пчела"</h2>
           <p>Этот обычный, на первый взгляд, квадрокоптер оснащен
             мощным лазером, замаскированным под стандартную камеру.
@@ -128,16 +151,17 @@
         <h2>Список товаров по категориям</h2>
         <ul class="popular-back">
           <li class="popular">
-            <p>
-              <a href="#"><img src="img/popular-1.png" alt="Виртуальная реальность" width="97px" height="55px">
+            <p class="popular-img">
+              <a href="#">
+                <img src="img/popular-1.png" class="popular-vr" alt="Виртуальная реальность" width="97px" height="55px">
               </a>
             </p>
-            <p> <a href="#">Виртуальная реальность</a></p>
+            <p class="text"> <a href="#">Виртуальная реальность</a></p>
 
           </li>
           <li class="popular">
-            <p>
-              <a href="catalogMonopod.html">
+            <p class="popular-img">
+              <a href="catalogMonopod.html" class="popular-monopod">
                 <img src="img/popular-2.png" alt="Монопод для селфи" width="86px" height="117px">
               </a>
             </p>
@@ -145,14 +169,14 @@
             <p> <a href="catalogMonopod.html"> Монопод для селфи</a> </p>
           </li>
           <li class="popular">
-            <p>
+            <p class="popular-img">
               <a href="#"><img src="img/popular-3.png" alt="Экшен-камеры" width="71px" height="87px"></a>
             </p>
             <p><a href="#">Экшен-камеры</a></p>
 
           </li>
           <li class="popular">
-            <p>
+            <p class="popular-img">
               <a href="#">
                 <img src="img/popular-4.png" alt="Финтес-браслеты" width="107px" height="65px"> </a>
             </p>
@@ -160,9 +184,9 @@
           </li>
 
           <li class="popular">
-            <p>
+            <p class="popular-img">
               <a href="#">
-                <img src="img/popular-5.png" alt="Умные часы" width="55px" height="98px">
+                <img src="img/popular-5.svg" alt="Умные часы" width="55px" height="98px">
               </a>
             </p>
             <p>
@@ -170,7 +194,7 @@
             </p>
           </li>
           <li class="popular">
-            <p>
+            <p class="popular-img">
               <a href="#"> <img src="img/poppular-6.png" alt="Квадрокоптеры" width="132px" height="69px"></a>
             </p>
 
@@ -191,11 +215,13 @@
     </div>
     <div class="service-slider-slides">
       <ul>
-        <li>
+        <li class="service-delivery">
           <h2>Доставка</h2>
+          <img src="img/delivery.svg" alt="Мы бежим к вам !!" class="delivery"  width="136" height="164px">
           <p>Мы с удовольствием доставим ваш товар прямо к вашему<br>
             подъезду совершенно бесплатно! Ведь мы неплохо<br>
             заработаем, поднимая его на ваш этаж.</p>
+
         </li>
         <li>
           <h2>Гарантия</h2>

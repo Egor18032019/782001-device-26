@@ -6,16 +6,18 @@
 }
 
 body {
-padding: 0;
-margin: 0;
-background-color: white;
-font-family: Gilrou,Open Sans,"Arial",sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  font-family: Gilrou, Open Sans, "Arial", sans-serif;
 }
+
 header {
+  display: inline-block;
   background-color: #f0c52e;
   opacity: 0.5;
   margin: 40px 140px;
-  width: 1160px;
+  width: 100%;
   height: 186px;
   padding: 0;
 }
@@ -24,94 +26,175 @@ header {
   padding-left: 59px;
 
 }
-.header--device{
+
+.header--device {
   width: 163px;
   height: 35px;
   object-fit: contain;
 }
-.header__top{
+
+.header__top {
   display: flex;
   align-items: baseline;
-  padding-left: 56px;
+  padding-left: 63px;
   min-height: 16px;
 }
+
 .header__navigation li {
-display: inline-block;
+  display: inline-block;
 
 }
-.header__search{
-  padding-right: 90px;
+
+.header__search {
+  padding-right: 393px;
 }
-.header-search-image{
-border: none;
-width: 16px;
-height: 16px;
-background: url("../img/search.png") center no-repeat;
-padding-left: 16px;
+
+.header-search-image {
+  border: none;
+  width: 16px;
+  height: 16px;
+  background: url("../img/search.png") center no-repeat;
+  padding-left: 16px;
 }
+
 .header-search-text {
   border: none;
   width: 118px;
-    height: 15px;
+  height: 15px;
   background-color: #f0c52e;
-    font-family: OpenSans;
-    font-size: 15px;
-    font-weight: 300;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 2;
-    letter-spacing: 0.15px;
-    text-align: left;
-    color: rgba(0, 0, 0, 0.3);
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2;
+  letter-spacing: 0.15px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.3);
 }
-.header-login{
-  padding-right: 90px;
+
+.header-login {
+  padding-right: 218px;
 
 }
-.header-login-image{
+
+.header-login-image {
   display: inline-block;
-  width:13px;
-  height:12px;
+  width: 13px;
+  height: 12px;
   background: url("../img/user.png") center no-repeat;
 }
-.header-contrast{
-  padding-right: 90px;
+
+.header-contrast {
+  padding-right: 41px;
+  background: url("../img/compare.svg") no-repeat left center;
+
 }
 
-.header__catalog{
+.header-contrast a,
+.header-basket a {
+  margin-left: 13px;
+}
+
+.header-basket {
+  background: url("../img/cart.svg") no-repeat left center;
+}
+
+
+.header__catalog {
+  display: inline-block;
   padding: 0;
-  width: 214px;
-  height: 12px;
+  margin: 0;
 }
-.header--catalog{
+
+.header--catalog {
+  font-family: Gilroy, "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: 3.6px;
+  padding-top: 50px;
+  color: #000000;
+  list-style: none;
   padding-left: 60px;
-  padding-top: 27px;
-   font-family: Gilroy, "Arial",sans-serif;
-   font-size: 18px;
-   font-weight: 800;
-   font-style: normal;
-   font-stretch: normal;
-   line-height: 1.33;
-   letter-spacing: 3.6px;
-   text-align: left;
-   color: #000000;
-   list-style: none;
 }
+
 .header--catalog>li {
-  position:relative;
+  position: relative;
 }
-.header--catalog-sub{
-  position:absolute;
+
+.header--catalog-sub {
+  position: absolute;
   display: none;
   z-index: 4;
 }
-.header--catalog > li:hover .header--catalog-sub {
+
+.header--catalog>li:hover .header--catalog-sub {
   display: block;
+}
+
+.header-servis {
+  display: inline-flex;
+  padding-left: 294px;
+  padding-right: 61px;
+}
+
+.header-servis-dostavka {
+  padding-right: 38px;
+}
+
+.header-servis-garant {
+  padding-right: 114px;
+}
+
+main {
+  margin-left: 140px;
+  margin-right: 140px;
+}
+
+.popular-back {
+  margin: 0;
+  padding: 0;
 }
 
 .popular-back li {
   display: inline-block;
+  padding-right: 40px;
 }
+
 .popular-back .popular {
-   text-align: center;
-   }
+  text-align: center;
+}
+
+.popular-img {
+  width: 160px;
+  height: 160px;
+  background-color: #f0c52e;
+  opacity: 0.5;
+}
+
+/*не могу понять откуда береться такой отступ от вр ?*/
+.popular-vr {
+  margin: 32% 20%;
+}
+
+.popular .text {
+  /* как сделать текст как на макете ??*/
+}
+
+.service {
+  padding: 0;
+  margin:0;
+  background-color: #e5e5e5;
+  b
+}
+.delivery {
+  display: block;
+  padding-right: 100px;
+  float: right;
+}
+.service-delivery {
+    width: 100%;
+    height: 288px;
+   
+}
