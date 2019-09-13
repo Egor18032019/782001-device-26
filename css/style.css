@@ -40,10 +40,6 @@ header {
   min-height: 16px;
 }
 
-.header__navigation li {
-  display: inline-block;
-
-}
 
 .header__search {
   padding-right: 393px;
@@ -72,7 +68,24 @@ header {
   text-align: left;
   color: rgba(0, 0, 0, 0.3);
 }
+.header__navigation {
+ 
+  padding:0;
+}
+.header__navigation li {
+  display: inline-block;
+}
 
+.header__navigation a {
+  text-decoration: none;
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.15px;
+  text-align: left;
+  color: #000000;
+
+}
 .header-login {
   padding-right: 218px;
 
@@ -137,8 +150,18 @@ header {
   display: inline-flex;
   padding-left: 294px;
   padding-right: 61px;
+  
 }
 
+.header-servis a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: 3.6px;
+  text-align: left;
+  color: #000000;
+}
 .header-servis-dostavka {
   padding-right: 38px;
 }
@@ -184,17 +207,108 @@ main {
 
 .service {
   padding: 0;
-  margin:0;
+  margin: 0;
   background-color: #e5e5e5;
-  b
+
 }
+
 .delivery {
   display: block;
   padding-right: 100px;
   float: right;
 }
+
 .service-delivery {
-    width: 100%;
-    height: 288px;
-   
+  width: 100%;
+  height: 288px;
 }
+
+.delivery-text {
+  width: 30%;
+  height: 26%;
+}
+
+.logotips {
+  padding-right: 143px;
+  padding-left: 140px;
+}
+
+.container-logotips {
+  display: flex;
+}
+
+footer {
+  width: 100%;
+  height: 323px;
+  background-color: #464646;
+  padding-right: 140px;
+  padding-left: 140px;
+}
+
+.footer-navi li {
+  display: inline-block;
+}
+
+.footer-login a,
+.footer-contrast a,
+.footer-basket a {
+  opacity: 0.7;
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.15px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer-center{
+ display: flex;
+ text-align: center;  
+}
+.footer-center address {
+  width: 201px;
+  height: 15px;
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: left;
+  color: #ffffff;
+float: left;
+}
+.footer-center-service{
+  width: 50%;
+}
+.footer-center p {
+  float: right;
+}
+.footer-center-service li {
+  display: inline-block;
+}
+
+.footer-contact a,
+.footer-garant a,
+.footer-delivery a {
+  height: 12px;
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  padding-right: 38px;
+  letter-spacing: 3.6px;
+  text-align: left;
+  color: #ffffff;
+}
+.footer-telephone a {
+  width: 164px;
+  height: 13px;
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: right;
+  color: #ffffff;
+}
+
+
+.footer-social li {
+  display: inline-block;
+}
+ .footer-social-vk{
+   background:url("../img/fb.png") no-repeat left center;
+ }
