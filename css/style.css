@@ -1,4 +1,5 @@
 /* подключить шрифты*/
+/*
 @font-face {
 
   font-family: "Open Sans";
@@ -69,7 +70,7 @@ header {
   color: rgba(0, 0, 0, 0.3);
 }
 .header__navigation {
- 
+
   padding:0;
 }
 .header__navigation li {
@@ -150,7 +151,7 @@ header {
   display: inline-flex;
   padding-left: 294px;
   padding-right: 61px;
-  
+
 }
 
 .header-servis a {
@@ -197,6 +198,7 @@ main {
 }
 
 /*не могу понять откуда береться такой отступ от вр ?*/
+/*
 .popular-vr {
   margin: 32% 20%;
 }
@@ -204,7 +206,7 @@ main {
 .popular .text {
   /* как сделать текст как на макете ??*/
 }
-
+/*s
 .service {
   padding: 0;
   margin: 0;
@@ -261,7 +263,7 @@ footer {
 }
 .footer-center{
  display: flex;
- text-align: center;  
+ text-align: center;
 }
 .footer-center address {
   width: 201px;
@@ -309,6 +311,9 @@ float: left;
 .footer-social li {
   display: inline-block;
 }
- .footer-social-vk{
+ .footer-social-fb{
+   width: 32px;
+   height: 32px;
    background:url("../img/fb.png") no-repeat left center;
  }
+*/
