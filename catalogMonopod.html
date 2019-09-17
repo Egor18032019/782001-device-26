@@ -10,7 +10,7 @@
   <header>
 
 
-    <a class="header__logo">
+    <a href="index.html" class="header__logo">
       <img class="header--device" src="img/device.png" alt="logotip DEVICE" width="163px" height="35px">
     </a>
 
@@ -27,7 +27,7 @@
 
         <li class="header-login">
 
-          <a href="#">Войти</a>
+          <a href="#">Валентин Петухов</a>
         </li>
 
         <li class="header-contrast">
@@ -65,9 +65,72 @@
       <li><a href="#">Каталог товаров</a></li>
       <li class="breadcrumbs-current"><a>Моноподы для селфи</a> </li>
     </ul>
+
     <section>
-      <h2>Фильтр:</h2>
-      <!-- написать форму после лекции -->
+      <div>
+        <h2>Фильтр:</h2>
+        <h2>Сортировка:</h2>
+        <ul class="sorting">
+          <li><button>По цене</button></li>
+          <li><a href="#">По типу</a></li>
+          <!--Не могу понять должна быть сылка или кнопка.
+          Где это видно по тз?-->
+        <li><button>По популярности</button></li>
+        </ul>
+        <span><button>Минимально</button></span>
+        <span><button>Максимально</button></span>
+      </div>
+
+      <form method="get" action="https://echo.htmlacademy.ru">
+        <fieldset class="price-sort">
+          <legend>Стоимость</legend>
+
+          <div class="price-sort-min">от 0</div>
+          <div class="price-sort-max">до 5000 </div>
+        </fieldset>
+        <fieldset class="color">
+          <legend>Цвет</legend>
+          <ul class="color-list">
+            <li>
+              <input type="checkbox" name="black" id="color-black" checked>
+              <label for="color-black">Черный</label>
+            </li>
+            <li>
+              <input type="checkbox" name="white" id="color-white">
+              <label for="color-white">Белый</label>
+            </li>
+            <li>
+              <input type="checkbox" name="blue" id="color-blue" checked>
+              <label for="color-blue">Синий</label>
+            </li>
+            <li>
+              <input type="checkbox" name="red" id="color-red" checked>
+              <label for="color-red">Красный</label>
+            </li>
+            <li>
+              <input type="checkbox" name="pink" id="color-pink">
+              <label for="color-pink">Розовый</label>
+            </li>
+          </ul>
+        </fieldset>
+        <!--Черная линия-->
+        <fieldset>
+          <legend class="bluetooth">
+            Bluetooth
+          </legend>
+          <ul class="bluetooth-list">
+            <li>
+              <input type="radio" name="bluetooth-group" value="bluetooth-yes" id="bluetooth-yes" checked>
+              <label for="bluetooth-yes">Есть</label>
+            </li>
+            <li>
+              <input type="radio" name="bluetooth-group" value="bluetooth-no" id="bluetooth-no">
+              <label for="bluetooth-no">Нет</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button>Показать</button>
+      </form>
     </section>
 
     <section>
@@ -76,53 +139,51 @@
         <ul class="monopods">
           <li class="monopod">
             <p class="monopod-image">
-             <img src="img/item-1-jpg.png" srcset="img/item-1-jpg@2x.png 2x,
-             img/item-1-jpg@3x.png 3x" class="item-1jpg" alt="Любительская селфи палка" width="360px"
-                  height="380px">
+              <img src="img/item-1-jpg.png" srcset="img/item-1-jpg@2x.png 2x,
+             img/item-1-jpg@3x.png 3x" class="item-1jpg" alt="Любительская селфи палка" width="360px" height="380px">
             </p>
 
             <h3 class="monopod-type"><a href="#">
                 Любительская селфи-палка</a>
               <span class="monopod-price">500руб</span> </h2>
-              <button>В КОРЗИНУ</button>
+              <button>В корзину</button>
               <button>Добавить к сравнению</button>
           </li>
 
           <li class="monopod">
             <p class="monopod-image">
-         
-                <img src="img/item-2-jpg.png" srcset="img/item-2-jpg@2x.png 2x,
+
+              <img src="img/item-2-jpg.png" srcset="img/item-2-jpg@2x.png 2x,
              img/item-2-jpg@3x.png 3x" class="item-2jpg">
-             
+
             </p>
             <h3 class="monopod-type"><a href="#">
                 Профессиональная селфи-палка
                 <span class="monopod-price">1500руб</span></a></h2>
-              <button>В КОРЗИНУ</button>
+              <button>В корзину</button>
               <button>Добавить к сравнению</button>
           </li>
           <li class="monopod">
             <p class="monopod-image">
-             
-                <img src="img/item-3-jpg.png" srcset="img/item-3-jpg@2x.png 2x,
+
+              <img src="img/item-3-jpg.png" srcset="img/item-3-jpg@2x.png 2x,
              img/item-3-jpg@3x.png 3x" class="item-3jpg">
-             
+
             </p>
             <h3 class="monopod-type"><a href="#">
                 Непотопляемая селфи-палка <span>2 500 руб</span></a></h2>
-              <button>В КОРЗИНУ</button>
+              <button>В корзину</button>
               <button>Добавить к сравнению</button>
           </li>
           <li class="monopod monopod-new">
             <p class="monopod-image">
-             
-                <img src="img/item-4-jpg.png" srcset="img/item-4-jpg@2x.png 2x,
-                 img/item-4-jpg@3x.png 3x" class="item-4jpg">
-             
+
+              <img src="img/item-4-jpg.png"  class="item-4jpg">
+
             </p>
             <h3 class="monopod-type"><a href="#">
                 Селфи-палка «Следуй за мной»<span>4 900 руб</span></a></h2>
-              <button>В КОРЗИНУ</button>
+              <button>В корзину</button>
               <button>Добавить к сравнению</button>
           </li>
         </ul>
