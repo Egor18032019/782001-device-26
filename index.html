@@ -11,19 +11,19 @@
   <header>
 
 
-    <a class="header__logo">
+    <a class="header-logo">
       <img class="header--device" src="img/device.png" alt="Логотип магазина гаджетов DEVICE" width="163" height="35">
     </a>
 
-    <div class="header__top">
-      <!--action оставлять пустым?-->
-      <form class="header__search" action="" method="get">
+    <div class="header-top">
+
+      <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
         <button class="header-search-image" type="submit"></button>
-        <input name="search" class="header-search-text" placeholder="Поиск по сайту" type="search">
+        <input name="search" class="header-search-text" placeholder="Поиск по сайту" type="text">
       </form>
 
 
-      <ul class="header__navigation">
+      <ul class="header-navigation">
 
 
         <li class="header-login">
@@ -33,7 +33,7 @@
 
         <li class="header-contrast">
 
-          <a href="contrast.html">Сравнить</a>
+          <a href="#">Сравнить</a>
         </li>
 
         <li class="header-basket">
@@ -47,7 +47,7 @@
       <ul class="header--catalog">
         <li> Каталог товаров
           <ul class="header--catalog-sub">
-            <li><a href="vr.html">Виртуальная реальность </a></li>
+            <li><a href="#">Виртуальная реальность </a></li>
             <li><a href="catalogMonopod.html">Моноподы для селфи</a></li>
             <li><a href="#">Экшен-камеры</a></li>
             <li><a href="#"> Финтес-браслеты</a></li>
@@ -59,9 +59,20 @@
     </nav>
 
     <div class="header-servis">
-      <p class="header-servis-dostavka"><a href="#">Доставка</a></p>
-      <p class="header-servis-garant"><a href="#">Гарантия</a></p>
-      <p class="header-servis-contacts"><a href="#">Контакты</a></p>
+<ul>
+  <li class="header-servis-delevery">
+    <input type="radio" id="delevery">
+    <label for="delevery">Доставка</label>
+  </li>
+<li class="header-servis-garant">
+  <input type="radio" id="garant">
+  <label for="garant">Гарантия</label>
+</li>
+<li class="header-servis-contacts">
+  <input type="radio" name="contacts" id="contacts">
+  <label for="contacts">Контакты</label>
+</li>
+</ul>
     </div>
 
   </header>
@@ -77,8 +88,7 @@
         <li class="slides-fist">
           <h3 class="visually-hidden">Наш лучший монопод</h3>
           <p class="slides-first-number">01</p>
-          <img src="img/slider-1-png.jpg" srcset="img/slider-1-png@2x.jpg 2x,
-             img/slider-1-png@3x.jpg 3x" class="slider-1png" alt="Монопод Бена Стиллера">
+          <img src="img/slider-1-png.jpg" class="slider-1png" alt="Монопод Бена Стиллера">
 
           <p>Делай селфи,как Бен Стиллер!</p>
 
@@ -102,8 +112,7 @@
         <li class="slides-two">
           <h3 class="visually-hidden">Наш лучший фитнес-браслет</h3>
           <p class="sliders-two-number">02</p>
-          <img src="img/slider-2-png.jpg" srcset="img/slider-2-png@2x.jpg 2x,
-             img/slider-2-png@3x.jpg 3x" class="slider-2png" alt="Супер фитнес браслет!!">
+          <img src="img/slider-2-png.jpg" class="slider-2png" alt="Супер фитнес браслет!!">
 
           <p>Худеем правильно!</p>
           <p>Мотивирующие фитнес-браслеты помогут найти в себе силы
@@ -121,8 +130,7 @@
         <li class="slider-three">
           <h3 class="visually-hidden">Наш лучший квадрокоптер(он еще и стреляет!)</h3>
           <p class="sliders-three-number">03</p>
-          <img src="img/slider-3-png.jpg" srcset="img/slider-3-png@2x.jpg 2x,
-                    img/slider-3-png@3x.jpg 3x" class="slider-3png" alt="Пуляющий квадрокоптер !!">
+          <img src="img/slider-3-png.jpg" class="slider-3png" alt="Пуляющий квадрокоптер !!">
 
 
           <p>"Порхает как бабочка, жалит как пчела"</p>
@@ -328,11 +336,11 @@
   <section class="contacts-about-us-open">
     <h2>Контакты полность</h2>
     <img src="img/map-big-jpg.png" class="map-big" width="960" height="559" alt="Карта где нас искать">
-    <button type="button" name="button">Закрыть</button>
+    <button type="reset" name="button">Закрыть</button>
   </section>
 
   <section class="contacts-about-write">
-    <h2>Напишите нам.</h2>
+    <h2 class="visually-hidden">Напишите нам.</h2>
     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="feedback-form-person">
         <p>
@@ -342,7 +350,7 @@
         </p>
         <p>
           <label for="fullname">Ваш e-mail:</label>
-          <input type="text" name="mail" id="person-mail" placeholder="email@example.com">
+          <input type="text" name="email" id="person-mail" placeholder="email@example.com">
         </p>
       </div>
       <div class="feedback-form-group">
@@ -351,7 +359,7 @@
       </div>
       <button type="submit" class="btn">Отправить</button>
     </form>
-    <button type="button" name="button">Закрыть</button>
+    <button type="reset" name="button">Закрыть</button>
   </section>
 </body>
 
