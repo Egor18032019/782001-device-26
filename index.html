@@ -59,19 +59,10 @@
     </nav>
 
     <div class="header-servis">
-<ul>
-  <li class="header-servis-delevery">
-    <input type="radio" id="delevery">
-    <label for="delevery">Доставка</label>
-  </li>
-<li class="header-servis-garant">
-  <input type="radio" id="garant">
-  <label for="garant">Гарантия</label>
-</li>
-<li class="header-servis-contacts">
-  <input type="radio" name="contacts" id="contacts">
-  <label for="contacts">Контакты</label>
-</li>
+<ul class="header-servis-list">
+  <li><a href="#">Доставка</a></li>
+  <li><a href="#">Гарантия</a></li>
+  <li><a href="#">Контакты</a></li>
 </ul>
     </div>
 
@@ -213,9 +204,21 @@
   <section class="service">
     <h2>Услуги</h2>
     <div class="service-slider-controls">
-      <h2>Доставка</h2>
-      <h2>Гарантия</h2>
-      <h2>Кредит</h2>
+        <ul>
+            <li class="service-delevery">
+              <input type="radio" id="delevery">
+              <label for="delevery">Доставка</label>
+            </li>
+          <li class="service-garant">
+            <input type="radio" id="garant">
+            <label for="garant">Гарантия</label>
+          </li>
+          <li class="service-contacts">
+            <input type="radio" name="contacts" id="contacts">
+            <label for="contacts">Контакты</label>
+          </li>
+          </ul>
+     >
     </div>
     <div class="service-slider-slides">
       <ul>
