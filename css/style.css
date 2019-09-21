@@ -1,21 +1,116 @@
-/* подключить шрифты*/
-/*
+/* подключить шрифты
+
 @font-face {
 
   font-family: "Open Sans";
   src: url("fonts/opensans.woff") format("woff");
 }
-
+*/
 body {
-  padding: 0;
   margin: 0;
-  background-color: white;
-  font-family: Gilrou, Open Sans, "Arial", sans-serif;
+  padding: 0;
+  font-family: Gilroy-ExtraBold, OpenSans-Light, "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  /* всем сылкам черный цвет.
+  так как белые только в подвале.
+  там  и переопределим цвет*/
+  color: #000000;
 }
 
 header {
-  display: inline-block;
   background-color: #f0c52e;
+  opacity: 0.5;
+}
+
+.header-search-text {
+  background-color: #f0c52e;
+  opacity: 0.5;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.header-search input:hover {
+  opacity: 0.6;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.header-search input:focus {
+  color: #000000;
+  opacity: 1;
+}
+
+.header-top {
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 0.15px;
+  text-align: left;
+  color: #000000;
+}
+
+.header-navigation,
+.header-catalog-list,
+.header-catalog-sub,
+.header-servis-list {
+  list-style: none;
+}
+
+.header-navigation a:hover,
+.header-catalog-list a:hover,
+.header-catalog-sub a:hover,
+.header-servis-list a:hover,
+.footer-center-service a:hover {
+  opacity: 0.6;
+}
+
+.header-navigation a:focus,
+.header-catalog-list a:focus,
+.header-catalog-sub a:focus,
+.header-servis-list a:focus,
+.footer-center-service a:focus {
+  opacity: 0.3;
+}
+/* на белом фоне не видно. сделать после фона
+.slides-number {
+  color: #ffffff;
+  font-family: Gilroy;
+  font-size: 79px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 1.79px;
+}
+*/
+.slides-feature {
+  font-family: Gilroy;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 1.19;
+  letter-spacing: 0.47px;
+  text-align: left;
+  color: #000000;
+}
+.feature-item{
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 0.15px;
+  text-align: left;
+  color: #464646;
+}
+
+
+/*
+header {
+  display: inline-block;
   opacity: 0.5;
   margin: 40px 140px;
   width: 100%;
@@ -206,6 +301,7 @@ main {
 .popular .text {
   /* как сделать текст как на макете ??*/
 }
+
 /*s
 .service {
   padding: 0;
