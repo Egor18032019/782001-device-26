@@ -78,6 +78,7 @@ header {
 .footer-center-service a:focus {
   opacity: 0.3;
 }
+
 /* на белом фоне не видно. сделать после фона
 .slides-number {
   color: #ffffff;
@@ -97,7 +98,8 @@ header {
   text-align: left;
   color: #000000;
 }
-.feature-item{
+
+.feature-item {
   font-family: OpenSans;
   font-size: 15px;
   font-weight: 300;
@@ -107,6 +109,80 @@ header {
   color: #464646;
 }
 
+.feature-tr {
+  font-family: Gilroy;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.33;
+  letter-spacing: 0.36px;
+  text-align: left;
+  color: #000000;
+}
+
+.feature-tr-bottom {
+  font-family: OpenSans;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.54;
+  letter-spacing: 0.13px;
+  text-align: left;
+  color: #464646;
+}
+
+.slides-detail {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: 3.6px;
+  text-align: center;
+  color: #000000;
+  background-color: #f0c52e;
+}
+
+.popular p {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: 0.18px;
+  text-align: left;
+  color: #000000;
+}
+
+.service-list,
+.controls-list {
+  list-style: none;
+}
+
+.controls-item {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  text-align: center;
+  color: #000000;
+}
+
+.servise-item h2 {
+  font-family: Gilroy;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: 0.47px;
+  text-align: left;
+  color: #000000;
+}
+
+.servise-item p {
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 0.15px;
+  text-align: left;
+  color: #464646;
+}
 
 /*
 header {

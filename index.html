@@ -96,12 +96,12 @@
           </p>
           <a href="#" class="slides-detail">Подробнее</a>
           <table>
-            <tr>
+            <tr class="feature-tr">
               <td>8,5 м</td>
               <td>5 кг</td>
               <td>Карбон</td>
             </tr>
-            <tr>
+            <tr class="feature-tr-bottom">
               <td>Длина палки</td>
               <td>Вес палки</td>
               <td>Материал</td>
@@ -119,10 +119,10 @@
           <a href="#" class="slides-detail">Подробнее</a>
 
           <table>
-            <tr>
+            <tr class="feature-tr">
               <td>48 часов</td>
             </tr>
-            <tr>
+            <tr class="feature-tr-bottom">
               <td>Без подзарядки</td>
             </tr>
           </table>
@@ -135,23 +135,25 @@
           <p class="feature-item feature-three">Этот обычный, на первый взгляд, квадрокоптер оснащен
             мощным лазером, замаскированным под стандартную камеру.
           </p>
+          <!--Надо в див обернуть ? чтобы желтым закрасить?-->
           <a href="#" class="slides-detail">Подробнее</a>
           <table>
-            <tr>
+            <tr class="feature-tr">
               <td>800 м</td>
-            </tr>
-            <tr>
               <td>50 м</td>
             </tr>
+            <tr class="feature-tr-bottom">
+              <td>Дальность полета</td>
+              <td>Радиус поражения</td>
+            </tr>
           </table>
-
       </ul>
 
     </section>
 
     <section class="popular">
       <div class="container">
-        <h2>Список товаров по категориям</h2>
+        <h2 class="visually-hidden">Список товаров по категориям</h2>
         <ul class="popular-back">
           <li class="popular">
             <p class="popular-img">
@@ -209,18 +211,18 @@
   </main>
 
   <section class="service">
-    <h2>Услуги</h2>
+    <h2 class="visually-hidden">Услуги</h2>
     <div class="service-slider-controls">
-      <ul>
-        <li class="service-delevery">
+      <ul class="controls-list">
+        <li class="controls-item">
           <input type="radio" id="delevery">
           <label for="delevery">Доставка</label>
         </li>
-        <li class="service-garant">
+        <li class="controls-item">
           <input type="radio" id="garant">
           <label for="garant">Гарантия</label>
         </li>
-        <li class="service-contacts">
+        <li class="controls-item">
           <input type="radio" name="contacts" id="contacts">
           <label for="contacts">Контакты</label>
         </li>
@@ -228,20 +230,20 @@
     </div>
 
     <div class="service-slider-slides">
-      <ul>
-        <li class="service-delivery">
+      <ul class="service-list">
+        <li class="servise-item">
           <h2>Доставка</h2>
           <p class="delivery-text">Мы с удовольствием доставим ваш товар прямо к вашему
             подъезду совершенно бесплатно! Ведь мы неплохо
             заработаем, поднимая его на ваш этаж.</p>
         </li>
-        <li>
+        <li class="servise-item">
           <h2>Гарантия</h2>
           <p>Если из-за возгорания купленного у нас товара у вас сгорит
             дом — не переживайте, мы выдадим вам новый.<br>
             Товар, не дом, конечно же.</p>
         </li>
-        <li>
+        <li class="servise-item">
           <h2>Кредит</h2>
           <p>Залезть в долговую яму стало проще! Кредитные
             консультанты подберут для вас наиболее выгодные
