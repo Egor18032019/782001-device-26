@@ -128,7 +128,7 @@ header {
   text-align: left;
   color: #464646;
 }
-
+/* как делать выход екста за цвет*/
 .slides-detail {
   font-family: Gilroy;
   font-size: 18px;
@@ -138,6 +138,7 @@ header {
   text-align: center;
   color: #000000;
   background-color: #f0c52e;
+  text-transform: uppercase;
 }
 
 .popular p {
@@ -184,6 +185,35 @@ header {
   color: #464646;
 }
 
+.map h2,
+.about h2 {
+  font-family: Gilroy;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: 0.47px;
+  text-align: left;
+  color: #000000;
+}
+.map p,
+.about p {
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 2;
+   text-align: left;
+  color: #464646;
+}
+.contacts-about {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: 3.6px;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+}
 /*
 header {
   display: inline-block;
