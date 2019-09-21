@@ -3,47 +3,42 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy Моноподы: Девайс</title>
-
+  <link href="css/normalize.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header>
 
-
-    <a href="index.html" class="header__logo">
-      <img class="header--device" src="img/device.png" alt="logotip DEVICE" width="163px" height="35px">
+    <a class="header-logo" href="index.html">
+      <img class="header--device" src="img/device.png" alt="Логотип магазина гаджетов DEVICE" width="163" height="35">
     </a>
 
-    <div class="header__top">
-
-      <form class="header__search" action="" method="get">
-        <button class="header-search-image" type="submit"></button>
-        <input name="s" class="header-search-text" placeholder="Поиск по сайту" type="search">
+    <div class="header-top">
+      <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
+        <input name="search" class="header-search-text" placeholder="Поиск по сайту" type="text">
+        <button class="header-search-button visually-hidden" type="submit">Найти</button>
       </form>
 
-
-      <ul class="header__navigation">
-
-
+      <ul class="header-navigation">
         <li class="header-login">
           <a href="#">Валентин Петухов</a>
         </li>
 
         <li class="header-contrast">
-          <img src="img/compare.png" alt="Contrast item">
           <a href="#">Сравнить</a>
         </li>
 
         <li class="header-basket">
-          <img src="img/cart.png" alt="basket">
           <a href="#">Корзина</a>
         </li>
       </ul>
     </div>
-    <nav class="header__catalog">
-      <ul class="header--catalog">
-        <li> КАТАЛОГ
-          <ul class="header--catalog-sub">
+
+    <nav class="header-catalog">
+      <ul class="header-catalog-list">
+        <li> Каталог товаров
+          <ul class="header-catalog-sub">
             <li><a href="#">Виртуальная реальность </a></li>
             <li><a href="catalogMonopod.html">Моноподы для селфи</a></li>
             <li><a href="#">Экшен-камеры</a></li>
@@ -55,7 +50,16 @@
       </ul>
     </nav>
 
+    <div class="header-servis">
+      <ul class="header-servis-list">
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Гарантия</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </div>
+
   </header>
+
 
   <main>
     <h1>Моноподы для селфи</h1>
@@ -201,15 +205,10 @@
 
 
   </main>
-
   <footer>
-
-    <div class="footer-logo">
-      <a href="index.html"><img src="img/device.png" alt="DEVICE"></a>
-    </div>
-
+    <a><img src="img/device.svg" class="footer-logo" alt="DEVICE"></a>
     <div class="footer-top">
-      <ul>
+      <ul class="footer-navi">
         <li class="footer-login">
           <a href="#">Войти</a></li>
         <li class="footer-contrast">
@@ -221,23 +220,26 @@
     </div>
     <div class="footer-center">
       <address>г. Москва, ул. Строителей, 15</address>
-      <ul>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a> </li>
-        <li><a href="#">Контакты</a></li>
+      <ul class="footer-center-service">
+        <li class="footer-delivery"><a href="#">Доставка</a></li>
+        <li class="footer-garant"><a href="#">Гарантия</a> </li>
+        <li class="footer-contact"><a href="#">Контакты</a></li>
       </ul>
-      <p class="footer-telephone"><a href="tel:+7 (495) 495-95-95">Тел.:+7(495)495-95-95</a> </p>
+      <p class="footer-telephone"><a href="tel:+74954959595">Тел.:+7(495)495-95-95</a> </p>
     </div>
     <div class="footer-bottom">
-      <p class="footer-line">Желтая линия</p>
-      <ul>
-        <li><a href="#" class="footer-social vk">Вконтакте</a></li>
-        <li><a href="#" class="footer-social in">Инстаграм</a></li>
-        <li><a href="#" class="footer-social te">Телеграм</a></li>
+      <!--тут должна быть Желтая линиия -->
+      <ul class="footer-social">
+        <li class="footer-social-fb"><a href="//facebook.com/" aria-label="Фейсбук"></a></li>
+        <li><a href="#" class="footer-social-in" aria-label="Инстаграм"></a></li>
+        <li><a href="#" class="footer-social-te" aria-label="Телеграм"></a></li>
       </ul>
+
     </div>
 
-    <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">Логотип Академии</a>
+    <p>
+      <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">Логотип Академии</a>
+    </p>
   </footer>
 
 
