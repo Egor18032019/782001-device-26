@@ -25,6 +25,17 @@ a {
   color: #000000;
 }
 
+.button {
+  text-transform: uppercase;
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: 3.6px;
+  text-align: center;
+  color: #000000;
+}
+
 header {
   background-color: #f0c52e;
   opacity: 0.5;
@@ -128,7 +139,8 @@ header {
   text-align: left;
   color: #464646;
 }
-/* как делать выход екста за цвет*/
+
+/* как делать выход цвета за текст?*/
 .slides-detail {
   font-family: Gilroy;
   font-size: 18px;
@@ -149,6 +161,13 @@ header {
   letter-spacing: 0.18px;
   text-align: left;
   color: #000000;
+}
+
+/* как сделать чтобы буквы выглядывали?*/
+.service {
+  background-color: #e5e5e5;
+  background-position: bottom;
+  background-size: 90%;
 }
 
 .service-list,
@@ -195,15 +214,17 @@ header {
   text-align: left;
   color: #000000;
 }
+
 .map p,
 .about p {
   font-family: OpenSans;
   font-size: 15px;
   font-weight: 300;
   line-height: 2;
-   text-align: left;
+  text-align: left;
   color: #464646;
 }
+
 .contacts-about {
   font-family: Gilroy;
   font-size: 18px;
@@ -214,6 +235,201 @@ header {
   color: #000000;
   text-transform: uppercase;
 }
+
+footer {
+  width: 100%;
+  height: 100%;
+  background-color: #464646;
+}
+
+.footer-navi a {
+  opacity: 0.7;
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.4;
+  letter-spacing: 0.15px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-center address,
+.footer-telephone a {
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 2;
+  text-align: left;
+  color: white;
+}
+
+.footer-service,
+.footer-social,
+.footer-navi {
+  list-style: none;
+}
+
+.footer-service a {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: 3.6px;
+  text-align: left;
+  color: white;
+}
+
+.logo-htmlacademy {
+  color: #ffc600;
+}
+
+.contacts-open,
+.contacts-write {
+  display: none;
+}
+
+main h1 {
+  font-family: Gilroy;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: 0.47px;
+  text-align: left;
+  color: #000000;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  font-family: OpenSans;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.71;
+  letter-spacing: 0.14px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.filters {
+  background-color: #ebebeb;
+}
+
+.filters h2 {
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 3.2px;
+  text-align: left;
+  color: #000000;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 12px;
+  letter-spacing: 0.18px;
+  text-align: left;
+  color: #000000;
+}
+
+.filter ul {
+  list-style: none;
+  line-height: 14px;
+  padding-left:0;
+}
+
+.monopod-list {
+  list-style: none;
+}
+
+.monopod:hover {
+  opacity: 0.7;
+
+}
+
+.monopod:hover .show,
+.monopod:hover .point {
+  display: block;
+}
+
+.show {
+  display: none;
+}
+
+.point {
+  display: none;
+  font-family: OpenSans;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 2.77;
+  letter-spacing: 0.13px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.monopod-type {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: 0.18px;
+  text-align: left;
+  color: #000000;
+}
+
+.monopod-price {
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.16px;
+  text-align: right;
+  color: #464646;
+}
+.pagination-list,
+.pagination-items{
+  list-style: none;
+}
+.pagination-list a{
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: 3.2px;
+  text-align: left;
+  color: #000000;
+}
+.pagination-item a{
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 3.2px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.3);
+}
+.pagination-current a{
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 3.2px;
+  text-align: left;
+  color: #000000;
+}
+/*
 /*
 header {
   display: inline-block;

@@ -69,8 +69,9 @@
       <li class="breadcrumbs-current"><a>Моноподы для селфи</a> </li>
     </ul>
 
-    <section>
-      <div>
+    <section class="filters">
+
+      <div class="filter-container">
         <h2>Фильтр:</h2>
         <h2>Сортировка:</h2>
         <ul class="sorting">
@@ -84,86 +85,88 @@
         <span><button>Максимально</button></span>
       </div>
 
-      <form method="get" action="https://echo.htmlacademy.ru">
-        <fieldset class="price-sort">
-          <legend>Стоимость</legend>
+      <div class="filter-container">
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="price-sort">
+            <legend>Стоимость</legend>
 
-          <div class="price-sort-min">от 0</div>
-          <div class="price-sort-max">до 5000 </div>
-        </fieldset>
-        <fieldset class="color">
-          <legend>Цвет</legend>
-          <ul class="color-list">
-            <li>
-              <input type="checkbox" name="black" id="color-black" checked>
-              <label for="color-black">Черный</label>
-            </li>
-            <li>
-              <input type="checkbox" name="white" id="color-white">
-              <label for="color-white">Белый</label>
-            </li>
-            <li>
-              <input type="checkbox" name="blue" id="color-blue" checked>
-              <label for="color-blue">Синий</label>
-            </li>
-            <li>
-              <input type="checkbox" name="red" id="color-red" checked>
-              <label for="color-red">Красный</label>
-            </li>
-            <li>
-              <input type="checkbox" name="pink" id="color-pink">
-              <label for="color-pink">Розовый</label>
-            </li>
-          </ul>
-        </fieldset>
-        <!--Черная линия-->
-        <fieldset>
-          <legend class="bluetooth">
-            Bluetooth
-          </legend>
-          <ul class="bluetooth-list">
-            <li>
-              <input type="radio" name="bluetooth-group" value="bluetooth-yes" id="bluetooth-yes" checked>
-              <label for="bluetooth-yes">Есть</label>
-            </li>
-            <li>
-              <input type="radio" name="bluetooth-group" value="bluetooth-no" id="bluetooth-no">
-              <label for="bluetooth-no">Нет</label>
-            </li>
-          </ul>
-        </fieldset>
-        <button>Показать</button>
-      </form>
+            <div class="price-sort-min">от 0</div>
+            <div class="price-sort-max">до 5000 </div>
+          </fieldset>
+          <fieldset class="color">
+            <legend>Цвет</legend>
+            <ul class="color-list">
+              <li>
+                <input type="checkbox" name="black" id="color-black" checked>
+                <label for="color-black">Черный</label>
+              </li>
+              <li>
+                <input type="checkbox" name="white" id="color-white">
+                <label for="color-white">Белый</label>
+              </li>
+              <li>
+                <input type="checkbox" name="blue" id="color-blue" checked>
+                <label for="color-blue">Синий</label>
+              </li>
+              <li>
+                <input type="checkbox" name="red" id="color-red" checked>
+                <label for="color-red">Красный</label>
+              </li>
+              <li>
+                <input type="checkbox" name="pink" id="color-pink">
+                <label for="color-pink">Розовый</label>
+              </li>
+            </ul>
+          </fieldset>
+          <!--Черная линия-->
+          <fieldset>
+            <legend class="bluetooth">
+              Bluetooth
+            </legend>
+            <ul class="bluetooth-list">
+              <li>
+                <input type="radio" name="bluetooth-group" value="bluetooth-yes" id="bluetooth-yes" checked>
+                <label for="bluetooth-yes">Есть</label>
+              </li>
+              <li>
+                <input type="radio" name="bluetooth-group" value="bluetooth-no" id="bluetooth-no">
+                <label for="bluetooth-no">Нет</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button demonstrate">Показать</button>
+        </form>
+      </div>
     </section>
 
     <section>
       <h2 class="visually-hidden">Список моноподов в продаже</h2>
-      <div class="catalog__monopods">
-        <ul class="monopods">
+      <div class="catalog-monopod">
+        <ul class="monopod-list">
           <li class="monopod">
             <p class="monopod-image">
               <img src="img/item-1-jpg.png" class="item-1jpg" alt="Любительская селфи палка" width="360px"
                 height="380px">
             </p>
 
-            <h3 class="monopod-type"><a href="#">
-                Любительская селфи-палка</a>
-              <span class="monopod-price">500руб</span> </h2>
-              <button>В корзину</button>
-              <button>Добавить к сравнению</button>
+            <h3 class="monopod-type">
+              <a href="#">Любительская селфи-палка</a>
+              <span class="monopod-price">500руб</span>
+            </h3>
+            <button class="show">В корзину</button>
+            <button class="point">Добавить к сравнению</button>
           </li>
 
           <li class="monopod">
             <p class="monopod-image">
-
-              <img src="img/item-2-jpg.png" class="item-2jpg">
-
+              <img src="img/item-2-jpg.png" class="item-2jpg" alt="Pro monopod" width="360" height="380">
             </p>
             <h3 class="monopod-type"><a href="#">
                 Профессиональная селфи-палка
-                <span class="monopod-price">1500руб</span></a></h2>
-              <button>В корзину</button>
-              <button>Добавить к сравнению</button>
+                <span class="monopod-price">1500руб</span></a>
+            </h3>
+            <button class="show">В корзину</button>
+            <button class="point">Добавить к сравнению</button>
           </li>
           <li class="monopod">
             <p class="monopod-image">
@@ -172,9 +175,9 @@
 
             </p>
             <h3 class="monopod-type"><a href="#">
-                Непотопляемая селфи-палка <span>2 500 руб</span></a></h2>
-              <button>В корзину</button>
-              <button>Добавить к сравнению</button>
+                Непотопляемая селфи-палка <span>2 500 руб</span></a></h3>
+            <button class="show">В корзину</button>
+            <button class="point">Добавить к сравнению</button>
           </li>
           <li class="monopod monopod-new">
             <p class="monopod-image">
@@ -182,35 +185,38 @@
               <img src="img/item-4-jpg.png" class="item-4jpg">
 
             </p>
-            <h3 class="monopod-type"><a href="#">
-                Селфи-палка «Следуй за мной»<span>4 900 руб</span></a></h2>
-              <button>В корзину</button>
-              <button>Добавить к сравнению</button>
+            <h3 class="monopod-type">
+              <a href="#">Селфи-палка «Следуй за мной»
+                <span>4 900 руб</span>
+              </a>
+            </h3>
+            <button class=".button show">В корзину</button>
+            <button class="point">Добавить к сравнению</button>
           </li>
         </ul>
 
         <!-- странички-->
         <ul class="pagination-list">
-
-          <li><a href="">НАЗАД</a></li>
-          <li class="pagination-item pagination-item-current"><a>1</a></li>
-          <li class="pagination-item"><a href="#">2</a></li>
-          <li class="pagination-item"><a href="#">3</a></li>
+          <li><a href="#">НАЗАД</a></li>
+          <ul class="pagination-items">
+            <li class="pagination-item pagination-current"><a>1</a></li>
+            <li class="pagination-item"><a href="#">2</a></li>
+            <li class="pagination-item"><a href="#">3</a></li>
+          </ul>
           <li> <a href="#">ВПЕРЁД</a></li>
         </ul>
-
       </div>
 
     </section>
 
-
   </main>
   <footer>
-    <a><img src="img/device.svg" class="footer-logo" alt="DEVICE"></a>
+    <a href="index.html"><img src="img/device.svg" class="footer-logo" alt="DEVICE"></a>
     <div class="footer-top">
       <ul class="footer-navi">
         <li class="footer-login">
-          <a href="#">Войти</a></li>
+          <a href="#">Валентин Петухов</a>
+        </li>
         <li class="footer-contrast">
           <a href="#"> Сравнить</a>
         </li>
@@ -220,29 +226,29 @@
     </div>
     <div class="footer-center">
       <address>г. Москва, ул. Строителей, 15</address>
-      <ul class="footer-center-service">
+      <ul class="footer-service">
         <li class="footer-delivery"><a href="#">Доставка</a></li>
         <li class="footer-garant"><a href="#">Гарантия</a> </li>
         <li class="footer-contact"><a href="#">Контакты</a></li>
       </ul>
-      <p class="footer-telephone"><a href="tel:+74954959595">Тел.:+7(495)495-95-95</a> </p>
+      <p class="footer-telephone"><a href="tel:+74954959595">Тел.:+7 (495)495-95-95</a> </p>
     </div>
     <div class="footer-bottom">
       <!--тут должна быть Желтая линиия -->
       <ul class="footer-social">
-        <li class="footer-social-fb"><a href="//facebook.com/" aria-label="Фейсбук"></a></li>
-        <li><a href="#" class="footer-social-in" aria-label="Инстаграм"></a></li>
-        <li><a href="#" class="footer-social-te" aria-label="Телеграм"></a></li>
+        <li class="footer-social-fb"><a href="//facebook.com/" aria-label="Фейсбук">ф</a></li>
+        <li><a href="#" class="footer-social-in" aria-label="Инстаграм">и</a></li>
+        <li><a href="#" class="footer-social-te" aria-label="Телеграм">т</a></li>
       </ul>
 
     </div>
 
     <p>
-      <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">Логотип Академии</a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img src="img/logo-htmlacademy.svg"
+          class="logo-htmlacademy" alt="Логотим HTML Academy">
+      </a>
     </p>
   </footer>
-
-
 </body>
 
 </html>
