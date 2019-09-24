@@ -7,19 +7,21 @@
   <!--сделать нормалайз полностью-->
   <link href="css/normalize.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 
 <body>
   <header>
-
+<div class="main-navigation">
     <a class="header-logo">
-      <img class="header--device" src="img/device.png" alt="Логотип магазина гаджетов DEVICE" width="163" height="35">
+      <img class="header-device" src="img/device.png" alt="Логотип магазина гаджетов DEVICE" width="163" height="35">
     </a>
 
     <div class="header-top">
+      <div class="container">
       <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
         <input name="search" class="header-search-text" placeholder="Поиск по сайту" type="text">
-        <button class="header-search-button visually-hidden" type="submit">Найти</button>
+        <button class="header-search-button" type="submit">Найти</button>
       </form>
 
       <ul class="header-navigation">
@@ -36,7 +38,8 @@
         </li>
       </ul>
     </div>
-
+  </div>
+  <div class="header-servis">
     <nav class="header-catalog">
       <ul class="header-catalog-list">
         <li> Каталог товаров
@@ -52,15 +55,16 @@
       </ul>
     </nav>
 
-    <div class="header-servis">
+
       <ul class="header-servis-list">
         <li><a href="#">Доставка</a></li>
         <li><a href="#">Гарантия</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>
     </div>
-
+  </div>
   </header>
+
   <main>
     <h1 class="visually-hidden"> Магазин интернет-гаджетов DEVICE</h1>
     <section class="main">
