@@ -1,11 +1,10 @@
-/* подключить шрифт Gilroy(немогу найти на гугол фонтс)
 
 @font-face {
-
-  font-family: "Open Sans";
-  src: url("fonts/opensans.woff") format("woff");
+  font-family: "Gilroy";
+  src: url("fonts/gilroyextrabold.woff"),
+  url("fonts/gilroylight") format("woff");
 }
-*/
+
 *, *::after, *::before {
   box-sizing: inherit;
 }
@@ -15,7 +14,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: Gilroy-ExtraBold, OpenSans-Light, "Arial", sans-serif;
+  font-family: Open Sans, "Arial", sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
@@ -114,7 +113,7 @@ margin-top: 21px;
 }
 
 .header-top {
-  font-family: OpenSans;
+  font-family: Open Sans;
   font-size: 15px;
   font-weight: 300;
   line-height: 2;
@@ -179,7 +178,7 @@ margin-top: 21px;
 }
 
 .feature-item {
-  font-family: OpenSans;
+  font-family: Open Sans;
   font-size: 15px;
   font-weight: 300;
   line-height: 2;
@@ -199,7 +198,7 @@ margin-top: 21px;
 }
 
 .feature-tr-bottom {
-  font-family: OpenSans;
+  font-family: Open Sans;
   font-size: 13px;
   font-weight: 300;
   line-height: 1.54;
@@ -263,7 +262,7 @@ margin-top: 21px;
 }
 
 .servise-item p {
-  font-family: OpenSans;
+  font-family: Open Sans;
   font-size: 15px;
   font-weight: 300;
   line-height: 2;
@@ -285,7 +284,7 @@ margin-top: 21px;
 
 .map p,
 .about p {
-  font-family: OpenSans;
+  font-family: Open Sans;
   font-size: 15px;
   font-weight: 300;
   line-height: 2;
@@ -312,7 +311,7 @@ footer {
 
 .footer-navi a {
   opacity: 0.7;
-  font-family: OpenSans;
+  font-family: Open Sans;
   font-size: 15px;
   font-weight: 300;
   font-style: normal;
@@ -325,7 +324,7 @@ footer {
 
 .footer-center address,
 .footer-telephone a {
-  font-family: OpenSans;
+  font-family: Open Sans;
   font-size: 15px;
   font-weight: 300;
   line-height: 2;
@@ -373,7 +372,7 @@ main h1 {
 }
 
 .breadcrumbs a {
-  font-family: OpenSans;
+  font-family: Open Sans;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.71;
@@ -384,6 +383,22 @@ main h1 {
 
 .filters {
   background-color: #ebebeb;
+}
+.arrow-down{
+  display: inline-block;
+  border: 10px solid white;
+  border-bottom-color: #000000;
+  border-top-width: 0px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+.arrow-top {
+  display: inline-block;
+  border: 10px solid #ffffff;
+  border-top-color:black;
+  border-bottom-width: 0px;
+  border-right-color: transparent;
+  border-left-color: transparent;
 }
 
 .filters h2 {
@@ -436,7 +451,7 @@ main h1 {
 
 .point {
   display: none;
-  font-family: OpenSans;
+  font-family: Open Sans;
   font-size: 13px;
   font-weight: 300;
   line-height: 2.77;
@@ -549,7 +564,7 @@ header {
   width: 118px;
   height: 15px;
   background-color: #f0c52e;
-  font-family: OpenSans;
+  font-family: Open Sans;
   font-size: 15px;
   font-weight: 300;
   font-style: normal;
