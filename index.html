@@ -16,7 +16,7 @@
     <a class="header-logo">
       <img class="header-device" src="img/device.png" alt="Логотип магазина гаджетов DEVICE" width="163" height="35">
     </a>
-ч
+
     <div class="header-top">
       <div class="container">
       <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
@@ -39,6 +39,7 @@
       </ul>
     </div>
   </div>
+
   <div class="header-servis">
     <nav class="header-catalog">
       <ul class="header-catalog-list">
@@ -65,13 +66,12 @@
   </div>
   </header>
 
-  <main>
+  <main class="container">
     <h1 class="visually-hidden"> Магазин интернет-гаджетов DEVICE</h1>
     <section class="main">
       <h2 class="visually-hidden">Наши лучшие товары </h2>
-      <div class="main-sliders-controls">
-        <!--три кружочка тут будут-->
-        <ul>
+
+        <ul class="main-sliders-controls">
           <li class="slider-control-first">
             <input type="radio" id="control-first">
             <label for="control-first"></label>
@@ -85,10 +85,11 @@
             <label for="control-three"></label>
           </li>
         </ul>
-      </div>
 
-      <ul>
-        <li class="slides-fist">
+
+
+      <ul class="main-sliders">
+        <li class="slides-first">
           <h3 class="visually-hidden">Наш лучший монопод</h3>
           <p class="sliders-number">01</p>
           <img src="img/slider-1-png.jpg" class="slider-1png" alt="Монопод Бена Стиллера" width="384px" height="486px">
@@ -131,7 +132,7 @@
             </tr>
           </table>
         </li>
-        <li class="slider-three">
+        <li class="slides-three">
           <h3 class="visually-hidden">Наш лучший квадрокоптер(он еще и стреляет!)</h3>
           <p class="sliders-number">03</p>
           <img src="img/slider-3-png.jpg" class="slider-3png" alt="Пуляющий квадрокоптер !!">
@@ -155,7 +156,7 @@
 
     </section>
 
-    <section class="popular">
+    <section class="popular-list">
       <div class="container">
         <h2 class="visually-hidden">Список товаров по категориям</h2>
         <ul class="popular-back">
@@ -230,6 +231,7 @@
             подъезду совершенно бесплатно! Ведь мы неплохо
             заработаем, поднимая его на ваш этаж.</p>
         </li>
+<!--  Временно
         <li class="servise-item">
           <h2>Гарантия</h2>
           <p>Если из-за возгорания купленного у нас товара у вас сгорит
@@ -242,13 +244,14 @@
             консультанты подберут для вас наиболее выгодные
             условия кредита. Выгодные для нашего банка, разумеется.</p>
         </li>
+-->
       </ul>
     </div>
   </section>
 
   <section class="logotips">
     <h2 class="visually-hidden">Логотипы товаров</h2>
-    <div class="container-logotips">
+    <div class="container">
 
       <a class="logotip-1">
         <img src="img/logo-1.png" class="logo-1" alt="У нас есть товары такой марки!">
@@ -302,9 +305,11 @@
   </section>
   </div>
 
-  <footer>
-    <a><img src="img/device.svg" class="footer-logo" alt="DEVICE"></a>
+  <footer class="main-footer">
+    <div class="container">
     <div class="footer-top">
+        <a class="footer-top-logotip"><img src="img/device.svg" class="footer-logo" alt="DEVICE"></a>
+
       <ul class="footer-navi">
         <li class="footer-login">
           <a href="#">Войти</a></li>
@@ -332,13 +337,14 @@
         <li><a href="#" class="footer-social-te" aria-label="Телеграм">т</a></li>
       </ul>
 
-    </div>
 
-    <p>
-      <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img src="img/logo-htmlacademy.svg"
-        class="logo-htmlacademy" alt="Логотим HTML Academy">
-   </a>
-    </p>
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-htmlacademy" target="_blank"><img src="img/logo-htmlacademy.svg"
+          class="logo-htmlacademy" alt="Логотим HTML Academy">
+     </a>
+
+
+    </div>
+  </div>
   </footer>
   <!-- секции для модальных окон 2штуки(popup)-->
   <section class="contacts-open">

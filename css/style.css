@@ -1,16 +1,19 @@
-
 @font-face {
   font-family: "Gilroy";
   src: url("fonts/gilroyextrabold.woff"),
-  url("fonts/gilroylight") format("woff");
+    url("fonts/gilroylight") format("woff");
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: inherit;
 }
+
 html {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -42,7 +45,7 @@ a {
 }
 
 header {
-margin-top: 21px;
+  margin-top: 21px;
 
 }
 
@@ -68,32 +71,52 @@ margin-top: 21px;
   width: 108px;
 }
 
-.header-top {
-  width: 100%;
-  margin-bottom: 52px;
-}
 
 .header-search-button {
   display: none;
 }
 
 .container {
-
+  width: 1160px;
   margin: 0 auto;
   padding: 0;
 }
 
 .header-top .container {
   display: flex;
+  padding-left: 60px;
+  padding-right: 61px;
   justify-content: space-between;
 }
 
 .header-navigation {
   display: flex;
+  margin-top: auto;
+  /*или 0 ?*/
   margin-left: auto;
   justify-content: space-between;
   /*почему не работает?7 */
+}
 
+.header-servis {
+  display: flex;
+  width: 100%;
+  padding-right: 61px;
+
+}
+
+.header-servis-list {
+  display: flex;
+
+}
+
+.header-catalog {
+
+  margin-right: auto;
+}
+
+.header-catalog-list {
+  padding-left: 60px;
 }
 
 .header-search-text {
@@ -113,6 +136,7 @@ margin-top: 21px;
 }
 
 .header-top {
+  width: 100%;
   font-family: Open Sans;
   font-size: 15px;
   font-weight: 300;
@@ -122,14 +146,6 @@ margin-top: 21px;
   color: #000000;
 }
 
-.header-servis{
-  display: flex;
-
-}
-.header-servis-list{
-  display: flex;
-
-}
 .header-catalog-sub {
   display: none;
 }
@@ -167,6 +183,29 @@ margin-top: 21px;
   letter-spacing: 1.79px;
 }
 */
+.main-sliders-controls {
+  display: flex;
+  list-style: none;
+  width: 122px;
+  justify-content: space-around;
+  /* после лекции настроить */
+}
+
+.main-sliders {
+  display: flex;
+  list-style: none;
+}
+
+
+/* времеено
+.main-sliders li .slider-1png{
+  transform:rotate(90deg);
+}*/
+.slides-two,
+.slides-three {
+  display: none;
+}
+
 .slides-feature {
   font-family: Gilroy;
   font-size: 47px;
@@ -220,6 +259,17 @@ margin-top: 21px;
   text-transform: uppercase;
 }
 
+.popular-list {
+  display: flex;
+
+}
+
+.popular-back {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
 .popular p {
   font-family: Gilroy;
   font-size: 18px;
@@ -232,9 +282,17 @@ margin-top: 21px;
 
 /* как сделать чтобы буквы выглядывали?*/
 .service {
+  width: auto;
+  display: flex;
   background-color: #e5e5e5;
   background-position: bottom;
   background-size: 90%;
+}
+
+.controls-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .service-list,
@@ -271,6 +329,25 @@ margin-top: 21px;
   color: #464646;
 }
 
+.logotips .container {
+  display: flex;
+}
+
+.index-columns {
+  display: flex;
+  justify-content: space-between;
+  padding: 93px 140px 96px 139px;
+}
+
+.map {
+  width: 462px;
+
+}
+
+.about {
+  width: 560px;
+}
+
 .map h2,
 .about h2 {
   font-family: Gilroy;
@@ -303,10 +380,70 @@ margin-top: 21px;
   text-transform: uppercase;
 }
 
-footer {
+.main-footer {
   width: 100%;
-  height: 100%;
+  padding-top: 65px;
+  padding-left: 139px;
+  padding-right: 140px;
   background-color: #464646;
+}
+
+.main-footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-navi {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+
+}
+
+.footer-top-logotip {
+  margin-right: auto;
+}
+
+.footer-service {
+  display: flex;
+  width: 460px;
+  justify-content: space-between;
+  margin: auto;
+
+}
+
+.footer-social {
+  display: flex;
+  width: 142px;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.footer-top {
+  display: flex;
+  align-self: flex-end;
+  width: 100%;
+  margin: 0;
+}
+
+.footer-center {
+  display: flex;
+  align-self: flex-end;
+  width: 1160px;
+  margin: 0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  width: 1160px;
+  margin: 0;
+}
+
+.footer-htmlacademy {
+  display: flex;
+
 }
 
 .footer-navi a {
@@ -384,7 +521,8 @@ main h1 {
 .filters {
   background-color: #ebebeb;
 }
-.arrow-down{
+
+.arrow-down {
   display: inline-block;
   border: 10px solid white;
   border-bottom-color: #000000;
@@ -392,10 +530,11 @@ main h1 {
   border-right-color: transparent;
   border-left-color: transparent;
 }
+
 .arrow-top {
   display: inline-block;
   border: 10px solid #ffffff;
-  border-top-color:black;
+  border-top-color: black;
   border-bottom-width: 0px;
   border-right-color: transparent;
   border-left-color: transparent;
