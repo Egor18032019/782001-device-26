@@ -61,11 +61,6 @@ header {
   margin-right: auto;
 }
 
-.header-logo {
-  width: 163px;
-  height: 35px;
-  order: -1;
-}
 
 .header-search {
   width: 108px;
@@ -91,6 +86,8 @@ header {
 
 .header-navigation {
   display: flex;
+  /* продумать с шириной. */
+  width: 540px;
   margin-top: auto;
   /*или 0 ?*/
   margin-left: auto;
@@ -107,7 +104,8 @@ header {
 
 .header-servis-list {
   display: flex;
-
+  width: 540px;
+  justify-content: space-between;
 }
 
 .header-catalog {
@@ -385,6 +383,7 @@ header {
   padding-top: 65px;
   padding-left: 139px;
   padding-right: 140px;
+  padding-bottom: 66px;
   background-color: #464646;
 }
 
@@ -397,7 +396,7 @@ header {
 .footer-navi {
   display: flex;
   justify-content: space-between;
-  width: 300px;
+  width: 340px;
 
 }
 
@@ -407,10 +406,9 @@ header {
 
 .footer-service {
   display: flex;
-  width: 460px;
+  width: 500px;
   justify-content: space-between;
   margin: auto;
-
 }
 
 .footer-social {
@@ -655,6 +653,8 @@ main h1 {
   text-align: left;
   color: #000000;
 }
+
+
 
 /*
 /*

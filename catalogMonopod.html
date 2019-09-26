@@ -9,57 +9,59 @@
 
 <body>
   <header>
+    <div class="main-navigation">
+      <a class="header-logo">
+        <img class="header-device" src="img/device.png" alt="Логотип магазина гаджетов DEVICE" width="163" height="35">
+      </a>
 
-    <a class="header-logo" href="index.html">
-      <img class="header--device" src="img/device.png" alt="Логотип магазина гаджетов DEVICE" width="163" height="35">
-    </a>
+      <div class="header-top">
+        <div class="container">
+          <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
+            <input name="search" class="header-search-text" placeholder="Поиск по сайту" type="text">
+            <button class="header-search-button" type="submit">Найти</button>
+          </form>
 
-    <div class="header-top">
-      <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
-        <input name="search" class="header-search-text" placeholder="Поиск по сайту" type="text">
-        <button class="header-search-button visually-hidden" type="submit">Найти</button>
-      </form>
+          <ul class="header-navigation">
+            <li class="header-login">
+              <a href="#">Войти</a>
+            </li>
 
-      <ul class="header-navigation">
-        <li class="header-login">
-          <a href="#">Валентин Петухов</a>
-        </li>
+            <li class="header-contrast">
+              <a href="#">Сравнить</a>
+            </li>
 
-        <li class="header-contrast">
-          <a href="#">Сравнить</a>
-        </li>
-
-        <li class="header-basket">
-          <a href="#">Корзина</a>
-        </li>
-      </ul>
-    </div>
-
-    <nav class="header-catalog">
-      <ul class="header-catalog-list">
-        <li> Каталог товаров
-          <ul class="header-catalog-sub">
-            <li><a href="#">Виртуальная реальность </a></li>
-            <li><a href="catalogMonopod.html">Моноподы для селфи</a></li>
-            <li><a href="#">Экшен-камеры</a></li>
-            <li><a href="#"> Финтес-браслеты</a></li>
-            <li><a href="#"> Умные часы </a></li>
-            <li><a href="#"> Квадрокоптеры </a></li>
+            <li class="header-basket">
+              <a href="#">Корзина</a>
+            </li>
           </ul>
-        </li>
-      </ul>
-    </nav>
+        </div>
+      </div>
 
-    <div class="header-servis">
-      <ul class="header-servis-list">
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
+      <div class="header-servis">
+        <nav class="header-catalog">
+          <ul class="header-catalog-list">
+            <li> Каталог товаров
+              <ul class="header-catalog-sub">
+                <li><a href="#">Виртуальная реальность </a></li>
+                <li><a href="catalogMonopod.html">Моноподы для селфи</a></li>
+                <li><a href="#">Экшен-камеры</a></li>
+                <li><a href="#"> Финтес-браслеты</a></li>
+                <li><a href="#"> Умные часы </a></li>
+                <li><a href="#"> Квадрокоптеры </a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+
+        <ul class="header-servis-list">
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>
     </div>
-
   </header>
-
 
   <main>
     <h1>Моноподы для селфи</h1>
@@ -81,7 +83,6 @@
           Где это видно по тз?-->
           <li><button>По популярности</button></li>
         </ul>
-
         <div class="arrow-down"></div>
         <div class="arrow-top"></div>
 
@@ -212,45 +213,47 @@
     </section>
 
   </main>
-  <footer>
-    <a href="index.html"><img src="img/device.svg" class="footer-logo" alt="DEVICE"></a>
-    <div class="footer-top">
-      <ul class="footer-navi">
-        <li class="footer-login">
-          <a href="#">Валентин Петухов</a>
-        </li>
-        <li class="footer-contrast">
-          <a href="#"> Сравнить</a>
-        </li>
-        <li class="footer-basket">
-          <a href="#">Корзина</a></li>
-      </ul>
-    </div>
-    <div class="footer-center">
-      <address>г. Москва, ул. Строителей, 15</address>
-      <ul class="footer-service">
-        <li class="footer-delivery"><a href="#">Доставка</a></li>
-        <li class="footer-garant"><a href="#">Гарантия</a> </li>
-        <li class="footer-contact"><a href="#">Контакты</a></li>
-      </ul>
-      <p class="footer-telephone"><a href="tel:+74954959595">Тел.:+7 (495)495-95-95</a> </p>
-    </div>
-    <div class="footer-bottom">
-      <!--тут должна быть Желтая линиия -->
-      <ul class="footer-social">
-        <li class="footer-social-fb"><a href="//facebook.com/" aria-label="Фейсбук">ф</a></li>
-        <li><a href="#" class="footer-social-in" aria-label="Инстаграм">и</a></li>
-        <li><a href="#" class="footer-social-te" aria-label="Телеграм">т</a></li>
-      </ul>
+  <footer class="main-footer">
+      <div class="container">
+      <div class="footer-top">
+          <a class="footer-top-logotip"><img src="img/device.svg" class="footer-logo" alt="DEVICE"></a>
 
-    </div>
+        <ul class="footer-navi">
+          <li class="footer-login">
+            <a href="#">Войти</a></li>
+          <li class="footer-contrast">
+            <a href="#"> Сравнить</a>
+          </li>
+          <li class="footer-basket">
+            <a href="#">Корзина</a></li>
+        </ul>
+      </div>
+      <div class="footer-center">
+        <address>г. Москва, ул. Строителей, 15</address>
+        <ul class="footer-service">
+          <li class="footer-delivery"><a href="#">Доставка</a></li>
+          <li class="footer-garant"><a href="#">Гарантия</a> </li>
+          <li class="footer-contact"><a href="#">Контакты</a></li>
+        </ul>
+        <p class="footer-telephone"><a href="tel:+74954959595">Тел.:+7 (495)495-95-95</a> </p>
+      </div>
+      <div class="footer-bottom">
+        <!--тут должна быть Желтая линиия -->
+        <ul class="footer-social">
+          <li class="footer-social-fb"><a href="//facebook.com/" aria-label="Фейсбук">ф</a></li>
+          <li><a href="#" class="footer-social-in" aria-label="Инстаграм">и</a></li>
+          <li><a href="#" class="footer-social-te" aria-label="Телеграм">т</a></li>
+        </ul>
 
-    <p>
-      <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img src="img/logo-htmlacademy.svg"
-          class="logo-htmlacademy" alt="Логотим HTML Academy">
-      </a>
-    </p>
-  </footer>
+
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-htmlacademy" target="_blank"><img src="img/logo-htmlacademy.svg"
+            class="logo-htmlacademy" alt="Логотим HTML Academy">
+       </a>
+
+
+      </div>
+    </div>
+    </footer>
 </body>
 
 </html>
