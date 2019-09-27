@@ -62,6 +62,10 @@ header {
   margin-right: auto;
 }
 
+/*-как правильно скрыть??*/
+.visually-hidden {
+  display: none;
+}
 
 .header-search {
   width: 108px;
@@ -437,7 +441,7 @@ header {
 .footer-bottom {
   display: flex;
   justify-content: center;
-  width: 1160px;
+  width: 100%;
   margin: 0;
 }
 
@@ -509,9 +513,13 @@ main h1 {
   display: flex;
   padding-left: 201px;
   list-style: none;
+  margin-bottom: 49px;
+  margin-top: 30px;
 }
 
 .breadcrumbs a {
+  padding-left: 16px;
+  /*стрелочки нарисовать*/
   font-family: Open Sans;
   font-size: 14px;
   font-weight: 300;
@@ -522,7 +530,34 @@ main h1 {
 }
 
 .filters {
+  width: 100%;
+}
+
+.filter-container-top {
+  min-height: 71px;
+  display: flex;
+  align-items: center;
   background-color: #ebebeb;
+}
+
+.sorting {
+  display: flex;
+  list-style: none;
+}
+
+.wrapper {
+  width: 467px;
+  background-color: #d9d9d9;
+  padding-left: 201px;
+}
+
+.arrow-list {
+  display: flex;
+  align-items: center;
+  width: 60px;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: 139px;
 }
 
 .arrow-down {
@@ -547,10 +582,35 @@ main h1 {
   font-family: Gilroy;
   font-size: 16px;
   font-weight: 800;
-  line-height: 1.5;
+  line-height: 2.5;
   letter-spacing: 3.2px;
   text-align: left;
   color: #000000;
+}
+
+.filter-container-left {
+  width: 467px;
+  padding-left: 201px;
+  background-color: #ebebeb;
+}
+
+.market {
+  display: flex;
+}
+
+.catalog-monopod {
+  padding-left: 73px;
+
+}
+
+.monopod-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.monopod-list li {
+  width: 360px;
 }
 
 .filter fieldset {
@@ -622,9 +682,32 @@ main h1 {
   color: #464646;
 }
 
-.pagination-list,
+.monopod-type {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination-list {
+  width: 759px;
+  min-height: 70px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 77px;
+  margin-top: 41px;
+  background-color: #ebebeb;
+}
+
 .pagination-items {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pagination-list a {

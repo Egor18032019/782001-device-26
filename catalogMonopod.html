@@ -66,6 +66,7 @@
   </header>
 
   <main>
+
     <h1>Моноподы для селфи</h1>
     <ul class="breadcrumbs">
       <li><a href="index.html">Главная</a></li>
@@ -75,8 +76,11 @@
 
     <section class="filters">
 
-      <div class="filter-container">
-        <h2>Фильтр:</h2>
+      <div class="filter-container-top">
+        <div class="wrapper">
+          <h2>Фильтр:</h2>
+        </div>
+
         <h2>Сортировка:</h2>
         <ul class="sorting">
           <li><button>По цене</button></li>
@@ -85,12 +89,14 @@
           Где это видно по тз?-->
           <li><button>По популярности</button></li>
         </ul>
-        <div class="arrow-down"></div>
-        <div class="arrow-top"></div>
-
+        <div class="arrow-list">
+          <div class="arrow-down"></div>
+          <div class="arrow-top"></div>
+        </div>
       </div>
-
-      <div class="filter-container">
+    </section>
+    <section class="market">
+      <div class="filter-container-left">
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
           <fieldset class="price-sort">
             <legend>Стоимость</legend>
@@ -142,9 +148,7 @@
           <button class="button demonstrate">Показать</button>
         </form>
       </div>
-    </section>
 
-    <section>
       <h2 class="visually-hidden">Список моноподов в продаже</h2>
       <div class="catalog-monopod">
         <ul class="monopod-list">
@@ -166,9 +170,10 @@
             <p class="monopod-image">
               <img src="img/item-2-jpg.png" class="item-2jpg" alt="Pro monopod" width="360" height="380">
             </p>
-            <h3 class="monopod-type"><a href="#">
-                Профессиональная селфи-палка
-                <span class="monopod-price">1500руб</span></a>
+            <h3 class="monopod-type">
+              <a href="#">
+                Профессиональная селфи-палка </a>
+              <span class="monopod-price">1500руб</span>
             </h3>
             <button class="show">В корзину</button>
             <button class="point">Добавить к сравнению</button>
@@ -179,8 +184,11 @@
               <img src="img/item-3-jpg.png" class="item-3jpg">
 
             </p>
-            <h3 class="monopod-type"><a href="#">
-                Непотопляемая селфи-палка <span>2 500 руб</span></a></h3>
+            <h3 class="monopod-type">
+              <a href="#">
+                Непотопляемая селфи-палка </a>
+              <span class="monopod-price">2 500 руб</span>
+            </h3>
             <button class="show">В корзину</button>
             <button class="point">Добавить к сравнению</button>
           </li>
@@ -192,8 +200,9 @@
             </p>
             <h3 class="monopod-type">
               <a href="#">Селфи-палка «Следуй за мной»
-                <span>4 900 руб</span>
-              </a>
+                </a>
+                <span class="monopod-price">4 900 руб</span>
+
             </h3>
             <button class=".button show">В корзину</button>
             <button class="point">Добавить к сравнению</button>
@@ -217,9 +226,9 @@
   </main>
 
   <footer class="main-footer">
-      <div class="container">
+    <div class="container">
       <div class="footer-top">
-          <a class="footer-top-logotip"><img src="img/device.svg" class="footer-logo" alt="DEVICE"></a>
+        <a class="footer-top-logotip"><img src="img/device.svg" class="footer-logo" alt="DEVICE"></a>
 
         <ul class="footer-navi">
           <li class="footer-login">
@@ -249,14 +258,14 @@
         </ul>
 
 
-          <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-htmlacademy" target="_blank"><img src="img/logo-htmlacademy.svg"
-            class="logo-htmlacademy" alt="Логотим HTML Academy">
-       </a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-htmlacademy" target="_blank"><img
+            src="img/logo-htmlacademy.svg" class="logo-htmlacademy" alt="Логотим HTML Academy">
+        </a>
 
 
       </div>
     </div>
-    </footer>
+  </footer>
 </body>
 
 </html>
