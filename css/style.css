@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Gilroy";
-  src: url("fonts/gilroyextrabold.woff"),
-    url("fonts/gilroylight") format("woff");
+  src: local("fonts/gilroyextrabold.woff"),
+    local("fonts/gilroylight") format("woff");
 }
 
 *,
@@ -46,7 +46,8 @@ a {
 
 header {
   margin-top: 21px;
-
+  margin-left: 139px;
+  margin-right: 140px;
 }
 
 .main-navigation {
@@ -391,6 +392,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 
 .footer-navi {
@@ -428,7 +430,7 @@ header {
 .footer-center {
   display: flex;
   align-self: flex-end;
-  width: 1160px;
+  width: 100%;
   margin: 0;
 }
 
@@ -493,6 +495,7 @@ header {
 }
 
 main h1 {
+  padding-left: 201px;
   font-family: Gilroy;
   font-size: 47px;
   font-weight: 800;
@@ -503,6 +506,8 @@ main h1 {
 }
 
 .breadcrumbs {
+  display: flex;
+  padding-left: 201px;
   list-style: none;
 }
 
