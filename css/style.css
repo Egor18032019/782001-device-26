@@ -1,7 +1,17 @@
 @font-face {
   font-family: "Gilroy";
-  src: local("fonts/gilroyextrabold.woff"),
-    local("fonts/gilroylight") format("woff");
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
+    url("../fonts/gilroyextrabold.woff") format("woff");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroylight.woff2") format("woff2"),
+    url("../fonts/gilroylight.woff") format("woff");
+  font-weight: 300;
+  font-display: swap;
 }
 
 *,
@@ -17,7 +27,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: Open Sans, "Arial", sans-serif;
+  font-family: 'Open Sans', "Arial", sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
@@ -35,7 +45,7 @@ a {
 
 .button {
   text-transform: uppercase;
-  font-family: Gilroy;
+  font-family: "Gilroy";
   font-size: 18px;
   font-weight: 800;
   line-height: 1.33;
@@ -50,21 +60,26 @@ header {
   margin-right: 140px;
 }
 
+.header-logo {
+  float: left;
+}
+
 .main-navigation {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 0;
-  width: 1160px;
   background-color: #f0c52e;
-  opacity: 0.5;
-  margin-left: auto;
-  margin-right: auto;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 56px;
 }
 
-/*-как правильно скрыть??*/
 .visually-hidden {
-  display: none;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .header-search {
@@ -77,15 +92,15 @@ header {
 }
 
 .container {
-  width: 1160px;
+  width: 1200px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 ;
 }
 
-.header-top .container {
+.header-wraper {
   display: flex;
-  padding-left: 60px;
-  padding-right: 61px;
+  /* padding-left: 60px;
+  padding-right: 61px; */
   justify-content: space-between;
 }
 
@@ -100,26 +115,35 @@ header {
   /*почему не работает?7 */
 }
 
+.header-contrast {
+  padding-left: 50px;
+}
+
 .header-servis {
   display: flex;
   width: 100%;
-  padding-right: 61px;
-
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+  letter-spacing: 3.6px;
+  text-align: left;
+  color: #000000;
 }
 
 .header-servis-list {
   display: flex;
   width: 540px;
   justify-content: space-between;
+
 }
 
 .header-catalog {
-
   margin-right: auto;
 }
 
 .header-catalog-list {
-  padding-left: 60px;
+  padding-left: 0;
 }
 
 .header-search-text {
@@ -140,7 +164,7 @@ header {
 
 .header-top {
   width: 100%;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-size: 15px;
   font-weight: 300;
   line-height: 2;
@@ -179,7 +203,7 @@ header {
 /* на белом фоне не видно. сделать после фона
 .slides-number {
   color: #ffffff;
-  font-family: Gilroy;
+  font-family: "Gilroy";
   font-size: 79px;
   font-weight: 800;
   line-height: 1;
@@ -210,7 +234,7 @@ header {
 }
 
 .slides-feature {
-  font-family: Gilroy;
+  font-family: "Gilroy";
   font-size: 47px;
   font-weight: 800;
   line-height: 1.19;
@@ -220,7 +244,7 @@ header {
 }
 
 .feature-item {
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-size: 15px;
   font-weight: 300;
   line-height: 2;
@@ -230,7 +254,7 @@ header {
 }
 
 .feature-tr {
-  font-family: Gilroy;
+  font-family: "Gilroy";
   font-size: 36px;
   font-weight: 300;
   line-height: 1.33;
@@ -240,7 +264,7 @@ header {
 }
 
 .feature-tr-bottom {
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-size: 13px;
   font-weight: 300;
   line-height: 1.54;
@@ -251,7 +275,7 @@ header {
 
 /* как делать выход цвета за текст?*/
 .slides-detail {
-  font-family: Gilroy;
+  font-family: "Gilroy";
   font-size: 18px;
   font-weight: 800;
   line-height: 1.33;
@@ -271,31 +295,58 @@ header {
   display: flex;
   justify-content: space-between;
   list-style: none;
+  padding: 0;
 }
 
 .popular p {
-  font-family: Gilroy;
+  font-family: "Gilroy";
   font-size: 18px;
   font-weight: 800;
   line-height: 1.33;
   letter-spacing: 0.18px;
   text-align: left;
   color: #000000;
+  margin-top: 0;
+  padding-top: 39px;
 }
 
-/* как сделать чтобы буквы выглядывали?*/
-.service {
-  width: auto;
+.popular-item {
+  width: 160px;
+  min-height: 160px;
   display: flex;
+  justify-content: center;
+  background-color: #f0c52e;
+}
+
+.popular {
+  width: 160px;
+}
+
+.popular a {
+  min-height: 160px;
+  padding-top: 30%;
+
+}
+
+.popular-monopod {
+  padding: 0;
+  padding-top: 20%;
+}
+
+.service {
+    display: flex;
+    width:1530px;
   background-color: #e5e5e5;
   background-position: bottom;
-  background-size: 90%;
+
 }
 
 .controls-list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-left: 163px;
+  border-right: 7px solid black;
 }
 
 .service-list,
@@ -304,7 +355,21 @@ header {
 }
 
 .controls-item {
-  font-family: Gilroy;
+  width: 278px;
+  min-height: 40px;
+  background-color: #000000;
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  text-align: center;
+  color: yellow;
+}
+
+.controls-list {
+  width: 417px;
+  margin-top: -16px;
+  font-family: "Gilroy";
   font-size: 18px;
   font-weight: 800;
   letter-spacing: 3.6px;
@@ -313,7 +378,9 @@ header {
 }
 
 .servise-item h2 {
-  font-family: Gilroy;
+  margin-top: -43px;
+  margin-bottom: 30px;
+  font-family: "Gilroy";
   font-size: 47px;
   font-weight: 800;
   line-height: 1.02;
@@ -323,13 +390,28 @@ header {
 }
 
 .servise-item p {
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-size: 15px;
   font-weight: 300;
   line-height: 2;
   letter-spacing: 0.15px;
   text-align: left;
   color: #464646;
+}
+
+.delivery-text {
+  width: 426px;
+  min-height: 75px;
+}
+
+.garant-text {
+  width: 436px;
+  min-height: 75px;
+}
+
+.credit-text {
+  width: 425px;
+  min-height: 75px;
 }
 
 .logotips .container {
@@ -344,16 +426,42 @@ header {
 
 .map {
   width: 462px;
+  margin-right: 139px;
+}
 
+.map-text {
+  width: 462px;
+
+}
+
+.map-delevery {
+  padding-left: 15px;
+  font-family: "Gilroy";
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 2.5;
+  /* letter-spacing: 0.5px; */
+  text-align: left;
+  color: #000000;
 }
 
 .about {
   width: 560px;
+  min-height: 46px;
+}
+
+.about-text {
+  width: 560px;
+}
+
+.about-map {
+  width: 560px;
+  min-height: 222px;
 }
 
 .map h2,
 .about h2 {
-  font-family: Gilroy;
+  font-family: "Gilroy";
   font-size: 47px;
   font-weight: 800;
   line-height: 1.02;
@@ -364,7 +472,7 @@ header {
 
 .map p,
 .about p {
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-size: 15px;
   font-weight: 300;
   line-height: 2;
@@ -372,8 +480,11 @@ header {
   color: #464646;
 }
 
-.contacts-about {
-  font-family: Gilroy;
+section .contacts-about {
+  width: 260px;
+  margin-top: 82px;
+  background-color: yellow;
+  font-family: "Gilroy";
   font-size: 18px;
   font-weight: 800;
   line-height: 1.33;
@@ -384,8 +495,8 @@ header {
 }
 
 .main-footer {
-  width: 100%;
-  padding-top: 65px;
+  width: auto;
+  padding-top: 45px;
   padding-left: 139px;
   padding-right: 140px;
   padding-bottom: 66px;
@@ -396,7 +507,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  width: 1160px;
 }
 
 .footer-navi {
@@ -406,14 +517,17 @@ header {
 
 }
 
-.footer-top-logotip {
+.footer-top-logo {
+  /* залить цветом */
+  fill: yellow;
   margin-right: auto;
+  margin-top:auto;
 }
 
 .footer-service {
   display: flex;
   width: 500px;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: auto;
 }
 
@@ -422,6 +536,8 @@ header {
   width: 142px;
   justify-content: space-between;
   margin: auto;
+  padding: 0;
+
 }
 
 .footer-top {
@@ -433,9 +549,8 @@ header {
 
 .footer-center {
   display: flex;
-  align-self: flex-end;
-  width: 100%;
-  margin: 0;
+ padding-top: 32px;
+ justify-content: center;
 }
 
 .footer-bottom {
@@ -446,13 +561,13 @@ header {
 }
 
 .footer-htmlacademy {
-  display: flex;
 
+  fill: yellow;
 }
 
 .footer-navi a {
   opacity: 0.7;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-size: 15px;
   font-weight: 300;
   font-style: normal;
@@ -465,7 +580,7 @@ header {
 
 .footer-center address,
 .footer-telephone a {
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-size: 15px;
   font-weight: 300;
   line-height: 2;
@@ -480,7 +595,8 @@ header {
 }
 
 .footer-service a {
-  font-family: Gilroy;
+   text-transform: uppercase;
+  font-family: "Gilroy";
   font-size: 18px;
   font-weight: 800;
   line-height: 1.33;
@@ -500,7 +616,7 @@ header {
 
 main h1 {
   padding-left: 201px;
-  font-family: Gilroy;
+  font-family: "Gilroy";
   font-size: 47px;
   font-weight: 800;
   line-height: 1.02;
@@ -520,7 +636,7 @@ main h1 {
 .breadcrumbs a {
   padding-left: 16px;
   /*стрелочки нарисовать*/
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-size: 14px;
   font-weight: 300;
   line-height: 1.71;
@@ -530,7 +646,9 @@ main h1 {
 }
 
 .filters {
-  width: 100%;
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .filter-container-top {
@@ -539,7 +657,10 @@ main h1 {
   align-items: center;
   background-color: #ebebeb;
 }
+.filter-container-top .container{
+  display: flex;
 
+}
 .sorting {
   display: flex;
   list-style: none;
@@ -549,6 +670,14 @@ main h1 {
   width: 467px;
   background-color: #d9d9d9;
   padding-left: 201px;
+  flex-shrink: 0;
+  margin-left: -140px;
+}
+.wrapper-left{
+  width: 980px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 74px;
 }
 
 .arrow-list {
@@ -560,7 +689,7 @@ main h1 {
   margin-left: 139px;
 }
 
-.arrow-down {
+/* .arrow-down {
   display: inline-block;
   border: 10px solid white;
   border-bottom-color: #000000;
@@ -576,10 +705,10 @@ main h1 {
   border-bottom-width: 0px;
   border-right-color: transparent;
   border-left-color: transparent;
-}
+} */
 
 .filters h2 {
-  font-family: Gilroy;
+  font-family: "Gilroy";
   font-size: 16px;
   font-weight: 800;
   line-height: 2.5;
@@ -592,13 +721,21 @@ main h1 {
   width: 467px;
   padding-left: 201px;
   background-color: #ebebeb;
+  flex-shrink: 0;
+  margin-left: -140px;
+
 }
 
 .market {
   display: flex;
 }
-
+.market .container{
+  display: flex;
+}
 .catalog-monopod {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   padding-left: 73px;
 
 }
@@ -618,7 +755,8 @@ main h1 {
 }
 
 .filter legend {
-  font-family: Gilroy;
+  margin-top:69px;
+  font-family: "Gilroy";
   font-size: 18px;
   font-weight: 800;
   line-height: 12px;
@@ -653,7 +791,7 @@ main h1 {
 
 .point {
   display: none;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-size: 13px;
   font-weight: 300;
   line-height: 2.77;
@@ -663,7 +801,7 @@ main h1 {
 }
 
 .monopod-type {
-  font-family: Gilroy;
+  font-family: "Gilroy";
   font-size: 18px;
   font-weight: 800;
   line-height: 1.33;
@@ -673,7 +811,7 @@ main h1 {
 }
 
 .monopod-price {
-  font-family: Gilroy;
+  font-family: "Gilroy";
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
@@ -711,7 +849,7 @@ main h1 {
 }
 
 .pagination-list a {
-  font-family: Gilroy;
+  font-family: "Gilroy";
   font-size: 16px;
   font-weight: 800;
   font-style: normal;
@@ -723,7 +861,7 @@ main h1 {
 }
 
 .pagination-item a {
-  font-family: Gilroy;
+  font-family: "Gilroy";
   font-size: 16px;
   font-weight: 800;
   line-height: 1.5;
@@ -733,7 +871,7 @@ main h1 {
 }
 
 .pagination-current a {
-  font-family: Gilroy;
+  font-family: "Gilroy";
   font-size: 16px;
   font-weight: 800;
   line-height: 1.5;
@@ -791,7 +929,7 @@ header {
   width: 118px;
   height: 15px;
   background-color: #f0c52e;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-size: 15px;
   font-weight: 300;
   font-style: normal;
@@ -854,7 +992,7 @@ header {
 }
 
 .header--catalog {
-  font-family: Gilroy, "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 1.33;
@@ -1022,7 +1160,7 @@ float: left;
 .footer-garant a,
 .footer-delivery a {
   height: 12px;
-  font-family: Gilroy;
+  font-family: "Gilroy";
   font-size: 18px;
   font-weight: 800;
   padding-right: 38px;

@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy Моноподы: Девайс</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
 
 </head>
 
 <body>
-  <header>
+  <header class="container">
     <div class="main-navigation">
       <a class="header-logo">
         <img class="header-device" src="img/device.png" alt="Логотип магазина гаджетов DEVICE" width="163" height="35">
       </a>
 
       <div class="header-top">
-        <div class="container">
+        <div class="header-wraper">
           <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
             <input name="search" class="header-search-text" placeholder="Поиск по сайту" type="text">
             <button class="header-search-button" type="submit">Найти</button>
@@ -64,163 +64,164 @@
       </div>
     </div>
   </header>
-
   <main>
-
-    <h1>Моноподы для селфи</h1>
-    <ul class="breadcrumbs">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="#">Каталог товаров</a></li>
-      <li class="breadcrumbs-current"><a>Моноподы для селфи</a> </li>
-    </ul>
-
+    <div class="container">
+      <h1>Моноподы для селфи</h1>
+      <ul class="breadcrumbs">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="#">Каталог товаров</a></li>
+        <li class="breadcrumbs-current"><a>Моноподы для селфи</a> </li>
+      </ul>
+    </div>
     <section class="filters">
 
       <div class="filter-container-top">
-        <div class="wrapper">
-          <h2>Фильтр:</h2>
-        </div>
+        <div class="container">
+          <div class="wrapper">
+            <h2>Фильтр:</h2>
+          </div>
+          <div class="wrapper-left">
+            <h2>Сортировка:</h2>
 
-        <h2>Сортировка:</h2>
-        <ul class="sorting">
-          <li><button>По цене</button></li>
-          <li><a href="#">По типу</a></li>
-          <!--Не могу понять должна быть сылка или кнопка.
-          Где это видно по тз?-->
-          <li><button>По популярности</button></li>
-        </ul>
-        <div class="arrow-list">
-          <div class="arrow-down"></div>
-          <div class="arrow-top"></div>
+            <ul class="sorting">
+              <li><a href="#">По цене</a></li>
+              <li><a href="#">По типу</a></li>
+              <!--все должно быть сылками-->
+              <li><a href="#">По популярности</a></li>
+              <li><a href="#">По порядку</a></li>
+              <li><a href="#">В обратном порядке</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
     <section class="market">
-      <div class="filter-container-left">
-        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset class="price-sort">
-            <legend>Стоимость</legend>
+      <div class="container">
+        <div class="filter-container-left">
+          <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+            <fieldset class="price-sort">
+              <legend>Стоимость</legend>
 
-            <div class="price-sort-min">от 0</div>
-            <div class="price-sort-max">до 5000 </div>
-          </fieldset>
-          <fieldset class="color">
-            <legend>Цвет</legend>
-            <ul class="color-list">
-              <li>
-                <input type="checkbox" name="black" id="color-black" checked>
-                <label for="color-black">Черный</label>
-              </li>
-              <li>
-                <input type="checkbox" name="white" id="color-white">
-                <label for="color-white">Белый</label>
-              </li>
-              <li>
-                <input type="checkbox" name="blue" id="color-blue" checked>
-                <label for="color-blue">Синий</label>
-              </li>
-              <li>
-                <input type="checkbox" name="red" id="color-red" checked>
-                <label for="color-red">Красный</label>
-              </li>
-              <li>
-                <input type="checkbox" name="pink" id="color-pink">
-                <label for="color-pink">Розовый</label>
-              </li>
-            </ul>
-          </fieldset>
-          <!--Черная линия-->
-          <fieldset>
-            <legend class="bluetooth">
-              Bluetooth
-            </legend>
-            <ul class="bluetooth-list">
-              <li>
-                <input type="radio" name="bluetooth-group" value="bluetooth-yes" id="bluetooth-yes" checked>
-                <label for="bluetooth-yes">Есть</label>
-              </li>
-              <li>
-                <input type="radio" name="bluetooth-group" value="bluetooth-no" id="bluetooth-no">
-                <label for="bluetooth-no">Нет</label>
-              </li>
-            </ul>
-          </fieldset>
-          <button class="button demonstrate">Показать</button>
-        </form>
-      </div>
+              <div class="price-sort-min">от 0</div>
+              <div class="price-sort-max">до 5000 </div>
+            </fieldset>
+            <fieldset class="color">
+              <legend>Цвет</legend>
+              <ul class="color-list">
+                <li>
+                  <input type="checkbox" name="black" id="color-black" checked>
+                  <label for="color-black">Черный</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="white" id="color-white">
+                  <label for="color-white">Белый</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="blue" id="color-blue" checked>
+                  <label for="color-blue">Синий</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="red" id="color-red" checked>
+                  <label for="color-red">Красный</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="pink" id="color-pink">
+                  <label for="color-pink">Розовый</label>
+                </li>
+              </ul>
+            </fieldset>
+            <!--Черная линия-->
+            <fieldset>
+              <legend class="bluetooth">
+                Bluetooth
+              </legend>
+              <ul class="bluetooth-list">
+                <li>
+                  <input type="radio" name="bluetooth-group" value="bluetooth-yes" id="bluetooth-yes" checked>
+                  <label for="bluetooth-yes">Есть</label>
+                </li>
+                <li>
+                  <input type="radio" name="bluetooth-group" value="bluetooth-no" id="bluetooth-no">
+                  <label for="bluetooth-no">Нет</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="button demonstrate">Показать</button>
+          </form>
+        </div>
 
-      <h2 class="visually-hidden">Список моноподов в продаже</h2>
-      <div class="catalog-monopod">
-        <ul class="monopod-list">
-          <li class="monopod">
-            <p class="monopod-image">
-              <img src="img/item-1-jpg.png" class="item-1jpg" alt="Любительская селфи палка" width="360px"
-                height="380px">
-            </p>
+        <h2 class="visually-hidden">Список моноподов в продаже</h2>
+        <div class="catalog-monopod">
+          <ul class="monopod-list">
+            <li class="monopod">
+              <p class="monopod-image">
+                <img src="img/item-1-jpg.png" class="item-1jpg" alt="Любительская селфи палка" width="360px"
+                  height="380px">
+              </p>
 
-            <h3 class="monopod-type">
-              <a href="#">Любительская селфи-палка</a>
-              <span class="monopod-price">500руб</span>
-            </h3>
-            <button class="show">В корзину</button>
-            <button class="point">Добавить к сравнению</button>
-          </li>
+              <h3 class="monopod-type">
+                <a href="#">Любительская селфи-палка</a>
+                <span class="monopod-price">500руб</span>
+              </h3>
+              <button class="show">В корзину</button>
+              <button class="point">Добавить к сравнению</button>
+            </li>
+            <li class="monopod">
+              <p class="monopod-image">
+                <img src="img/item-2-jpg.png" class="item-2jpg" alt="Pro monopod" width="360" height="380">
+              </p>
+              <h3 class="monopod-type">
+                <a href="#">
+                  Профессиональная селфи-палка </a>
+                <span class="monopod-price">1500руб</span>
+              </h3>
+              <button class="show">В корзину</button>
+              <button class="point">Добавить к сравнению</button>
+            </li>
+            <li class="monopod">
+              <p class="monopod-image">
 
-          <li class="monopod">
-            <p class="monopod-image">
-              <img src="img/item-2-jpg.png" class="item-2jpg" alt="Pro monopod" width="360" height="380">
-            </p>
-            <h3 class="monopod-type">
-              <a href="#">
-                Профессиональная селфи-палка </a>
-              <span class="monopod-price">1500руб</span>
-            </h3>
-            <button class="show">В корзину</button>
-            <button class="point">Добавить к сравнению</button>
-          </li>
-          <li class="monopod">
-            <p class="monopod-image">
+                <img src="img/item-3-jpg.png" class="item-3jpg">
 
-              <img src="img/item-3-jpg.png" class="item-3jpg">
+              </p>
+              <h3 class="monopod-type">
+                <a href="#">
+                  Непотопляемая селфи-палка </a>
+                <span class="monopod-price">2 500 руб</span>
+              </h3>
+              <button class="show">В корзину</button>
+              <button class="point">Добавить к сравнению</button>
+            </li>
+            <li class="monopod monopod-new">
+              <p class="monopod-image">
 
-            </p>
-            <h3 class="monopod-type">
-              <a href="#">
-                Непотопляемая селфи-палка </a>
-              <span class="monopod-price">2 500 руб</span>
-            </h3>
-            <button class="show">В корзину</button>
-            <button class="point">Добавить к сравнению</button>
-          </li>
-          <li class="monopod monopod-new">
-            <p class="monopod-image">
+                <img src="img/item-4-jpg.png" class="item-4jpg">
 
-              <img src="img/item-4-jpg.png" class="item-4jpg">
-
-            </p>
-            <h3 class="monopod-type">
-              <a href="#">Селфи-палка «Следуй за мной»
+              </p>
+              <h3 class="monopod-type">
+                <a href="#">Селфи-палка «Следуй за мной»
                 </a>
                 <span class="monopod-price">4 900 руб</span>
 
-            </h3>
-            <button class=".button show">В корзину</button>
-            <button class="point">Добавить к сравнению</button>
-          </li>
-        </ul>
+              </h3>
+              <button class=".button show">В корзину</button>
+              <button class="point">Добавить к сравнению</button>
+            </li>
 
-        <!-- странички-->
-        <ul class="pagination-list">
-          <li><a href="#">НАЗАД</a></li>
-          <ul class="pagination-items">
-            <li class="pagination-item pagination-current"><a>1</a></li>
-            <li class="pagination-item"><a href="#">2</a></li>
-            <li class="pagination-item"><a href="#">3</a></li>
           </ul>
-          <li> <a href="#">ВПЕРЁД</a></li>
-        </ul>
-      </div>
 
+          <!-- странички-->
+          <ul class="pagination-list">
+            <li><a href="#">НАЗАД</a></li>
+            <ul class="pagination-items">
+              <li class="pagination-item pagination-current"><a>1</a></li>
+              <li class="pagination-item"><a href="#">2</a></li>
+              <li class="pagination-item"><a href="#">3</a></li>
+            </ul>
+            <li> <a href="#">ВПЕРЁД</a></li>
+          </ul>
+        </div>
+      </div>
     </section>
 
   </main>
@@ -228,7 +229,12 @@
   <footer class="main-footer">
     <div class="container">
       <div class="footer-top">
-        <a class="footer-top-logotip"><img src="img/device.svg" class="footer-logo" alt="DEVICE"></a>
+        <a class="footer-top-logo">
+          <svg width="163" height="35" viewBox="0 0 163 35">
+            <path
+              d="M-.151.702v33.6h13.532a15.72 15.72 0 0 0 11.72-4.824 16.458 16.458 0 0 0 4.712-11.976 16.458 16.458 0 0 0-4.712-11.976A15.723 15.723 0 0 0 13.381.702H-.151zM7.582 26.91V8.091h5.8a8.646 8.646 0 0 1 6.5 2.568 9.407 9.407 0 0 1 2.489 6.84 9.406 9.406 0 0 1-2.489 6.84 8.642 8.642 0 0 1-6.5 2.568h-5.8zm34.8-5.952h12.082v-7.3H42.378V8.091h13.291V.702H34.645v33.6H55.91V26.91H42.378v-5.952zm36.343 13.344L89.744.702h-8.458l-7.491 24.72L66.304.702h-8.457l11.019 33.6h9.859zm14.4 0h7.733V.702h-7.733v33.6zm38.615-1.416a15.506 15.506 0 0 0 6.041-5.688l-6.67-3.84a7.482 7.482 0 0 1-3.165 3.024 9.87 9.87 0 0 1-4.664 1.1 9.595 9.595 0 0 1-7.177-2.736 9.909 9.909 0 0 1-2.682-7.248 9.909 9.909 0 0 1 2.682-7.248 9.595 9.595 0 0 1 7.177-2.736 9.897 9.897 0 0 1 4.639 1.08 7.592 7.592 0 0 1 3.19 3.048l6.67-3.84a15.873 15.873 0 0 0-6.09-5.688 17.42 17.42 0 0 0-8.409-2.088c-9.779-.272-17.797 7.691-17.591 17.472-.208 9.781 7.809 17.747 17.588 17.476a17.52 17.52 0 0 0 8.458-2.088zm17.881-11.928h12.082v-7.3h-12.085V8.091h13.29V.702h-21.023v33.6h21.265V26.91h-13.532v-5.952z" />
+          </svg>
+        </a>
 
         <ul class="footer-navi">
           <li class="footer-login">
@@ -252,16 +258,41 @@
       <div class="footer-bottom">
         <!--тут должна быть Желтая линиия -->
         <ul class="footer-social">
-          <li class="footer-social-fb"><a href="//facebook.com/" aria-label="Фейсбук">ф</a></li>
-          <li><a href="#" class="footer-social-in" aria-label="Инстаграм">и</a></li>
-          <li><a href="#" class="footer-social-te" aria-label="Телеграм">т</a></li>
+          <li class="footer-social-fb">
+            <a href="//facebook.com/" aria-label="Фейсбук">
+              <svg width="32" height="32" viewBox="0 0 32 32">
+                <path fill="#FFF"
+                  d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062 9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902 1.353-3.445 3.021-3.445h3.021v3.445z" />
+              </svg>
+
+            </a></li>
+          <li><a href="#" class="footer-social-in" aria-label="Инстаграм">
+              <svg width="32" height="32" viewBox="0 0 32 32">
+                <g fill="#FFF">
+                  <path
+                    d="M20.916 16a4.938 4.938 0 1 1-9.877 0c0-.394.051-.773.138-1.14h-.897v6.838h11.396V14.86h-.897c.086.367.137.746.137 1.14z" />
+                  <path
+                    d="M15.978 18.659c1.466 0 2.659-1.193 2.659-2.659s-1.193-2.659-2.659-2.659c-1.466 0-2.659 1.193-2.659 2.659s1.192 2.659 2.659 2.659zM18.637 10.302h3.039v3.039h-3.039z" />
+                  <path
+                    d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.955 21.698a2.285 2.285 0 0 1-2.279 2.279H10.279A2.285 2.285 0 0 1 8 21.698V10.302a2.286 2.286 0 0 1 2.279-2.279h11.396a2.286 2.286 0 0 1 2.279 2.279v11.396z" />
+                </g>
+              </svg>
+            </a></li>
+          <li><a href="#" class="footer-social-te" aria-label="Телеграм">
+              <svg width="32" height="32" viewBox="0 0 32 32">
+                <path fill="#FFF"
+                  d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.944 12.809c-.251 6.516-3.463 10.832-10.992 10.702h-.486c-.447 0-4.543-.443-5.344-1.823 2.479.19 4.247-.406 5.12-1.136-1.048-.289-2.923-.461-3.251-2.848.384.104.618.221 1.299.113-1.307-.824-2.758-1.519-2.679-3.643.311.317 1.164.518 1.46.457-.768-.233-2.149-3.244-.974-4.781 1.984 1.79 4.075 3.482 7.804 3.643.227-2.214 1.24-3.699 3.168-4.325 1.84-.479 3.255.26 3.901 1.138.737-.224 1.453-.466 2.193-.685-.004.833-.569 1.463-.935 1.709.747.165 1.423-.475 1.423-.475-.184.963-1.094 1.725-1.707 1.954z" />
+                </svg>
+            </a></li>
         </ul>
 
 
-        <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-htmlacademy" target="_blank"><img
-            src="img/logo-htmlacademy.svg" class="logo-htmlacademy" alt="Логотим HTML Academy">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-htmlacademy" target="_blank">
+          <svg width="26.943" height="34.09" viewBox="0 0 26.943 34.09">
+            <path
+              d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z" />
+          </svg>
         </a>
-
 
       </div>
     </div>
