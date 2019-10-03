@@ -90,7 +90,6 @@ header.container {
   width: 108px;
 }
 
-
 .header-search-button {
   display: none;
 }
@@ -445,6 +444,7 @@ header.container {
 }
 
 .map-delevery {
+  padding-top: 35px;
   padding-left: 15px;
   font-family: "Gilroy";
   font-size: 16px;
@@ -467,6 +467,7 @@ header.container {
 .about-map {
   width: 560px;
   min-height: 222px;
+  margin-top:44px;
 }
 
 .map h2,
@@ -505,7 +506,7 @@ section .contacts-about {
 }
 
 .main-footer {
-  width: 1480px;
+  width: 1440px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 45px;
@@ -776,6 +777,90 @@ main h1 {
   border: none;
 }
 
+.price-sort legend {
+  padding-top: 87px;
+  margin-bottom: 41px;
+}
+
+.price-range {
+  width: 201px;
+  font-family: "Gilroy";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.71;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.price-controls {
+  position: relative;
+  min-height: 32px;
+  font-size: 0;
+}
+
+
+
+.range-controls {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.range-controls .bar {
+  width: 50%;
+  height: 2px;
+  background-color: #91c92f;
+}
+
+.range-controls .scale {
+  min-height: 2px;
+  background-color: #dbdbdb;
+}
+
+.range-toogle {
+  position: absolute;
+  top: -10px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  background: red;
+  /* почеу не видно центр ?  */
+  border: 10px solid #ffffff;
+}
+
+.range-toogle-min {
+  left: 0;
+}
+
+.range-toogle-max {
+  left: 50%;
+}
+
+.price-controls label {
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  font-family: "Gilroy";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.71;
+}
+
+.price-controls input {
+  width: 40px;
+  color: inherit;
+  font: inherit;
+  border: none;
+
+  background: inherit;
+}
+
+.price-controls .max-price,
+.price-controls .min-price {
+  width: 100px;
+  text-align: left;
+}
+
 .filter legend {
   margin-top: 69px;
   font-family: "Gilroy";
@@ -797,20 +882,64 @@ main h1 {
   padding-bottom: 17px;
 }
 
-/* input[type="radio"], input[type="checkbox"] {
-  display: none;
-  }
+/* Костомные чекбоксы */
 
-  input[type="radio"] + label::before, input[type="checkbox"] + label::before {
-    content:"";
-    display: inline-block;
-    width: 23px;
-    height: 23px;
-    margin-right: 8px;
-    vertical-align: middle;
-    border: 3px solid #ffffff;
-    box-shadow: 0 0 0 3px #bdc3c7;
-    } */
+.check-input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.check::before {
+  content: "";
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  margin-right: 1.2em;
+  vertical-align: middle;
+}
+
+/* когда чекет */
+.check-input:checked+.check::before {
+  background-image: url("../img/checkbox-on.svg");
+}
+
+/* фокус и актив */
+.check-input:focus+.check,
+.check-input:active+.check {
+  font-weight: 600;
+  /* чтобы проверить */
+}
+
+/* радио кнопки */
+.radio::before {
+  content: "";
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin-right: 1.2em;
+  vertical-align: middle;
+}
+
+.check-input:checked+.radio::before {
+  background-image: url("../img/radio-on.svg");
+}
+
+.radio {
+  display: block;
+  padding-bottom: 14px;
+}
+
+.check-input:focus+.radio,
+.check-input:active+.radio {
+  font-weight: 600;
+  /* чтобы проверить */
+}
 
 .monopod-list {
   list-style: none;
