@@ -68,14 +68,14 @@ header.container {
 
 .main-navigation {
   width: 1160px;
-  min-height: 186px;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background-color: #f0c52e;
   padding-left: 60px;
   padding-right: 60px;
-  padding-bottom: 56px;
+  padding-bottom: 18px;
 }
 
 .visually-hidden {
@@ -86,9 +86,9 @@ header.container {
   margin: -1px;
 }
 
-.header-search {
+/* .header-search {
   width: 108px;
-}
+} */
 
 .header-search-button {
   display: none;
@@ -118,8 +118,42 @@ header.container {
   /*почему не работает?7 */
 }
 
+.header-login::before {
+  content: "";
+  width: 13px;
+  height: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.1em;
+  background-image: url("../img/user.svg");
+  background-repeat: no-repeat;
+}
+
 .header-contrast {
-  padding-left: 50px;
+  padding-left: 218px;
+}
+
+.header-contrast::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.1em;
+  background-image: url("../img/compare.svg");
+  background-repeat: no-repeat;
+}
+
+.header-basket::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.1em;
+  background-image: url("../img/cart.svg");
+  background-repeat: no-repeat;
+
 }
 
 .header-servis {
@@ -142,12 +176,28 @@ header.container {
   text-transform: uppercase;
 }
 
+.header-delevery {
+  padding-right: 80px;
+}
+
 .header-catalog {
   margin-right: auto;
 }
 
 .header-catalog-list {
   padding-left: 0;
+}
+
+.header-search::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.1em;
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+
 }
 
 .header-search-text {
@@ -204,7 +254,7 @@ header.container {
   opacity: 0.3;
 }
 
-/* на белом фоне не видно. сделать после фона
+
 .slides-number {
   color: #ffffff;
   font-family: "Gilroy";
@@ -213,19 +263,24 @@ header.container {
   line-height: 1;
   letter-spacing: 1.79px;
 }
-*/
+
 .main-sliders-controls {
   display: flex;
-  list-style: none;
   width: 122px;
+  position: absolute;
+  left: 1305px;
+  list-style: none;
   justify-content: space-around;
-  /* после лекции настроить */
+
 }
 
 .main-sliders {
   display: flex;
   list-style: none;
+  margin-left: 35px;
+
 }
+
 
 .controls-list input {
   appearance: none;
@@ -237,12 +292,28 @@ header.container {
 .main-sliders li .slider-1png{
   transform:rotate(90deg);
 }*/
+.slides {
+  display: flex;
+}
+
+.slides-text {
+  width: 50%;
+  padding-top:36px;
+  padding-left:125px;
+}
+
+.slides-text table {
+  padding-top: 45px;
+}
+
 .slides-two,
 .slides-three {
   display: none;
 }
 
 .slides-feature {
+  width:479px;
+  margin-bottom: 20px;
   font-family: "Gilroy";
   font-size: 47px;
   font-weight: 800;
@@ -253,11 +324,13 @@ header.container {
 }
 
 .feature-item {
+  width:479px;
+  padding-bottom: 35px;
+
   font-family: 'Open Sans';
   font-size: 15px;
   font-weight: 300;
   line-height: 2;
-  letter-spacing: 0.15px;
   text-align: left;
   color: #464646;
 }
@@ -332,8 +405,11 @@ header.container {
 }
 
 .popular a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 160px;
-  padding-top: 30%;
+
 
 }
 
@@ -344,21 +420,29 @@ header.container {
 
 .service {
   display: flex;
-  width: 1530px;
+  width: 100%;
   background-color: #e5e5e5;
   background-position: bottom;
+}
 
+.service .container {
+  display: flex;
+}
+
+.service-slider-slides {
+  padding-left: 117px;
 }
 
 .controls-list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 417px;
+  width: 277px;
   margin-top: -16px;
-  margin-right: 107px;
-  padding-left: 163px;
+  padding: 0;
+
   border-right: 7px solid black;
+
   font-family: "Gilroy";
   font-size: 18px;
   font-weight: 800;
@@ -467,7 +551,7 @@ header.container {
 .about-map {
   width: 560px;
   min-height: 222px;
-  margin-top:44px;
+  margin-top: 44px;
 }
 
 .map h2,
@@ -506,7 +590,7 @@ section .contacts-about {
 }
 
 .main-footer {
-  width: 1440px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 45px;
@@ -531,10 +615,22 @@ section .contacts-about {
 }
 
 .footer-top-logo {
-  /* залить цветом */
   fill: yellow;
   margin-right: auto;
   margin-top: auto;
+}
+
+.footer-login::before {
+  content: "";
+  width: 13px;
+  height: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.1em;
+  background-image: url("../img/user.svg");
+  background-repeat: no-repeat;
+  /* fill: yellow; не работает.
+  если менять в свг то в хедере становиться желтым  */
 }
 
 .footer-service {
@@ -622,9 +718,128 @@ section .contacts-about {
   color: #ffc600;
 }
 
-.contacts-open,
-.contacts-write {
+.modal-map {
   display: none;
+  top: 5%;
+  left: 50%;
+  margin-left: -480px;
+  width: 960px;
+  box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+}
+
+.modal-write {
+  display: none;
+  width: 960px;
+  top: 10%;
+  left: 50%;
+  margin-left: -480px;
+  padding: 75px 98px 100px 92px;
+  box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+}
+
+.modal-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 55px;
+  height: 55px;
+  background-color: rgb(235, 166, 38);
+  border: 20px solid rgb(235, 166, 38);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-send {
+  margin-top: 55px;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: -18px;
+  width: 52px;
+  height: 3px;
+
+  background-color: white;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal {
+  position: fixed;
+  color: black;
+  background-color: white;
+}
+
+.feedback-form label {
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-weight: 800;
+
+  line-height: 1.33;
+  text-align: left;
+  color: #000000;
+}
+
+.feedback-form input {
+  width: 360px;
+  min-height: 50px;
+  display: flex;
+  padding-left: 20px;
+  font-family: "OpenSans";
+  font-size: 14px;
+
+  line-height: 1.29;
+  text-align: left;
+  color: rgba(70, 70, 70, 0.4);
+  background-color: rgba(70, 70, 70, 0.2);
+}
+
+.feedback-form input:focus {
+  background-color: #ffffff;
+  color: #464646;
+}
+
+.feedback-textarea input:invalid {
+  background-color: #f6dada;
+  /* почему не закрашиват ?? */
+}
+
+.feedback-person {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedback-textarea {
+  margin-top: 20px;
+
+}
+
+.feedback-textarea textarea {
+  width: 100%;
+  min-height: 156px;
+  padding: 20px;
+
+  font-family: "OpenSans";
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: left;
+  color: rgba(70, 70, 70, 0.4);
+  background-color: rgba(70, 70, 70, 0.2);
+}
+
+.feedback-textarea textarea:focus {
+
+  background-color: #ffffff;
+  color: #464646;
 }
 
 main h1 {
@@ -659,13 +874,13 @@ main h1 {
 }
 
 .filters {
-  width: 1440px;
+
   margin-left: auto;
   margin-right: auto;
 }
 
 .filter-container-top {
-  width: 1440px;
+  width: 100%;
   min-height: 71px;
   display: flex;
   align-items: center;
@@ -688,7 +903,7 @@ main h1 {
   background-color: #d9d9d9;
   padding-left: 201px;
   flex-shrink: 0;
-  margin-left: -120px;
+  margin-left: -140px;
 }
 
 .wrapper-left {
@@ -736,17 +951,19 @@ main h1 {
 }
 
 .filter-container-left {
-  width: 467px;
+  width: 327px;
   padding-left: 201px;
   background-color: #ebebeb;
   flex-shrink: 0;
-  margin-left: -50px;
+  padding-right: 100px;
+  padding-left: 20px;
 
 }
 
 .market {
   display: flex;
-  margin-left: -140px;
+  width: 100%;
+  background-color: #ebebeb;
 }
 
 .market .container {
@@ -759,6 +976,7 @@ main h1 {
   flex-shrink: 0;
   justify-content: center;
   flex-wrap: wrap;
+  background-color: white;
 
 
 }
@@ -770,7 +988,61 @@ main h1 {
 }
 
 .monopod-list li {
+  position: relative;
   width: 360px;
+}
+
+.show {
+  display: none;
+  padding: 0;
+  font-family: "Gilroy";
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  text-align: center;
+  color: #000000
+}
+
+.point {
+  display: none;
+  padding: 0;
+  font-family: 'Open Sans';
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.13px;
+  text-align: center;
+  color: black;
+  opacity: 0.4;
+}
+
+.monopod .point,
+.monopod .show {
+  width: 160px;
+  margin-bottom: 33px;
+  border: none;
+}
+
+.monopod .actions {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-left: -120px;
+  width: 200px;
+  min-height: 58px;
+  padding: 40px;
+
+  z-index: 10;
+}
+
+.monopod-new {
+  background-image: url("../img/search.svg");
+  background-position: 50% 10%;
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-origin: border-box;
 }
 
 .filter fieldset {
@@ -851,14 +1123,17 @@ main h1 {
   color: inherit;
   font: inherit;
   border: none;
-
   background: inherit;
+  text-align: left;
+  vertical-align: center;
+  background-color: #ebebeb;
 }
 
 .price-controls .max-price,
 .price-controls .min-price {
   width: 100px;
   text-align: left;
+  vertical-align: center;
 }
 
 .filter legend {
@@ -955,20 +1230,7 @@ main h1 {
   display: block;
 }
 
-.show {
-  display: none;
-}
 
-.point {
-  display: none;
-  font-family: 'Open Sans';
-  font-size: 13px;
-  font-weight: 300;
-  line-height: 2.77;
-  letter-spacing: 0.13px;
-  text-align: center;
-  color: rgba(0, 0, 0, 0.5);
-}
 
 .monopod-type {
   font-family: "Gilroy";
