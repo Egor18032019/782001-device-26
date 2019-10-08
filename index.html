@@ -43,7 +43,7 @@
       <div class="header-servis">
         <nav class="header-catalog">
           <ul class="header-catalog-list">
-            <li> Каталог товаров
+            <li class="header-item"> Каталог товаров
               <ul class="header-catalog-sub">
                 <li><a href="#">Виртуальная реальность </a></li>
                 <li><a href="catalogMonopod.html">Моноподы для селфи</a></li>
@@ -173,7 +173,7 @@
           <li class="popular">
             <div class="popular-item">
               <a href="catalogMonopod.html" class="popular-monopod">
-                <img src="img/popular-2.png" alt="Монопод для селфи" width="86" height="117">
+                <img src="img/popular-2.png" class="popular-img" alt="Монопод для селфи" width="86" height="117">
               </a>
             </div>
             <p> <a href="catalogMonopod.html"> Монопод для селфи</a> </p>
@@ -222,42 +222,42 @@
       <div class="service-slider-controls">
         <ul class="controls-list">
           <li class="controls-item">
-            <input type="radio" id="delevery">
-            <label for="delevery">Доставка</label>
+            <input type="radio" id="delivery" checked name="service-group">
+            <label for="delivery">Доставка</label>
           </li>
-          <!-- <li class="controls-item">
-          <input type="radio" id="garant">
-          <label for="garant">Гарантия</label>
-        </li>
-        <li class="controls-item">
-          <input type="radio" name="contacts" id="contacts">
-          <label for="contacts">Контакты</label>
-        </li> -->
+          <li class="controls-item">
+            <input type="radio" id="garant" name="service-group">
+            <label for="garant">Гарантия</label>
+          </li>
+          <li class="controls-item">
+            <input type="radio" id="contacts" name="service-group">
+            <label for="contacts">Контакты</label>
+          </li>
         </ul>
       </div>
 
       <div class="service-slider-slides">
         <ul class="service-list">
-          <li class="servise-item">
+          <li class="servise-item servise-delivery">
             <h2>Доставка</h2>
             <p class="delivery-text">Мы с удовольствием доставим ваш товар прямо к вашему
               подъезду совершенно бесплатно! Ведь мы неплохо
               заработаем, поднимая его на ваш этаж.</p>
           </li>
-          <!--  Временно
-        <li class="servise-item">
+
+        <li class="servise-item servise-garant">
           <h2>Гарантия</h2>
           <p class="garant-text">Если из-за возгорания купленного у нас товара у вас сгорит
             дом — не переживайте, мы выдадим вам новый.<br>
             Товар, не дом, конечно же.</p>
         </li>
-        <li class="servise-item">
+        <li class="servise-item servise-credit">
           <h2>Кредит</h2>
           <p class="credit-text">Залезть в долговую яму стало проще! Кредитные
             консультанты подберут для вас наиболее выгодные
             условия кредита. Выгодные для нашего банка, разумеется.</p>
         </li>
--->
+
         </ul>
       </div>
     </div>
@@ -267,22 +267,23 @@
     <h2 class="visually-hidden">Логотипы товаров</h2>
     <div class="container">
 
-      <a class="logotip-1">
-        <img src="img/logo-1.png" class="logo-1" alt="У нас есть товары такой марки!">
-        <img src="img/logo-1-jpg.png" class="logo-1jpg" alt="У нас есть товары такой марки!">
+      <a class="logotip-1 logotip">
+        <img src="img/logo-1.png" class="logo-1" alt="У нас есть товары такой марки!" width="260" height="100">
+        <img src="img/logo-1-jpg.png" class="logo-1jpg logo-color" alt="У нас есть товары такой марки!" width="260" height="100">
       </a>
-      <a class="logotip-2">
-        <img src="img/logo-2.png" class="logo-3" alt="У нас есть даже и ГоПро!">
-        <img src="img/logo-2-jpg.png" class="logo-3jpg" alt="У нас есть даже и ГоПро!">
+      <a class="logotip-2 logotip">
+        <img src="img/logo-2.png" class="logo-2" alt="У нас есть даже и ГоПро!" width="260" height="100">
+        <img src="img/logo-2-jpg.png" class="logo-2jpg logo-color" alt="У нас есть даже и ГоПро!" width="260" height="100">
       </a>
-      <a class="logotip-3">
-        <img src="img/logo-3.png" class="logo-3" alt="У нас есть товары такой марки!">
-        <img src="img/logo-3-jpg.png" class="logo-3jpg" alt="У нас есть товары такой марки!">
+      <a class="logotip-3 logotip">
+        <img src="img/logo-3.png" class="logo-3" alt="У нас есть товары такой марки!" width="260" height="100">
+        <img src="img/logo-3-jpg.png" class="logo-3jpg logo-color" alt="У нас есть товары такой марки!" width="260" height="100">
 
       </a>
-      <a class="logotip-4">
+      <a class="logotip-4 logotip">
         <img src="img/logo-4.png" class="logo-4" width="260" height="100" alt="У нас есть товары такой марки!">
-        <img src="img/logo-4-jpg.png" class="logo-4jpg" width="260" height="100" alt="У нас есть товары такой марки!">
+        <img src="img/logo-4-jpg.png" class="logo-4jpg logo-color" width="260" height="100"
+          alt="У нас есть товары такой марки!">
 
       </a>
     </div>
@@ -295,12 +296,12 @@
         <div class="map-text">
           <h2>О нас</h2>
 
-          <p class="map-text">Огромный выбор гаджетов не оставит равнодушным гика,
+          <p class="map-text text-column">Огромный выбор гаджетов не оставит
+            равнодушным гика,
             который есть в каждом из нас.
           </p>
-          <p>
-            Мы можем доставить ваш товар в самые отдаленные точки
-            России! DEVICE работает со многими транспортными компаниями:
+          <p class="delevery-text">
+            Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
           </p>
 
           <ul class="map-delevery">
@@ -315,15 +316,14 @@
 
       </section>
       <section class="about">
-        <!--короткую черную линию-->
+
         <h2>Контакты</h2>
-        <p class="about-text">
+        <p class="about-text text-column">
           Вы можете забрать товар сами, заехав в наш офис.
           Заодно, вы сможете проверить работоспособность покупки.
           Всякое бывает.
         </p>
         <div class="about-map">
-
           <a href="https://yandex.ru/maps/?um=constructor%3A66a842096b577af37d8c13de2e5053c4c467d14bfd5ffc179665cc005a4d2714&amp;source=constructorStatic"
             target="_blank"> <img src="img/map-jpg.jpg" alt="карта" width="560px" height="222px">
           </a>
@@ -433,10 +433,10 @@
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Контакты полность</h2>
-    <iframe
+    <!-- <iframe
       src="https://yandex.ru/map-widget/v1/?um=constructor%3A66a842096b577af37d8c13de2e5053c4c467d14bfd5ffc179665cc005a4d2714&amp;source=constructor"
       width="960" height="559" frameborder="0">
-    </iframe>
+    </iframe> -->
     <button type="reset" name="button" class="modal-close">
       <span class="visually-hidden">Закрыть</span>
     </button>

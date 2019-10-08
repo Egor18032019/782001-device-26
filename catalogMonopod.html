@@ -12,7 +12,7 @@
 <body>
   <header class="container">
     <div class="main-navigation">
-      <a class="header-logo" href="index.html">
+      <a class="header-logo">
         <img class="header-device" src="img/device.png" alt="Логотип магазина гаджетов DEVICE" width="163" height="35">
       </a>
 
@@ -42,7 +42,7 @@
       <div class="header-servis">
         <nav class="header-catalog">
           <ul class="header-catalog-list">
-            <li> Каталог товаров
+            <li class="header-item"> Каталог товаров
               <ul class="header-catalog-sub">
                 <li><a href="#">Виртуальная реальность </a></li>
                 <li><a href="catalogMonopod.html">Моноподы для селфи</a></li>
@@ -55,18 +55,18 @@
           </ul>
         </nav>
 
-
         <ul class="header-servis-list">
           <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
+          <li class="header-delevery"><a href="#">Гарантия</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
+
       </div>
     </div>
   </header>
   <main>
     <div class="container">
-      <h1>Моноподы для селфи</h1>
+      <h1 class="monopod-title">Моноподы для селфи</h1>
       <ul class="breadcrumbs">
         <li><a href="index.html">Главная</a></li>
         <li><a href="#">Каталог товаров</a></li>
@@ -84,11 +84,13 @@
             <h2>Сортировка:</h2>
 
             <ul class="sorting">
-              <li><a href="#">По цене</a></li>
+              <li class="sorting-current"><a href="#">По цене</a></li>
               <li><a href="#">По типу</a></li>
               <li><a href="#">По популярности</a></li>
-              <li><a href="#">По порядку</a></li>
-              <li><a href="#">В обратном порядке</a></li>
+            </ul>
+            <ul class="sorting-arrow">
+              <li class="arrow-down"><a href="#">По порядку</a></li>
+              <li class="arrow-top"><a href="#">В обратном порядке</a></li>
             </ul>
           </div>
         </div>
@@ -111,7 +113,7 @@
                 </div>
                 <div class="price-controls">
                   <label for="min-price" class="min-price">
-                    От
+                    от
                     <input type="text" name="min-price" value="0">
                   </label>
                   <label for="max-price" class="max-price">
@@ -122,7 +124,7 @@
 
               </div>
             </fieldset>
-            <fieldset class="color">
+            <fieldset class="color-sort">
               <legend>Цвет</legend>
               <ul class="color-list">
                 <li>
@@ -148,7 +150,7 @@
               </ul>
             </fieldset>
             <!--Черная линия-->
-            <fieldset>
+            <fieldset class="bluetooth-sort">
               <legend class="bluetooth">
                 Bluetooth
               </legend>
