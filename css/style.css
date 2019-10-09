@@ -112,9 +112,9 @@ header.container {
   margin: -1px;
 }
 
-/* .header-search {
-  width: 108px;
-} */
+.header-search {
+
+}
 
 .header-search-button {
   display: none;
@@ -128,8 +128,8 @@ header.container {
 
 .header-wraper {
   display: flex;
-  /* padding-left: 60px;
-  padding-right: 61px; */
+  padding-left: 4px;
+
   justify-content: space-between;
 }
 
@@ -138,8 +138,9 @@ header.container {
   /* продумать с шириной. */
   width: 540px;
   margin-top: auto;
+  padding-left:40px;
   /*или 0 ?*/
-  margin-left: auto;
+margin-left: auto;
   justify-content: space-between;
   /*почему не работает?7 */
 }
@@ -150,13 +151,13 @@ header.container {
   height: 12px;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 0.1em;
+  margin-right: 0.8em;
   background-image: url("../img/user.svg");
   background-repeat: no-repeat;
 }
 
 .header-contrast {
-  padding-left: 218px;
+  padding-left: 170px;
 }
 
 .header-contrast::before {
@@ -212,9 +213,29 @@ header.container {
 }
 
 .header-catalog-list {
+  position: relative;
   padding-left: 0;
 }
 
+.header-catalog-list::after{
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  top: 11px;
+  right: -29px;
+  transform: rotate(90deg);
+  background-color: black;
+}
+.header-catalog-list::before{
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  top:12px;
+  right: -28px;
+  background-color: black;
+}
 /* .header-catalog-list:hover .header-catalog-sub {
   display: flex;
 } */
@@ -250,6 +271,7 @@ header.container {
 }
 
 .header-search-text {
+  padding-left: 11px;
   border: none;
   background-color: rgb(247, 225, 150);
   opacity: 0.5;
@@ -268,6 +290,7 @@ header.container {
 
 .header-top {
   width: 100%;
+  padding-top: 3px;
   font-family: 'Open Sans';
   font-size: 15px;
   font-weight: 300;
