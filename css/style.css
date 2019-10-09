@@ -184,8 +184,9 @@ header.container {
 
 .header-servis {
   display: flex;
-  padding-top: 5px;
   width: 100%;
+  padding-top: 5px;
+  padding-bottom: 15px;
   font-family: "Gilroy";
   font-size: 18px;
   font-weight: 800;
@@ -342,7 +343,7 @@ header.container {
 
 .slides-text {
   width: 50%;
-  padding-top: 36px;
+  padding-top: 23px;
   padding-left: 125px;
 }
 
@@ -1030,7 +1031,7 @@ main h1 {
 
 .container .monopod-title {
   padding-left: 59px;
-  padding-top: 17px;
+  padding-top: 10px;
   margin-bottom: 20px;
 }
 
