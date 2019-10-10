@@ -92,6 +92,11 @@ header.container {
   opacity: 0.4;
 }
 
+.slider {
+
+  background-image: linear-gradient(rgb(247, 225, 150) 24%, white 0);
+}
+
 .main-navigation {
   width: 1160px;
 
@@ -100,7 +105,7 @@ header.container {
   align-items: flex-start;
   background-color: rgb(247, 225, 150);
   padding-left: 60px;
-  padding-right: 60px;
+  padding-right: 55px;
   padding-bottom: 18px;
 }
 
@@ -112,9 +117,7 @@ header.container {
   margin: -1px;
 }
 
-.header-search {
-
-}
+.header-search {}
 
 .header-search-button {
   display: none;
@@ -123,7 +126,7 @@ header.container {
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 20px;
 }
 
 .header-wraper {
@@ -138,9 +141,9 @@ header.container {
   /* продумать с шириной. */
   width: 540px;
   margin-top: auto;
-  padding-left:40px;
+  padding-left: 40px;
   /*или 0 ?*/
-margin-left: auto;
+  margin-left: auto;
   justify-content: space-between;
   /*почему не работает?7 */
 }
@@ -205,7 +208,7 @@ margin-left: auto;
 }
 
 .header-delevery {
-  padding-right: 80px;
+  padding-right: 75px;
 }
 
 .header-catalog {
@@ -217,7 +220,7 @@ margin-left: auto;
   padding-left: 0;
 }
 
-.header-catalog-list::after{
+.header-catalog-list::after {
   content: "";
   position: absolute;
   width: 16px;
@@ -227,15 +230,17 @@ margin-left: auto;
   transform: rotate(90deg);
   background-color: black;
 }
-.header-catalog-list::before{
+
+.header-catalog-list::before {
   content: "";
   position: absolute;
   width: 16px;
   height: 2px;
-  top:12px;
+  top: 12px;
   right: -28px;
   background-color: black;
 }
+
 /* .header-catalog-list:hover .header-catalog-sub {
   display: flex;
 } */
@@ -328,20 +333,30 @@ margin-left: auto;
 }
 
 
-.slides-number {
-  color: #ffffff;
+.sliders-number {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  right: 35px;
+  bottom: 185px;
+  width: 166px;
+  height: 131px;
+
   font-family: "Gilroy";
-  font-size: 79px;
+  font-size: 179px;
   font-weight: 800;
   line-height: 1;
   letter-spacing: 1.79px;
+  text-align: right;
+  color: white;
 }
 
 .main-sliders-controls {
   display: flex;
   width: 122px;
   position: absolute;
-  left: 1305px;
+  left: 70%;
+  top: 85%;
   list-style: none;
   justify-content: space-around;
 
@@ -350,9 +365,13 @@ margin-left: auto;
 .main-sliders {
   display: flex;
   list-style: none;
-  margin-left: 35px;
+  margin-left: 52px;
+  margin-top: 0;
 }
 
+.main-sliders li {
+  position: relative;
+}
 
 .controls-list input {
   appearance: none;
@@ -366,7 +385,7 @@ margin-left: auto;
 
 .slides-text {
   width: 50%;
-  padding-top: 23px;
+  padding-top: 37px;
   padding-left: 125px;
 }
 
@@ -383,7 +402,7 @@ margin-left: auto;
 
 .slides-feature {
   width: 479px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   font-family: "Gilroy";
   font-size: 47px;
   font-weight: 800;
@@ -434,6 +453,7 @@ margin-left: auto;
   position: relative;
   display: block;
   width: 220px;
+  z-index: 1;
   font-family: "Gilroy";
   font-size: 18px;
   font-weight: 800;
@@ -450,10 +470,9 @@ margin-left: auto;
   width: 220px;
   height: 8px;
   bottom: 9px;
-  background-color: #f0c52e;
-  opacity: 0.5;
-
-  z-index: 1;
+  left: 0px;
+  background-color: rgb(240, 196, 46);
+  z-index: -1;
 }
 
 .popular-list {
@@ -461,17 +480,24 @@ margin-left: auto;
   margin-top: 95px;
 }
 
+.popular-list .container {
+  padding: 0;
+}
+
 .popular-back {
   display: flex;
   justify-content: space-between;
   list-style: none;
   padding: 0;
-  margin-bottom: 125px;
+  margin-bottom: 105px;
 }
 
 .popular p {
   /* немогу подобрать размеры для разных браузеров
  и понять не могу почему такая большая высота у блока p */
+  display: block;
+  margin-top: -20px;
+  padding: 0;
   font-family: "Gilroy";
   font-size: 18px;
   font-weight: 800;
@@ -479,10 +505,7 @@ margin-left: auto;
   letter-spacing: 0.18px;
   text-align: left;
   color: #000000;
-  margin: 0;
-  padding: 0;
-  /* margin-top: -20px; */
-  /* padding-top: 50px; */
+
 }
 
 
@@ -524,10 +547,10 @@ margin-left: auto;
 .service {
   display: flex;
   width: 100%;
-  min-height: 288px;
-  margin-bottom: 95px;
-  background-color: #e5e5e5;
-  background-position: bottom;
+  min-height: 320px;
+  margin-bottom: 60px;
+  background-image: linear-gradient(#e5e5e5 90%, white 10%);
+
 }
 
 .service .container {
@@ -535,7 +558,8 @@ margin-left: auto;
 }
 
 .service-slider-slides {
-  padding-left: 90px;
+  width: 800px;
+   padding-left: 90px;
 }
 
 .service-slider-controls {
@@ -558,7 +582,7 @@ margin-left: auto;
   flex-direction: column;
   justify-content: space-between;
   width: 277px;
-  margin-top: -45px;
+  margin-top: -15px;
   padding: 0;
   font-family: "Gilroy";
   font-size: 18px;
@@ -593,27 +617,60 @@ margin-left: auto;
   vertical-align: middle;
 }
 
-.controls-item input:checked+label {
+.service input {
+  display: none;
+}
+.servise-item {
+  display: none;
+  width: 690px;
+}
+
+.servise-delivery{
+  background-image: url("../img/delivery.svg");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 13px;
+}
+
+.servise-garant{
+  background-image: url("../img/warranty.svg");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 13px;
+}
+.servise-credit{
+  background-image: url("../img/credit.svg");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 13px;
+}
+
+#delivery:checked ~ .service-slider-slides  .service-list .servise-delivery  {
+  display: block;
+}
+#garant:checked ~ .service-slider-slides  .service-list .servise-garant  {
+  display: block;
+}
+#contacts:checked ~ .service-slider-slides .service-list .servise-credit  {
+  display: block;
+}
+
+#delivery:checked~.service-slider-controls .delivery-label {
+  background-color: black;
+  color: yellow;
+}
+
+#garant:checked~.service-slider-controls .garant-label {
   background-color: black;
   color: yellow
 }
 
-#delivery:checked~.service-list .servise-item:nth-child(1) {
-  display: block;
+#contacts:checked~.service-slider-controls .contacts-label {
+  background-color: black;
+  color: yellow
 }
 
-#garant:checked~.servise-garant {
-  display: block;
-}
 
-#contacts:checked~.service-list .servise-credit {
-  display: block;
-}
-
-.servise-item {
-  display: none;
-
-}
 
 .servise-item h2 {
   margin-top: -43px;
@@ -661,13 +718,34 @@ margin-left: auto;
   justify-content: space-around;
 }
 
+.logotip {
+  position: relative;
+}
+
+.logotip img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
+  transition: opacity 0.5s;
+}
+
+/* TODO: поменять пнг на свг. перенсти фокус с ли на а */
 .logo-color {
-  display: none;
-  margin-top: -100px;
+  opacity: 0;
+  /* margin-top: -100px; */
+}
+
+.logo-bw {
+  opacity: 1;
 }
 
 .logotip:hover .logo-color {
-  display: block;
+  opacity: 1;
+}
+
+.logotip:hover .logo-bw {
+  opacity: 0;
 }
 
 .index-columns {
@@ -693,7 +771,7 @@ margin-left: auto;
 }
 
 .map-text {
-  width: 462px;
+  width: 475px;
 }
 
 .text-column {
@@ -702,8 +780,8 @@ margin-left: auto;
 }
 
 .map-delevery {
-  padding-top: 35px;
-  padding-left: 15px;
+  padding-top: 28px;
+  padding-left: 38px;
   font-family: "Gilroy";
   font-size: 16px;
   font-weight: 800;
@@ -722,11 +800,12 @@ margin-left: auto;
 
 .about-text {
   width: 560px;
+  padding-bottom: 13px;
 }
 
 .about-map,
 .map-text {
-  margin-bottom: 65px;
+  margin-bottom: 60px;
 }
 
 .about-map {
@@ -763,6 +842,7 @@ margin-left: auto;
 section .contacts-about {
   position: relative;
   width: 260px;
+  margin-left: 25px;
   font-family: "Gilroy";
   font-size: 18px;
   font-weight: 800;
@@ -771,7 +851,7 @@ section .contacts-about {
   text-align: center;
   color: #000000;
   text-transform: uppercase;
-  z-index: 1;
+  z-index:  1;
   /* как сделать текст чтобы проступал ,,?? */
 }
 
@@ -779,18 +859,21 @@ section .contacts-about {
   content: "";
   position: absolute;
   top: 8px;
-  left: 0px;
+  left: -22px;
   width: 260px;
   height: 8px;
-  background-color: #f0c52e;
-  opacity: 0.5;
+  background-color: rgb(240, 196, 46);
+  z-index: -1;
+}
+.contacts-about-write{
+  padding-left: 17px;
 }
 
 .main-footer {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 45px;
+  padding-top: 40px;
   padding-bottom: 66px;
   background-color: #464646;
 }
@@ -799,13 +882,12 @@ section .contacts-about {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 1160px;
-}
+  }
 
 .footer-navi {
   display: flex;
   justify-content: space-between;
-  width: 340px;
+  width: 363px;
 }
 
 .footer-top-logo {
@@ -819,45 +901,51 @@ section .contacts-about {
 
 }
 
+/* TODO:за инлайнить  svg в хедере
++ горизонтальный скрол . */
 .footer-login::before {
   content: "";
   width: 13px;
   height: 12px;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 0.1em;
+  margin-right: 10px;
   background-image: url("../img/user.svg");
   background-repeat: no-repeat;
-  /* fill: yellow; не работает.
-  если менять в свг то в хедере становиться желтым  */
+
 }
 
 .footer-service {
   display: flex;
-  width: 500px;
-  justify-content: space-around;
+  width: 463px;
+  justify-content: space-between;
   margin: auto;
+  padding:0;
+  padding-right: 36px;
 }
 
 .footer-social {
   display: flex;
-  width: 142px;
+  width: 165px;
   justify-content: space-between;
   margin: auto;
   padding: 0;
   opacity: 0.3;
+  padding-left: 27px;
 }
-
+.footer-telephone{
+  letter-spacing: 0.3px;
+}
 .footer-top {
   display: flex;
-  align-self: flex-end;
   width: 100%;
   margin: 0;
+  padding-bottom: 7px;
 }
 
 .footer-center {
   display: flex;
-  padding-top: 32px;
+margin-bottom: 45px;
   align-items: center;
 }
 
@@ -865,7 +953,6 @@ section .contacts-about {
   display: flex;
   align-items: center;
   width: auto;
-  margin-top: 70px;
 }
 
 .footer-htmlacademy {
@@ -888,6 +975,7 @@ section .contacts-about {
 
 .footer-center address,
 .footer-telephone a {
+  font-style: normal;
   font-family: 'Open Sans';
   font-size: 15px;
   font-weight: 300;
@@ -1053,8 +1141,8 @@ main h1 {
 }
 
 .container .monopod-title {
-  padding-left: 59px;
-  padding-top: 10px;
+  padding-left: 62px;
+  padding-top: 5px;
   margin-bottom: 20px;
 }
 
@@ -1162,6 +1250,7 @@ main h1 {
 
 }
 
+TODO: картинки
 /* .sorting-arrow .arrow-down {
   display: inline-block;
   border: 10px solid white;
@@ -1421,13 +1510,16 @@ main h1 {
 .color-sort legend {
   margin-bottom: 13px;
 }
-.bluetooth-sort{
-margin-bottom: 10px;
+
+.bluetooth-sort {
+  margin-bottom: 10px;
 }
-.bluetooth{
+
+.bluetooth {
   margin-bottom: 8px;
-  }
-.bluetooth-sort::before{
+}
+
+.bluetooth-sort::before {
   content: "";
   position: absolute;
   top: -40px;
@@ -1435,7 +1527,8 @@ margin-bottom: 10px;
   height: 2px;
   background-color: black;
 }
-.bluetooth-list{
+
+.bluetooth-list {
   font-family: 'OpenSans';
   font-size: 14px;
   font-weight: 300;
@@ -1443,9 +1536,11 @@ margin-bottom: 10px;
   letter-spacing: 0.14px;
   text-align: left;
 }
-.demonstrate{
+
+.demonstrate {
   margin-left: 45px;
 }
+
 .filter ul {
   list-style: none;
   line-height: 14px;

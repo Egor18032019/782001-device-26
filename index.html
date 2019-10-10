@@ -69,7 +69,7 @@
   <main class="container">
     <h1 class="visually-hidden"> Магазин интернет-гаджетов DEVICE</h1>
     <section class="slider">
-      <div class="container">
+      <div>
         <h2 class="visually-hidden">Наши лучшие товары </h2>
 
         <ul class="main-sliders-controls">
@@ -218,20 +218,20 @@
 
   <section class="service">
     <div class="container">
+      <input type="radio" id="delivery" checked name="service-group">
+      <input type="radio" id="garant" name="service-group">
+      <input type="radio" id="contacts" name="service-group">
       <h2 class="visually-hidden">Услуги</h2>
       <div class="service-slider-controls">
         <ul class="controls-list">
           <li class="controls-item">
-            <input type="radio" id="delivery" checked name="service-group">
-            <label for="delivery">Доставка</label>
+            <label class="delivery-label" for="delivery">Доставка</label>
           </li>
           <li class="controls-item">
-            <input type="radio" id="garant" name="service-group">
-            <label for="garant">Гарантия</label>
+            <label class="garant-label" for="garant">Гарантия</label>
           </li>
           <li class="controls-item">
-            <input type="radio" id="contacts" name="service-group">
-            <label for="contacts">Контакты</label>
+            <label class="contacts-label" for="contacts">Контакты</label>
           </li>
         </ul>
       </div>
@@ -244,19 +244,18 @@
               подъезду совершенно бесплатно! Ведь мы неплохо
               заработаем, поднимая его на ваш этаж.</p>
           </li>
-
-        <li class="servise-item servise-garant">
-          <h2>Гарантия</h2>
-          <p class="garant-text">Если из-за возгорания купленного у нас товара у вас сгорит
-            дом — не переживайте, мы выдадим вам новый.<br>
-            Товар, не дом, конечно же.</p>
-        </li>
-        <li class="servise-item servise-credit">
-          <h2>Кредит</h2>
-          <p class="credit-text">Залезть в долговую яму стало проще! Кредитные
-            консультанты подберут для вас наиболее выгодные
-            условия кредита. Выгодные для нашего банка, разумеется.</p>
-        </li>
+          <li class="servise-item servise-garant">
+            <h2>Гарантия</h2>
+            <p class="garant-text">Если из-за возгорания купленного у нас товара у вас сгорит
+              дом — не переживайте, мы выдадим вам новый.<br>
+              Товар, не дом, конечно же.</p>
+          </li>
+          <li class="servise-item servise-credit">
+            <h2>Кредит</h2>
+            <p class="credit-text">Залезть в долговую яму стало проще! Кредитные
+              консультанты подберут для вас наиболее выгодные
+              условия кредита. Выгодные для нашего банка, разумеется.</p>
+          </li>
 
         </ul>
       </div>
@@ -268,16 +267,19 @@
     <div class="container">
 
       <a class="logotip-1 logotip">
-        <img src="img/logo-1.png" class="logo-1" alt="У нас есть товары такой марки!" width="260" height="100">
-        <img src="img/logo-1-jpg.png" class="logo-1jpg logo-color" alt="У нас есть товары такой марки!" width="260" height="100">
+        <img src="img/logo-1.png" class="logo-1 logo-bw" alt="У нас есть товары такой марки!" width="260" height="100">
+        <img src="img/logo-1-jpg.png" class="logo-1jpg logo-color" alt="У нас есть товары такой марки!" width="260"
+          height="100">
       </a>
       <a class="logotip-2 logotip">
         <img src="img/logo-2.png" class="logo-2" alt="У нас есть даже и ГоПро!" width="260" height="100">
-        <img src="img/logo-2-jpg.png" class="logo-2jpg logo-color" alt="У нас есть даже и ГоПро!" width="260" height="100">
+        <img src="img/logo-2-jpg.png" class="logo-2jpg logo-color" alt="У нас есть даже и ГоПро!" width="260"
+          height="100">
       </a>
       <a class="logotip-3 logotip">
         <img src="img/logo-3.png" class="logo-3" alt="У нас есть товары такой марки!" width="260" height="100">
-        <img src="img/logo-3-jpg.png" class="logo-3jpg logo-color" alt="У нас есть товары такой марки!" width="260" height="100">
+        <img src="img/logo-3-jpg.png" class="logo-3jpg logo-color" alt="У нас есть товары такой марки!" width="260"
+          height="100">
 
       </a>
       <a class="logotip-4 logotip">
@@ -296,12 +298,13 @@
         <div class="map-text">
           <h2>О нас</h2>
 
-          <p class="map-text text-column">Огромный выбор гаджетов не оставит
+          <p class="map-row text-column">Огромный выбор гаджетов не оставит
             равнодушным гика,
             который есть в каждом из нас.
           </p>
           <p class="delevery-text">
-            Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+            Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными
+            компаниями:
           </p>
 
           <ul class="map-delevery">
@@ -311,14 +314,14 @@
           </ul>
         </div>
 
-        <p class="contacts-about"><a href="#" class="contacts-about-us">
-            Подробнее о нас</a></p>
+        <a href="#" class="contacts-about contacts-about-us">
+            Подробнее о нас</a>
 
       </section>
       <section class="about">
-
+<div class="about-text">
         <h2>Контакты</h2>
-        <p class="about-text text-column">
+        <p class="text-column">
           Вы можете забрать товар сами, заехав в наш офис.
           Заодно, вы сможете проверить работоспособность покупки.
           Всякое бывает.
@@ -328,7 +331,8 @@
             target="_blank"> <img src="img/map-jpg.jpg" alt="карта" width="560px" height="222px">
           </a>
         </div>
-        <p class="contacts-about"> <a href="#" class="contacts-about-write">Напишите нам</a></p>
+      </div>
+<a href="#" class="contacts-about contacts-about-write">Напишите нам</a>
 
       </section>
     </div>
