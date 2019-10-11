@@ -147,10 +147,12 @@ header.container {
   justify-content: space-between;
   /*почему не работает?7 */
 }
-.header-navigation span{
+
+.header-navigation span {
   fill: black;
   padding-right: 5px;
 }
+
 /* .header-login::before {
   content: "";
   width: 13px;
@@ -489,9 +491,12 @@ header.container {
   letter-spacing: 0.18px;
   text-align: left;
   color: #000000;
-
 }
 
+.popular .icon-selfi {
+  align-items: end;
+  padding-bottom: 2px;
+}
 
 .popular-item {
   width: 160px;
@@ -503,10 +508,10 @@ header.container {
 
 .popular:hover .popular-item {
   background-color: rgb(240, 196, 46);
-
 }
 
-.popular:focus .popular-img {
+.popular-icon:focus .popular-img,
+.popular:focus .popular-item p {
   opacity: 0.5;
 }
 
@@ -582,6 +587,7 @@ header.container {
 }
 
 .controls-item {
+  position: relative;
   min-height: 40px;
   text-transform: uppercase;
   font-family: "Gilroy";
@@ -590,6 +596,17 @@ header.container {
   letter-spacing: 3.6px;
   text-align: center;
   color: black;
+}
+
+.controls-item:before {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 8px;
+  top: 11px;
+  right: 117px;
+  z-index: -1;
+  background-color: rgb(240, 196, 46);
 }
 
 .controls-item label {
@@ -608,6 +625,7 @@ header.container {
 .servise-item {
   display: none;
   width: 690px;
+  min-height: 200px;
 }
 
 .servise-delivery {
@@ -646,16 +664,19 @@ header.container {
 #delivery:checked~.service-slider-controls .delivery-label {
   background-color: black;
   color: yellow;
+  z-index: 1;
 }
 
 #garant:checked~.service-slider-controls .garant-label {
   background-color: black;
-  color: yellow
+  color: yellow;
+  z-index: -1;
 }
 
 #contacts:checked~.service-slider-controls .contacts-label {
   background-color: black;
-  color: yellow
+  color: yellow;
+  z-index: 2;
 }
 
 
@@ -722,7 +743,13 @@ header.container {
   transition: opacity 0.5s;
 }
 
-/* TODO: поменять пнг на свг. перенсти фокус с ли на а */
+/* TODO:
+перенсти фокус с ли на а - немогу это сделать
+1. как делать катаклог товаров ?
+
+
+*/
+
 .logo-color {
   opacity: 0;
   /* margin-top: -100px; */
@@ -893,8 +920,13 @@ section .contacts-about {
 }
 
 .footer-top-logo:hover {
-  fill: rgb(167, 136, 32);
+  fill: rgb(181, 146, 28);
 }
+
+.footer-top-logo:focus {
+  fill: rgb(125, 108, 48);
+}
+
 .footer-service {
   display: flex;
   width: 463px;
@@ -912,6 +944,18 @@ section .contacts-about {
   padding: 0;
   opacity: 0.3;
   padding-left: 27px;
+}
+
+.footer-social a {
+  fill: #fff;
+}
+
+.footer-social a:hover {
+  fill: rgb(181, 181, 181);
+}
+
+.footer-social a:focus {
+  fill: rgb(88, 88, 88);
 }
 
 .footer-telephone {
@@ -952,9 +996,18 @@ section .contacts-about {
 .footer-htmlacademy {
   fill: rgb(255, 197, 0);
 }
-.footer-navi span{
-  fill:#ffc600;
+
+.footer-htmlacademy:hover {
+  fill: rgb(181, 146, 28);
 }
+.footer-htmlacademy:focus {
+  fill: rgb(125,108, 48);
+}
+
+.footer-navi span {
+  fill: #ffc600;
+}
+
 .footer-navi a {
   opacity: 0.7;
   font-family: 'Open Sans';
@@ -965,7 +1018,15 @@ section .contacts-about {
   line-height: 2.4;
   letter-spacing: 0.15px;
   text-align: left;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(147, 147, 147, 0.6);
+}
+
+.footer-navi a:hover {
+  color: #ffffff;
+}
+
+.footer-navi a:focus {
+  color: rgb(91, 91, 91);
 }
 
 .footer-center address,
@@ -985,6 +1046,14 @@ section .contacts-about {
   list-style: none;
 }
 
+.footer-service a:hover {
+  color: rgb(166, 166, 166)
+}
+
+.footer-service a:focus {
+  color: rgb(125, 125, 125)
+}
+
 .footer-service a {
   text-transform: uppercase;
   font-family: "Gilroy";
@@ -996,9 +1065,6 @@ section .contacts-about {
   color: white;
 }
 
-.logo-htmlacademy {
-  color: #ffc600;
-}
 
 .modal-map {
   display: none;
@@ -1307,7 +1373,7 @@ main h1 {
   margin-left: -140px;
   background-color: #ebebeb;
   flex-shrink: 0;
-    padding-left: 186px;
+  padding-left: 186px;
 }
 
 .market {
