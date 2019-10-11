@@ -66,10 +66,8 @@ a {
   height: 8px;
   bottom: 9px;
   right: -35px;
-  background-color: #f0c52e;
-  opacity: 0.5;
-
-  z-index: 1;
+  background-color: rgb(240, 196, 46);
+  z-index: -1;
 }
 
 header.container {
@@ -153,20 +151,28 @@ header.container {
   padding-right: 5px;
 }
 
-/* .header-login::before {
-  content: "";
-  width: 13px;
-  height: 12px;
-  display: inline-block;
-  vertical-align: middle;
+.login-name {
+  font-family: 'Open Sans';
+  font-size: 15px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2;
+  letter-spacing: 0.15px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.3);
+}
+.header-login .login-name::before {
+  content: "Валентин Петухов";
+  width: 132px;
+  color:black;
   margin-right: 0.8em;
-  background-image: url("../img/user.svg");
-  background-repeat: no-repeat;
-} */
+}
 
+/*
 .header-contrast {
   padding-left: 170px;
-}
+} */
 
 .header-servis {
   display: flex;
@@ -745,8 +751,8 @@ header.container {
 
 /* TODO:
 перенсти фокус с ли на а - немогу это сделать
-1. как делать катаклог товаров ?
-
+1. как делать каталог товаров ?
+2. бутоны на карточках товара - как убрать задний фон ? и остальное
 
 */
 
@@ -913,6 +919,18 @@ section .contacts-about {
   width: 363px;
 }
 
+.name {
+  font-family: 'OpenSans';
+  font-size: 15px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2;
+  letter-spacing: 0.15px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .footer-top-logo {
   fill: rgb(255, 197, 0);
   margin-right: auto;
@@ -1000,8 +1018,9 @@ section .contacts-about {
 .footer-htmlacademy:hover {
   fill: rgb(181, 146, 28);
 }
+
 .footer-htmlacademy:focus {
-  fill: rgb(125,108, 48);
+  fill: rgb(125, 108, 48);
 }
 
 .footer-navi span {
@@ -1421,6 +1440,7 @@ main h1 {
 
 .show {
   display: none;
+  position: relative;
   padding: 0;
   font-family: "Gilroy";
   text-transform: uppercase;
@@ -1430,7 +1450,19 @@ main h1 {
   font-weight: 800;
   letter-spacing: 3.6px;
   text-align: center;
-  color: #000000
+  color: #000000;
+  z-index: 1;
+}
+
+.show::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 8px;
+  bottom: 8px;
+  right: -15px;
+  background-color: rgb(240, 196, 46);
+  z-index: -1;
 }
 
 .point {
@@ -1445,12 +1477,14 @@ main h1 {
   opacity: 0.4;
 }
 
+
 .monopod .point,
 .monopod .show {
   width: 160px;
   margin-bottom: 33px;
   border: none;
 }
+
 
 .monopod .actions {
   position: absolute;
@@ -1712,15 +1746,12 @@ main h1 {
 
 .monopod:hover {
   opacity: 0.7;
-
 }
 
 .monopod:hover .show,
 .monopod:hover .point {
   display: block;
 }
-
-
 
 .monopod-type {
   font-family: "Gilroy";
