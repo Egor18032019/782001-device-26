@@ -1291,7 +1291,6 @@ main h1 {
 .sorting li {
   display: flex;
   justify-content: space-between;
-
 }
 
 .sorting .sorting-current {
