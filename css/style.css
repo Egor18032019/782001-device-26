@@ -139,7 +139,7 @@ header.container {
   /* продумать с шириной. */
   width: 540px;
   margin-top: auto;
-  padding-left: 40px;
+  padding-left: 33px;
   /*или 0 ?*/
   margin-left: auto;
   justify-content: space-between;
@@ -148,8 +148,17 @@ header.container {
 
 .header-navigation span {
   fill: black;
-  padding-right: 5px;
-}
+  }
+  .header-login span{
+    padding-right: 0;
+  }
+
+  .header-basket span{
+    padding-right: 12px;
+  }
+  .header-contrast span{
+    padding-right: 5px;
+  }
 
 .login-name {
   font-family: 'Open Sans';
@@ -177,10 +186,10 @@ header.container {
   margin-right: 0.8em;
 }
 
-/*
-.header-contrast {
-  padding-left: 170px;
-} */
+
+.header-contrast-padding {
+  padding-left: 174px;
+}
 
 .header-servis {
   display: flex;
@@ -369,7 +378,7 @@ header.container {
   width: 141px;
   height: 18px;
 
-  text-align: center;
+  /* text-align: center; */
   font-size: 0;
   transform: translateX(-50%);
 }
@@ -379,13 +388,6 @@ header.container {
 }
 
 .main-sliders-controls label {
-  /* display: block; */
-  /* width: 22px;
-  min-height: 40px;
-  padding-left: 20px; */
-  /* text-align: left; */
-  /* vertical-align: middle; */
-
   position: relative;
 
   display: inline-block;
@@ -837,13 +839,12 @@ header.container {
 перенсти фокус с ли на а - немогу это сделать
 1. как делать каталог товаров ?
 2. бутоны на карточках товара - как убрать задний фон ? и остальное
-
+3.Третий слайд не могу сделать.
 */
 
 .logo-color {
   opacity: 0;
-  /* margin-top: -100px; */
-}
+  }
 
 .logo-bw {
   opacity: 1;
