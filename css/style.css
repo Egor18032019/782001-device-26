@@ -162,10 +162,18 @@ header.container {
   text-align: left;
   color: rgba(0, 0, 0, 0.3);
 }
+
 .header-login .login-name::before {
   content: "Валентин Петухов";
   width: 132px;
-  color:black;
+  color: black;
+  margin-right: 0.8em;
+}
+
+.header-login .login-clear::before {
+  content: "";
+  width: 132px;
+  color: black;
   margin-right: 0.8em;
 }
 
@@ -343,16 +351,97 @@ header.container {
   color: white;
 }
 
+.slider-list {
+  position: relative;
+}
+
 .main-sliders-controls {
   display: flex;
-  width: 122px;
-  position: absolute;
-  left: 70%;
-  top: 85%;
+
   list-style: none;
   justify-content: space-around;
 
+  position: absolute;
+  left: 88%;
+  bottom: 135px;
+  z-index: 100;
+
+  width: 141px;
+  height: 18px;
+
+  text-align: center;
+  font-size: 0;
+  transform: translateX(-50%);
 }
+
+.slides {
+  display: none;
+}
+
+.main-sliders-controls label {
+  /* display: block; */
+  /* width: 22px;
+  min-height: 40px;
+  padding-left: 20px; */
+  /* text-align: left; */
+  /* vertical-align: middle; */
+
+  position: relative;
+
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  padding: 8px;
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.main-sliders-controls label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+
+}
+
+.slider input {
+  display: none;
+}
+
+#control-first:checked~.main-sliders .slides-first {
+  display: flex;
+}
+
+#control-two:checked~.main-sliders .slides-two {
+  display: flex;
+}
+
+#control-three:checked~.main-sliders .slides-three {
+  display: flex;
+}
+
+#control-first:checked~.main-sliders-controls .slider-control-first::before,
+#control-two:checked~  .main-sliders-controls .slider-control-two::before,
+#control-three:checked~.main-sliders-controls .slider-control-three::before
+ {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 4px;
+  height: 4px;
+  margin: -4px;
+  background-color: inherit;
+  border: 2px solid red;
+  border-radius: 50%;
+}
+
 
 .main-sliders {
   display: flex;
@@ -371,9 +460,7 @@ header.container {
 
 }
 
-.slides {
-  display: flex;
-}
+
 
 .slides-text {
   width: 50%;
@@ -387,10 +474,7 @@ header.container {
 }
 
 
-.slides-two,
-.slides-three {
-  display: none;
-}
+
 
 .slides-feature {
   width: 479px;

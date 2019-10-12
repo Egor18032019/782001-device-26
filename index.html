@@ -32,7 +32,8 @@
                       d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z" />
                   </svg>
                 </span>
-                Войти</a>
+                <span class="login-clear">Войти</span>
+              </a>
             </li>
             <li class="header-contrast">
               <a href="#"><span>
@@ -49,7 +50,7 @@
                       d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z" />
                     <path
                       d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z" />
-                    </svg>
+                  </svg>
                 </span>
                 Корзина</a>
             </li>
@@ -87,21 +88,21 @@
   <main class="container">
     <h1 class="visually-hidden"> Магазин интернет-гаджетов DEVICE</h1>
     <section class="slider">
-      <div>
+      <div class="slider-list">
         <h2 class="visually-hidden">Наши лучшие товары </h2>
+        <input type="radio" id="control-first" name="slider-group" checked>
+        <input type="radio" id="control-two" name="slider-group">
+        <input type="radio" id="control-three" name="slider-group">
 
         <ul class="main-sliders-controls">
-          <li class="slider-control-first">
-            <input type="radio" id="control-first">
-            <label for="control-first"></label>
+          <li class="slider-control-first slider-item">
+            <label class="slider-1" for="control-first">1</label>
           </li>
-          <li class="slider-control-two">
-            <input type="radio" id="control-two">
-            <label for="control-two"></label>
+          <li class="slider-control-two slider-item">
+            <label class="slider-2" for="control-two">2</label>
           </li>
-          <li class="slider-control-three">
-            <input type="radio" name="contacts" id="control-three">
-            <label for="control-three"></label>
+          <li class="slider-control-three slider-item">
+            <label class="slider-3" for="control-three">3</label>
           </li>
         </ul>
 
@@ -133,45 +134,51 @@
               </table>
             </div>
           </li>
-          <li class="slides-two">
+
+          <li class="slides-two slides">
             <h3 class="visually-hidden">Наш лучший фитнес-браслет</h3>
             <p class="sliders-number">02</p>
-            <img src="img/slider-2-png.png" class="slider-2png" alt="Супер фитнес браслет!!">
+            <img src="img/slider-2-png.png" class="slider-2png" width="345" height="485" alt="Супер фитнес браслет!!">
+            <div class="slides-text">
+              <p class="slides-feature feature-two">Худеем<br>
+                 правильно!</p>
+              <p class="feature-item feature-two">Мотивирующие фитнес-браслеты помогут найти в себе силы
+                не пропускать занятия и соблюдать диету.</p>
+              <a href="#" class="slides-detail">Подробнее</a>
 
-            <p class="slides-feature feature-two">Худеем правильно!</p>
-            <p class="feature-item feature-two">Мотивирующие фитнес-браслеты помогут найти в себе силы
-              не пропускать занятия и соблюдать диету.</p>
-            <a href="#" class="slides-detail">Подробнее</a>
-
-            <table>
-              <tr class="feature-tr">
-                <td>48 часов</td>
-              </tr>
-              <tr class="feature-tr-bottom">
-                <td>Без подзарядки</td>
-              </tr>
-            </table>
+              <table>
+                <tr class="feature-tr">
+                  <td>48 часов</td>
+                </tr>
+                <tr class="feature-tr-bottom">
+                  <td>Без подзарядки</td>
+                </tr>
+              </table>
+            </div>
           </li>
-          <li class="slides-three">
+
+          <li class="slides-three slides">
             <h3 class="visually-hidden">Наш лучший квадрокоптер(он еще и стреляет!)</h3>
             <p class="sliders-number">03</p>
-            <img src="img/slider-3-png.png  " class="slider-3png" alt="Пуляющий квадрокоптер !!">
-            <p class="slides-feature feature-three">"Порхает как бабочка, жалит как пчела"</p>
-            <p class="feature-item feature-three">Этот обычный, на первый взгляд, квадрокоптер оснащен
-              мощным лазером, замаскированным под стандартную камеру.
-            </p>
-            <!--Надо в див обернуть ? чтобы желтым закрасить?-->
-            <a href="#" class="slides-detail">Подробнее</a>
-            <table>
-              <tr class="feature-tr">
-                <td>800 м</td>
-                <td>50 м</td>
-              </tr>
-              <tr class="feature-tr-bottom">
-                <td>Дальность полета</td>
-                <td>Радиус поражения</td>
-              </tr>
-            </table>
+            <img src="img/slider-3-png.png  " class="slider-3png" width="526px" height="334" alt="Пуляющий квадрокоптер !!">
+            <div class="slides-text">
+              <p class="slides-feature feature-three">"Порхает как бабочка, жалит как пчела"</p>
+              <p class="feature-item feature-three">Этот обычный, на первый взгляд, квадрокоптер оснащен
+                мощным лазером, замаскированным под стандартную камеру.
+              </p>
+              <a href="#" class="slides-detail">Подробнее</a>
+              <table>
+                <tr class="feature-tr">
+                  <td>800 м</td>
+                  <td>50 м</td>
+                </tr>
+                <tr class="feature-tr-bottom">
+                  <td>Дальность полета</td>
+                  <td>Радиус поражения</td>
+                </tr>
+              </table>
+            </div>
+          </li>
         </ul>
       </div>
     </section>
@@ -194,7 +201,7 @@
                 <img src="img/popular-2.png" class="popular-img" alt="Монопод для селфи" width="86" height="117">
               </a>
             </div>
-            <p> <a  href="catalogMonopod.html"> Монопод для селфи</a> </p>
+            <p> <a href="catalogMonopod.html"> Монопод для селфи</a> </p>
           </li>
           <li class="popular">
             <div class="popular-item">
@@ -224,7 +231,8 @@
           </li>
           <li class="popular">
             <div class="popular-item">
-              <a class="popular-icon" href="#"> <img src="img/poppular-6.png" alt="Квадрокоптеры" width="132" height="69"></a>
+              <a class="popular-icon" href="#"> <img src="img/poppular-6.png" alt="Квадрокоптеры" width="132"
+                  height="69"></a>
             </div>
             <p><a href="#">Квадрокоптеры</a></p>
           </li>
@@ -367,12 +375,14 @@
         <ul class="footer-navi">
           <li class="footer-login">
             <a href="#">
-              <span><svg width="13" height="12" viewBox="0 0 13 12">
+              <span>
+                <svg width="13" height="12" viewBox="0 0 13 12">
                   <path fill="#ffc600"
                     d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z" />
                 </svg>
               </span>
-              Войти</a></li>
+              <span class="login-clear">Войти</span>
+            </a></li>
           <li class="footer-contrast">
             <a href="#"><span>
                 <svg width="10" height="10" viewBox="0 0 10 10">
@@ -413,7 +423,7 @@
             </a></li>
           <li><a href="#" class="footer-social-in" aria-label="Инстаграм">
               <svg width="32" height="32" viewBox="0 0 32 32">
-                <g >
+                <g>
                   <path
                     d="M20.916 16a4.938 4.938 0 1 1-9.877 0c0-.394.051-.773.138-1.14h-.897v6.838h11.396V14.86h-.897c.086.367.137.746.137 1.14z" />
                   <path
