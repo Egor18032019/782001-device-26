@@ -26,33 +26,36 @@
 
           <ul class="header-navigation">
             <li class="header-login">
-              <a href="#"> <span>
-                  <svg width="13" height="12" viewBox="0 0 13 12">
-                    <path
-                      d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z" />
-                  </svg>
-                </span>
-                <span class="login-clear">Войти</span>
+              <a href="#">
+                <svg width="13" height="12" viewBox="0 0 13 12">
+                  <path
+                    d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z" />
+                </svg>
+
+                <span class="login-name"></span>
+              </a>
+              <a href="#">
+                <span class="login-name">Войти</span>
               </a>
             </li>
             <li class="header-contrast header-contrast-padding">
-              <a href="#"><span>
-                  <svg width="10" height="10" viewBox="0 0 10 10">
-                    <path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z" /></svg>
-                </span>
-                Сравнить</a>
+              <a href="#">
+                <svg width="10" height="10" viewBox="0 0 10 10">
+                  <path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z" /></svg>
+                <span>Сравнить</span>
+              </a>
             </li>
 
             <li class="header-basket">
-              <a href="#"><span>
-                  <svg width="12" height="12" viewBox="0 0 12 12">
-                    <path
-                      d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z" />
-                    <path
-                      d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z" />
-                  </svg>
-                </span>
-                Корзина</a>
+              <a href="#">
+                <svg width="12" height="12" viewBox="0 0 12 12">
+                  <path
+                    d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z" />
+                  <path
+                    d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z" />
+                </svg>
+                <span>Корзина</span>
+              </a>
             </li>
           </ul>
         </div>
@@ -62,7 +65,6 @@
         <nav class="header-catalog">
           <ul class="header-catalog-list">
             <li class="header-item"> Каталог товаров
-              <span><img src="img/plus.svg" alt="plus"></span>
               <ul class="header-catalog-sub">
                 <li><a href="#">Виртуальная реальность </a></li>
                 <li><a href="catalog-monopod.html">Моноподы для селфи</a></li>
@@ -194,7 +196,7 @@
               </a>
             </div>
 
-              <a href="#">Виртуальная реальность</a>
+            <a class="popular-a" href="#">Виртуальная реальность</a>
 
           </li>
           <li class="popular">
@@ -204,7 +206,7 @@
               </a>
             </div>
 
-              <a href="catalog-monopod.html"> Монопод для селфи</a>
+            <a class="popular-a" href="catalog-monopod.html"> Моноподы для селфи</a>
 
           </li>
           <li class="popular">
@@ -213,14 +215,14 @@
                 <img src="img/popular-3.svg" alt="Экшен-камеры" width="71" height="87">
               </a>
             </div>
-            <a href="#">Экшен-камеры</a>
+            <a class="popular-a" href="#">Экшен-камеры</a>
           </li>
           <li class="popular">
             <div class="popular-item">
               <a href="#" class="popular-icon">
                 <img src="img/popular-4.svg" alt="Финтес-браслеты" width="107" height="65"> </a>
             </div>
-            <a  href="#">Финтес-браслеты</a>
+            <a class="popular-a" href="#">Финтес-браслеты</a>
           </li>
 
           <li class="popular">
@@ -230,7 +232,7 @@
               </a>
             </div>
 
-              <a href="#">Умные часы</a>
+            <a class="popular-a" href="#">Умные часы</a>
 
           </li>
           <li class="popular">
@@ -239,7 +241,7 @@
                 <img src="img/poppular-6.svg" alt="Квадрокоптеры" width="132" height="69">
               </a>
             </div>
-            <a href="#">Квадрокоптеры</a>
+            <a class="popular-a" href="#">Квадрокоптеры</a>
           </li>
         </ul>
       </div>
@@ -261,7 +263,7 @@
             <label class="garant-label" for="garant">Гарантия</label>
           </li>
           <li class="controls-item">
-            <label class="contacts-label" for="contacts">Контакты</label>
+            <label class="contacts-label" for="contacts">Кредит</label>
           </li>
         </ul>
       </div>
@@ -385,12 +387,12 @@
           <li class="footer-login">
             <a href="#">
 
-                <svg width="13" height="12" viewBox="0 0 13 12">
-                  <path fill="#ffc600"
-                    d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z" />
-                </svg>
+              <svg width="13" height="12" viewBox="0 0 13 12">
+                <path fill="#ffc600"
+                  d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z" />
+              </svg>
 
-              <span class="login-clear">Войти</span>
+              <span class="login-name">Войти</span>
             </a>
           </li>
           <li class="footer-contrast">
@@ -509,4 +511,5 @@
   </section>
 
 </body>
+
 </html>
