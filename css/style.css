@@ -59,6 +59,10 @@ a {
   z-index: 2;
 }
 
+.button:hover {
+  transform: scale(1.5);
+}
+
 .button::before {
   content: "";
   position: absolute;
@@ -71,8 +75,15 @@ a {
 }
 
 header.container {
+  width: 1160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-top: 40px;
-
+  background-color: rgb(247, 225, 150);
+  padding-left: 60px;
+  padding-right: 55px;
+  padding-bottom: 17px;
 }
 
 .header-logo {
@@ -127,12 +138,7 @@ header.container {
   padding: 0 20px;
 }
 
-.header-wraper {
-  display: flex;
-  padding-left: 4px;
 
-  justify-content: space-between;
-}
 
 .header-navigation {
   display: flex;
@@ -151,7 +157,7 @@ header.container {
 }
 
 .header-login span {
-  padding-right: 11px;
+  padding-right: 12px;
 }
 
 .header-basket {
@@ -159,16 +165,16 @@ header.container {
 }
 
 .header-basket span {
-  padding-right: 5px;
+  padding-right: 0;
 }
 
 .header-contrast svg,
 .header-basket svg {
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .header-contrast span {
-  padding-right: 9px;
+  padding-right: 0;
 }
 
 .login-clear {
@@ -181,6 +187,10 @@ header.container {
   letter-spacing: 0.15px;
   text-align: left;
   color: rgba(0, 0, 0, 0.3);
+}
+
+header .login-clear {
+  padding-right: 12px;
 }
 
 /* .header-login .login-name::before {
@@ -239,7 +249,7 @@ header.container {
 .header-item::after {
   content: "";
   width: 16px;
-  height: 16px;
+  height: 20px;
   display: inline-block;
   vertical-align: middle;
   margin-right: 0.1em;
@@ -294,6 +304,10 @@ header.container {
   text-transform: uppercase;
 }
 
+.header-item:hover {
+  color: rgb(99, 90, 60);
+}
+
 .header-search::before {
   content: "";
   width: 16px;
@@ -326,6 +340,10 @@ header.container {
 }
 
 .header-top {
+  display: flex;
+  padding-left: 4px;
+  justify-content: space-between;
+
   width: 100%;
   padding-top: 1px;
   font-family: 'Open Sans', "Arial", sans-serif;
@@ -336,6 +354,7 @@ header.container {
   text-align: left;
   color: #000000;
 }
+
 
 .header-catalog-sub {
   display: none;
@@ -364,14 +383,21 @@ header.container {
   opacity: 0.3;
 }
 
+.image-container {
+  width: 526px;
+  height: 486px;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
 
 .sliders-number {
   position: absolute;
   display: block;
   z-index: 1;
-  right: 35px;
+  right: 34px;
   bottom: 185px;
-  width: 166px;
+  width: 167px;
   height: 131px;
 
   font-family: "Gilroy", "Arial", sans-serif;
@@ -410,10 +436,28 @@ header.container {
   display: none;
 }
 
+.slides img {
+  /* width: 40%; */
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+
+}
+
+.slides .slider-3png {
+  width: 526px;
+  margin-right: 0;
+}
+
+
+
+
 .main-sliders-controls label {
   position: relative;
 
   display: inline-block;
+  vertical-align: middle;
   width: 18px;
   height: 18px;
   padding: 8px;
@@ -470,8 +514,8 @@ header.container {
 .main-sliders {
   display: flex;
   list-style: none;
-  margin-left: 52px;
-  margin-top: 0;
+  margin: 0;
+  padding-left: 22px;
 }
 
 .main-sliders li {
@@ -481,37 +525,38 @@ header.container {
 .controls-list input {
   appearance: none;
   opacity: 0;
-
 }
 
 
-
 .slides-text {
-  width: 50%;
+  width: 100%;
   position: relative;
-  padding-top: 37px;
-  padding-left: 125px;
+  padding-top: 34px;
+  padding-left: 54px;
+  margin: 0;
 }
 
 .slides-text ::before {
   content: "";
   position: absolute;
-  top: 41px;
-  left: 124px;
   width: 100px;
   height: 7px;
+  top: 39px;
+  left: 54px;
   background-color: white;
 }
 
 .slides-text table {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 530px;
   padding-top: 51px;
+  margin: 0;
+  padding-left: 0;
 }
 
 .slides-feature {
-  width: 479px;
+  width: 502px;
   margin-bottom: 19px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 47px;
@@ -534,10 +579,23 @@ header.container {
   color: #464646;
 }
 
+.feature-three {
+  width: 520px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+  padding-bottom: 34px;
+}
+
 .feature-tr {
   display: flex;
-  width: 427px;
-  justify-content: space-between;
+  width: 437px;
+}
+
+.feature-tr td {
+  display: flex;
+  width: 100%;
+  /* justify-content: space-between; */
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 300;
@@ -548,7 +606,7 @@ header.container {
 }
 
 .feature-tr td:first-child {
-  padding-right: 5px;
+  padding-right: 28px;
   padding-left: 0;
 }
 
@@ -558,8 +616,13 @@ header.container {
 
 .feature-tr-bottom {
   display: flex;
+  width: 442px;
+}
+
+.feature-tr-bottom td {
+  display: flex;
   justify-content: space-between;
-  width: 362px;
+  width: 100%;
   padding-top: 7px;
   font-family: 'Open Sans', "Arial", sans-serif;
   font-size: 13px;
@@ -570,6 +633,9 @@ header.container {
   color: #464646;
 }
 
+.feature-tr-bottom td:first-child {
+  padding-right: 27px;
+}
 
 .slides-detail {
   position: relative;
@@ -751,11 +817,9 @@ header.container {
   display: flex;
   width: 278px;
   align-items: center;
+  justify-content: center;
   padding-right: 114px;
   min-height: 40px;
-  /* text-align: left;
-  vertical-align: middle; */
-  justify-content: center;
 }
 
 .service input {
@@ -889,6 +953,7 @@ header.container {
 2. бутоны на карточках товара - как убрать задний фон ? и остальное
 3.Третий слайд не могу сделать.
 4. как сделать иконку для нового товара ?? текст не могу поставить по середине
+5. не могу сделать фокус и ховер на кнопки
 */
 
 .logo-color {
@@ -1398,7 +1463,7 @@ main h1 {
 .breadcrumbs {
   display: flex;
   list-style: none;
-  margin-bottom: 41px;
+  margin-bottom: 45px;
   margin-left: 5px;
 }
 
@@ -1426,27 +1491,31 @@ main h1 {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.filters {
-
-  margin-left: auto;
-  margin-right: auto;
+.breadcrumbs a:hover {
+  color: rgb(132, 132, 132);
 }
 
-.filter-container-top {
+.breadcrumbs a:focus {
+  color: rgb(239, 239, 239);
+}
+
+.filters {
   width: 100%;
-  min-height: 71px;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 71px;
   align-items: center;
   background-color: #ebebeb;
   background-image: linear-gradient(90deg, #d9d9d9 28%, transparent 25%);
   /*,linear-gradient(-90deg, white 1%, transparent 0%); */
 }
 
-.filter-container-top .container {
+.filters .container {
   display: flex;
 }
 
-.filter-container-top h2 {
+.filters h2 {
   display: flex;
   align-items: center;
   text-transform: uppercase;
@@ -1474,7 +1543,7 @@ main h1 {
   line-height: 1.29;
   letter-spacing: normal;
   text-align: left;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(164, 164, 164, 0.6);
 }
 
 .sorting li {
@@ -1482,9 +1551,21 @@ main h1 {
   justify-content: space-between;
 }
 
-.sorting .sorting-current {
+.sorting a {
+  color: rgba(164, 164, 164, 0.6);
+}
+
+.sorting-current a {
   color: black;
   opacity: 1;
+}
+
+.sorting a:hover {
+  color: rgb(102, 102, 102);
+}
+
+.sorting a:focus {
+  color: rgb(34, 34, 34);
 }
 
 .wrapper {
@@ -1533,18 +1614,34 @@ main h1 {
   font-size: 0px;
   line-height: 1.29;
   text-align: left;
+  fill: rgb(211, 210, 210);
 }
 
 .sorting-arrow .arrow-top {
   width: 11px;
   min-height: 10px;
-  background-image: url("../img/icon-up-dir.svg")
 }
 
 .sorting-arrow .arrow-down {
   width: 11px;
   min-height: 10px;
-  background-image: url("../img/icon-down-dir.svg")
+
+}
+
+.sorting-arrow a {
+  width: 11px;
+  min-height: 10px;
+}
+
+.sorting-arrow li:hover {
+  fill: rgb(167, 165, 166);
+}
+
+.sorting-arrow li:focus {
+  /* fill:rgb(35, 31, 32); почему не работает ?*/
+  fill: red;
+  color: red;
+  opacity: 1;
 }
 
 .filters h2 {
@@ -1887,6 +1984,10 @@ main h1 {
   vertical-align: middle;
 }
 
+.check-input:disabled+.check {
+  opacity: 0.3;
+}
+
 /* когда чекет */
 .check-input:checked+.check::before {
   background-image: url("../img/checkbox-on.svg");
@@ -1894,9 +1995,14 @@ main h1 {
 
 /* фокус и актив */
 .check-input:focus+.check,
-.check-input:active+.check {
+.check-input:active+.check,
+.check-input:checked+.check {
   font-weight: 600;
-  /* чтобы проверить */
+  opacity: 1;
+}
+
+.check-input:checked+.check:hover {
+  opacity: 0.6;
 }
 
 /* радио кнопки */
@@ -1915,15 +2021,24 @@ main h1 {
   background-image: url("../img/radio-on.svg");
 }
 
+.check-input:checked+.radio:hover {
+  opacity: 0.6;
+}
+
+.check-input:checked+.radio:focus {
+  opacity: 1;
+  /* да как так то  */
+}
+
 .radio {
   display: block;
   padding-bottom: 14px;
 }
 
 .check-input:focus+.radio,
-.check-input:active+.radio {
+.check-input:active+.radio,
+.check-input:checked+.radio {
   font-weight: 600;
-  /* чтобы проверить */
 }
 
 .monopod-list {
@@ -1956,8 +2071,9 @@ main h1 {
   width: 300px;
   padding-right: 46px;
 }
+
 .monopod-type .monopod-odd {
-padding-right:0;
+  padding-right: 0;
 }
 
 .monopod-price {
@@ -1980,8 +2096,8 @@ padding-right:0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 31px;
-  padding-right: 25px;
+  padding-left: 0;
+  padding-right: 0;
   margin-left: auto;
   margin-bottom: 77px;
   margin-top: 0;
@@ -2007,6 +2123,32 @@ padding-right:0;
   color: #000000;
 }
 
+.pagination-list>li:first-child:hover,
+.pagination-list>li:last-child:hover {
+  background-color: rgb(217, 217, 217);
+
+}
+
+.pagination-list li:first-child a:focus,
+.pagination-list li:last-child a:focus {
+  color: rgb(151, 151, 151);
+}
+
+.pagination-list li:first-child,
+.pagination-list li:last-child {
+  width: 130px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-list li:first-child a,
+.pagination-list li:last-child a {
+  width: 100%;
+  text-align: center;
+}
+
 .pagination-item a {
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 16px;
@@ -2014,7 +2156,8 @@ padding-right:0;
   line-height: 1.5;
   letter-spacing: 3.2px;
   text-align: left;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgb(178, 178, 178);
+  cursor: pointer;
 }
 
 .pagination-current a {
@@ -2024,5 +2167,13 @@ padding-right:0;
   line-height: 1.5;
   letter-spacing: 3.2px;
   text-align: left;
-  color: #000000;
+  color: black;
+}
+
+.pagination-items a:hover {
+  color: rgb(102, 102, 102);
+}
+
+.pagination-items a:focus {
+  color: black;
 }
