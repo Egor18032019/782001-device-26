@@ -527,7 +527,6 @@ header .login-clear {
   opacity: 0;
 }
 
-
 .slides-text {
   width: 100%;
   position: relative;
@@ -1326,6 +1325,7 @@ section .contacts-about {
   margin-left: -480px;
   width: 960px;
   box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+  z-index: 1;
 }
 
 .modal-write {
@@ -1338,23 +1338,32 @@ section .contacts-about {
   box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
 }
 
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+.modal-error{
+  animation: shake 0.6s;
+}
+
+.modal-send {
+  margin-top: 55px;
+  background-color: white;
+}
+
 .modal-close {
   position: absolute;
   top: 22px;
   right: 22px;
   width: 55px;
   height: 55px;
-  background-color: rgb(240, 197, 46);
-  border: 20px solid rgb(240, 197, 46);
-  border-radius: 50%;
+  background-image: url("../img/modal-close.svg");
+  background-color: white;
+  border: none;
   cursor: pointer;
 }
 
-.modal-send {
-  margin-top: 55px;
-}
-
-.modal-close::before,
+/* .modal-close::before,
 .modal-close::after {
   content: "";
   position: absolute;
@@ -1362,7 +1371,6 @@ section .contacts-about {
   right: -18px;
   width: 52px;
   height: 3px;
-
   background-color: white;
 }
 
@@ -1372,12 +1380,13 @@ section .contacts-about {
 
 .modal-close::after {
   transform: rotate(-45deg);
-}
+} */
 
 .modal {
   position: fixed;
   color: black;
   background-color: white;
+  z-index: 1;
 }
 
 .feedback-form label {
@@ -1438,7 +1447,6 @@ section .contacts-about {
 }
 
 .feedback-textarea textarea:focus {
-
   background-color: #ffffff;
   color: #464646;
 }
@@ -2176,4 +2184,41 @@ main h1 {
 
 .pagination-items a:focus {
   color: black;
+}
+
+/* анимация модального окна */
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,80% {
+    transform: translateX(10px);
+  }
 }
