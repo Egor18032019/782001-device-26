@@ -322,12 +322,16 @@ header .login-clear {
 
 .header-catalog-sub {
   position: absolute;
-  width: 555px;
-  height: 129px;
+  width: 1160px;
+  height: 166px;
+  left: -60px;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 0;
-
+  padding-left: 59px;
+  padding-right: 483px;
+  padding-bottom: 40px;
+  background-color: rgb(247, 225, 150);
+  z-index: 2;
   text-transform: none;
   font-family: 'Open Sans', "Arial", sans-serif;
   font-size: 15px;
@@ -337,9 +341,7 @@ header .login-clear {
   text-align: left;
 }
 
-.header-catalog-sub li {
-  width: 181px;
-}
+.header-catalog-sub li {}
 
 .header-catalog-sub li:nth-child(5) {
   margin-bottom: 22px;
@@ -449,12 +451,13 @@ header .login-clear {
 .sliders-number {
   position: absolute;
   display: block;
-  z-index: 1;
   right: 34px;
-  bottom: 185px;
+  top: -12px;
+
   width: 167px;
   height: 131px;
-
+  margin: 0;
+  z-index: 1;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 179px;
   font-weight: 800;
@@ -462,6 +465,7 @@ header .login-clear {
   letter-spacing: 1.79px;
   text-align: right;
   color: white;
+  vertical-align: middle;
 }
 
 .slider-list {
@@ -478,13 +482,14 @@ header .login-clear {
   justify-content: space-around;
 
   position: absolute;
-  left: 88%;
-  bottom: 135px;
-  z-index: 100;
+  left: 90%;
+  bottom: 144px;
+  z-index: 3;
 
-  width: 141px;
+  width: 101px;
   height: 18px;
-
+  padding: 0%;
+  margin: 0;
   /* text-align: center; */
   font-size: 0;
   -webkit-transform: translateX(-50%);
@@ -1086,6 +1091,8 @@ header .login-clear {
 1.перенсти фокус с ли на а - немогу это сделать(popular)
 2. бутоны на карточках товара - как убрать задний фон ?
 3. не могу сделать фокус и ховер на кнопки
+4. 3 слайд прыгает !
+5. точка ?
 */
 
 .logo-color {
