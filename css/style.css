@@ -280,7 +280,7 @@ header .login-clear {
   padding-left: 0;
 }
 
-.header-item::after {
+.header-item::before {
   content: "";
   width: 16px;
   height: 20px;
@@ -316,23 +316,35 @@ header .login-clear {
   background-color: black;
 } */
 
-/* .header-catalog-list:hover .header-catalog-sub {
+.header-catalog-list:hover .header-catalog-sub {
   display: flex;
-} */
+}
 
 .header-catalog-sub {
+  position: absolute;
+  width: 555px;
+  height: 129px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0;
 
   text-transform: none;
-  font-family: "OpenSans", "Arial", sans-serif;
+  font-family: 'Open Sans', "Arial", sans-serif;
   font-size: 15px;
   font-weight: 300;
-
   line-height: 2.4;
   letter-spacing: 0.15px;
   text-align: left;
 }
 
-.header-catalog-sub li {}
+.header-catalog-sub li {
+  width: 181px;
+}
+
+.header-catalog-sub li:nth-child(5) {
+  margin-bottom: 22px;
+}
+
 
 .header-item {
   text-transform: uppercase;
@@ -548,9 +560,9 @@ header .login-clear {
   display: flex;
 }
 
-#control-first:checked~.main-sliders-controls .slider-control-first::before,
-#control-two:checked~.main-sliders-controls .slider-control-two::before,
-#control-three:checked~.main-sliders-controls .slider-control-three::before {
+#control-first:checked~.main-sliders-controls .slider-1::before,
+#control-two:checked~.main-sliders-controls .slider-2::before,
+#control-three:checked~.main-sliders-controls .slider-3::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -558,9 +570,9 @@ header .login-clear {
   z-index: 2;
   width: 4px;
   height: 4px;
-  margin: -4px;
+  margin: -5px;
   background-color: inherit;
-  border: 2px solid red;
+  border: 2px solid black;
   border-radius: 50%;
 }
 
@@ -1070,12 +1082,10 @@ header .login-clear {
 }
 
 /* TODO:
-перенсти фокус с ли на а - немогу это сделать
-1. как делать каталог товаров ?
-2. бутоны на карточках товара - как убрать задний фон ? и остальное
-3.Третий слайд не могу сделать.
-4. как сделать иконку для нового товара ?? текст не могу поставить по середине
-5. не могу сделать фокус и ховер на кнопки
+0. плюсик в каталоге делать абсолют или  как то по другому ??
+1.перенсти фокус с ли на а - немогу это сделать(popular)
+2. бутоны на карточках товара - как убрать задний фон ?
+3. не могу сделать фокус и ховер на кнопки
 */
 
 .logo-color {
@@ -1257,7 +1267,7 @@ section .contacts-about {
 }
 
 .name {
-  font-family: 'OpenSans', "Arial", sans-serif;
+  font-family: 'Open Sans', "Arial", sans-serif;
   font-size: 15px;
   font-weight: 300;
   font-style: normal;
@@ -1473,7 +1483,6 @@ section .contacts-about {
   color: white;
 }
 
-
 .modal-map {
   display: none;
   top: 15%;
@@ -1570,7 +1579,7 @@ section .contacts-about {
   display: -ms-flexbox;
   display: flex;
   padding-left: 20px;
-  font-family: "OpenSans", "Arial", sans-serif;
+  font-family: 'Open Sans', "Arial", sans-serif;
   font-size: 14px;
 
   line-height: 1.29;
@@ -1608,7 +1617,7 @@ section .contacts-about {
   min-height: 156px;
   padding: 20px;
 
-  font-family: "OpenSans", "Arial", sans-serif;
+  font-family: 'Open Sans', "Arial", sans-serif;
   font-size: 14px;
   line-height: 1.29;
   text-align: left;
@@ -2029,10 +2038,12 @@ main h1 {
   width: 60px;
   height: 60px;
   top: 28px;
-  right: 27px;
+  right: 24px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
