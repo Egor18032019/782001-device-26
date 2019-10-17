@@ -506,16 +506,23 @@
   </section>
 
   <section class="modal modal-map">
-    <h2 class="visually-hidden">Контакты полность</h2>
-    <iframe
-      src="https://yandex.ru/map-widget/v1/?um=constructor%3A66a842096b577af37d8c13de2e5053c4c467d14bfd5ffc179665cc005a4d2714&amp;source=constructor"
-      width="960" height="559" frameborder="0">
-    </iframe>
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+
+    <!-- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A66a842096b577af37d8c13de2e5053c4c467d14bfd5ffc179665cc005a4d2714&amp;source=constructor"
+      width="960" height="559" frameborder="0" allowfullscreen>
+    </iframe> -->
+
+    <p>
+      <img src="img/map-big-jpg.jpg" alt="Офис компании по адресу ул.Строителей 15" width="960" height="559">
+    </p>
     <button type="reset" name="button" class="modal-close">
       <span class="visually-hidden">Закрыть</span>
     </button>
   </section>
-  <script>
+  <script src="js/firstjs.js"></script>
+  <script src="js/mapjs.js"></script>
+
+  <!-- <script>
     var link = document.querySelector(".contacts-about-write");
     var popup = document.querySelector(".modal-write");
     var close = popup.querySelector(".modal-close");
@@ -573,7 +580,8 @@
         popup.classList.add("modal-error");
       } else {
         if (isStorageSupport) {
-          localStorage.setItem("login", login.value, "email", email.value);
+          localStorage.setItem("login", login.value);
+          localStorage.setItem("email", email.value);
         }
       }
     });
@@ -596,7 +604,7 @@
       }
     })
 
-  </script>
+  </script> -->
 </body>
 
 </html>
