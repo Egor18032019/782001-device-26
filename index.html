@@ -64,7 +64,8 @@
     <div class="header-servis">
       <nav class="header-catalog">
         <ul class="header-catalog-list">
-          <li class="header-item"> Каталог товаров
+          <li class="header-item">
+            <a href="#" class="catalog-main">Каталог товаров</a>
             <ul class="header-catalog-sub">
               <li><a href="#">Виртуальная реальность </a></li>
               <li><a href="catalog-monopod.html">Моноподы для селфи</a></li>
@@ -196,58 +197,55 @@
         <h2 class="visually-hidden">Список товаров по категориям</h2>
         <ul class="popular-back">
           <li class="popular">
-            <div class="popular-item">
-              <a class="popular-icon" href="#">
+            <a class="popular-icon" href="#">
+              <span class="popular-item">
                 <img src="img/popular-1.svg" class="popular-img" alt="Виртуальная реальность" width="97" height="55">
-              </a>
-            </div>
-
-            <a class="popular-a" href="#">Виртуальная реальность</a>
+              </span>
+              <span>Виртуальная реальность</span>
+            </a>
+          </li>
+          <li class="popular">
+            <a class="popular-icon" href="catalog-monopod.html">
+              <span class="popular-item">
+                <img src="img/popular-2.svg" class="popular-img popular-selfi" alt="Монопод для селфи" width="86" height="117">
+              </span>
+              <span class="popular-selfi">
+                Моноподы для селфи
+              </span>
+            </a>
+          </li>
+          <li class="popular">
+            <a class="popular-icon" href="#">
+              <span class="popular-item">
+                <img src="img/popular-3.svg" class="popular-img"  alt="Экшен-камеры" width="71" height="87">
+              </span>
+              <span> Экшен-камеры</span>
+            </a>
+          </li>
+          <li class="popular">
+            <a href="#" class="popular-icon">
+              <span class="popular-item">
+                <img src="img/popular-4.svg" class="popular-img" alt="Финтес-браслеты" width="107" height="65">
+              </span>
+              <span> Финтес-браслеты</span>
+            </a>
+          </li>
+          <li class="popular">
+            <a class="popular-icon" href="#">
+              <span class="popular-item">
+                <img src="img/popular-5.svg" class="popular-img"  alt="Умные часы" width="55" height="98">
+              </span>
+              <span> Умные часы</span>
+            </a>
 
           </li>
           <li class="popular">
-            <div class="popular-item">
-              <a class="popular-icon icon-selfi" href="catalog-monopod.html">
-                <img src="img/popular-2.svg" class="popular-img" alt="Монопод для селфи" width="86" height="117">
-              </a>
-            </div>
-
-            <a class="popular-a" href="catalog-monopod.html"> Моноподы для селфи</a>
-
-          </li>
-          <li class="popular">
-            <div class="popular-item">
-              <a class="popular-icon" href="#">
-                <img src="img/popular-3.svg" alt="Экшен-камеры" width="71" height="87">
-              </a>
-            </div>
-            <a class="popular-a" href="#">Экшен-камеры</a>
-          </li>
-          <li class="popular">
-            <div class="popular-item">
-              <a href="#" class="popular-icon">
-                <img src="img/popular-4.svg" alt="Финтес-браслеты" width="107" height="65"> </a>
-            </div>
-            <a class="popular-a" href="#">Финтес-браслеты</a>
-          </li>
-
-          <li class="popular">
-            <div class="popular-item">
-              <a class="popular-icon" href="#">
-                <img src="img/popular-5.svg" alt="Умные часы" width="55" height="98">
-              </a>
-            </div>
-
-            <a class="popular-a" href="#">Умные часы</a>
-
-          </li>
-          <li class="popular">
-            <div class="popular-item">
-              <a class="popular-icon" href="#">
-                <img src="img/poppular-6.svg" alt="Квадрокоптеры" width="132" height="69">
-              </a>
-            </div>
-            <a class="popular-a" href="#">Квадрокоптеры</a>
+            <a class="popular-icon" href="#">
+              <span class="popular-item">
+                <img src="img/poppular-6.svg" class="popular-img"  alt="Квадрокоптеры" width="132" height="69">
+              </span>
+              <span>Квадрокоптеры</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -263,13 +261,13 @@
       <div class="service-slider-controls">
         <ul class="controls-list">
           <li class="controls-item">
-            <label class="delivery-label" for="delivery">Доставка</label>
+            <label class="delivery-label" for="delivery"><span>Доставка</span></label>
           </li>
           <li class="controls-item">
-            <label class="garant-label" for="garant">Гарантия</label>
+            <label class="garant-label" for="garant"><span>Гарантия</span></label>
           </li>
           <li class="controls-item">
-            <label class="contacts-label" for="contacts">Кредит</label>
+            <label class="contacts-label" for="contacts"><span>Кредит</span></label>
           </li>
         </ul>
       </div>
@@ -487,7 +485,7 @@
       <div class="feedback-person">
         <p>
           <label class="fullname" for="person-name">Ваше имя:</label>
-          <input type="text" name="fullname" id="person-name" placeholder="Имя Фамилия">
+          <input type="text" name="fullname" id="person-name" placeholder="Имя Фамилия" required>
         </p>
         <p>
           <label class="email" for="person-mail">Ваш e-mail:</label>

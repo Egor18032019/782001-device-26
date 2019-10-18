@@ -39,41 +39,46 @@ body {
 
 a {
   text-decoration: none;
-  /* всем сылкам черный цвет.
-  так как белые только в подвале.
-  там  и переопределим цвет*/
   color: #000000;
 }
 
 .button {
-  border: none;
+  display: block;
   position: relative;
+  width: 200px;
+  height: 40px;
   background-color: #ebebeb;
+  border: none;
   text-transform: uppercase;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 800;
-  line-height: 1.33;
+  line-height: 40px;
   letter-spacing: 3.6px;
   text-align: center;
   color: #000000;
-  /* немогу понять как сделать буквы */
   z-index: 2;
 }
 
-.button:hover {
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
+.button:hover::before {
+  height: 100%;
+}
+
+.button:focus {
+  color: rgb(0, 0, 0, 0.3);
 }
 
 .button::before {
   content: "";
+  display: block;
   position: absolute;
-  width: 200px;
+  width: 100%;
   height: 8px;
-  bottom: 9px;
-  right: -35px;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  bottom: 50%;
+  left: 0;
   background-color: rgb(240, 196, 46);
   z-index: -1;
 }
@@ -94,7 +99,7 @@ header.container {
   background-color: rgb(247, 225, 150);
   padding-left: 60px;
   padding-right: 55px;
-  padding-bottom: 17px;
+  padding-bottom: 8px;
 }
 
 .header-logo {
@@ -114,11 +119,11 @@ header.container {
 
 .slider {
 
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(24%, rgb(247, 225, 150)), color-stop(0, white));
+  background-image: -o-linear-gradient(rgb(247, 225, 150) 27%, white 0);
 
-  background-image: -o-linear-gradient(rgb(247, 225, 150) 24%, white 0);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(27%, rgb(247, 225, 150)), color-stop(0, white));
 
-  background-image: linear-gradient(rgb(247, 225, 150) 24%, white 0);
+  background-image: linear-gradient(rgb(247, 225, 150) 27%, white 0);
 }
 
 .main-navigation {
@@ -168,16 +173,13 @@ header.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* продумать с шириной. */
   width: 540px;
   margin-top: auto;
   padding-left: 33px;
-  /*или 0 ?*/
   margin-left: auto;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  /*почему не работает?7 */
 }
 
 .header-navigation svg {
@@ -193,16 +195,16 @@ header.container {
 }
 
 .header-basket span {
-  padding-right: 0;
+  padding-right: 5px;
 }
 
 .header-contrast svg,
 .header-basket svg {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .header-contrast span {
-  padding-right: 0;
+  padding-right: 9px;
 }
 
 .login-clear {
@@ -221,21 +223,6 @@ header .login-clear {
   padding-right: 12px;
 }
 
-/* .header-login .login-name::before {
-  content: "Валентин Петухов";
-  width: 132px;
-  color: black;
-  margin-right: 0.8em;
-} */
-
-/* .header-login .login-clear::before {
-  content: "";
-  width: 132px;
-  color: black;
-  margin-right: 0.8em;
-} */
-
-
 .header-contrast-padding {
   padding-left: 174px;
 }
@@ -246,7 +233,7 @@ header .login-clear {
   display: flex;
   width: 100%;
   padding-top: 5px;
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -280,13 +267,13 @@ header .login-clear {
   padding-left: 0;
 }
 
-.header-item::before {
+.catalog-main::after {
   content: "";
   width: 16px;
   height: 20px;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 0.1em;
+  margin-left: 12px;
   background-image: url("../img/plus.svg");
   background-repeat: no-repeat;
 }
@@ -295,28 +282,10 @@ header .login-clear {
   padding-left: 5px;
 }
 
-/* .header-catalog-list::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 2px;
-  top: 11px;
-  right: -29px;
-  transform: rotate(90deg);
-  background-color: black;
-}
-
-.header-catalog-list::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 2px;
-  top: 12px;
-  right: -28px;
-  background-color: black;
-} */
 
 .header-catalog-list:hover .header-catalog-sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -325,7 +294,11 @@ header .login-clear {
   width: 1160px;
   height: 166px;
   left: -60px;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   padding-left: 59px;
   padding-right: 483px;
@@ -457,7 +430,7 @@ header .login-clear {
   width: 167px;
   height: 131px;
   margin: 0;
-  z-index: 1;
+  /* z-index: 1; */
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 179px;
   font-weight: 800;
@@ -482,11 +455,11 @@ header .login-clear {
   justify-content: space-around;
 
   position: absolute;
-  left: 90%;
-  bottom: 144px;
+  right: 22px;
+  bottom: 148px;
   z-index: 3;
 
-  width: 101px;
+  width: 100px;
   height: 18px;
   padding: 0%;
   margin: 0;
@@ -502,7 +475,6 @@ header .login-clear {
 }
 
 .slides img {
-  /* width: 40%; */
   margin-right: auto;
   margin-left: auto;
   margin-top: auto;
@@ -515,23 +487,21 @@ header .login-clear {
   margin-right: 0;
 }
 
-
-
-
 .main-sliders-controls label {
   position: relative;
 
   display: inline-block;
   vertical-align: middle;
-  width: 18px;
-  height: 18px;
-  padding: 8px;
+  width: 13px;
+  height: 13px;
+  /* padding: 8px; */
+  border: 1px solid #000000;
 
   border-radius: 50%;
   cursor: pointer;
 }
 
-.main-sliders-controls label::after {
+/* .main-sliders-controls label::after {
   content: "";
   position: absolute;
   top: 0;
@@ -541,7 +511,7 @@ header .login-clear {
   border: 1px solid #000000;
   border-radius: 50%;
 
-}
+} */
 
 .slider input {
   display: none;
@@ -570,16 +540,37 @@ header .login-clear {
 #control-three:checked~.main-sliders-controls .slider-3::before {
   content: "";
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 3px;
+  top: 2.5px;
   z-index: 2;
-  width: 4px;
-  height: 4px;
-  margin: -5px;
+  width: 6px;
+  height: 6px;
+  /* margin: -5px; */
   background-color: inherit;
-  border: 2px solid black;
+  border: 1.5px solid black;
   border-radius: 50%;
 }
+
+/* #control-first:checked~.main-sliders-controls .slider-1::after,
+#control-two:checked~.main-sliders-controls .slider-2::after,
+#control-three:checked~.main-sliders-controls .slider-3::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  width: 1px;
+  height: 1px;
+  margin: -5px;
+  background-color: inherit;
+  border: 1px solid red;
+  border-radius: 50%;
+} */
+
+
+
+
+
 
 
 .main-sliders {
@@ -589,6 +580,7 @@ header .login-clear {
   list-style: none;
   margin: 0;
   padding-left: 22px;
+  padding-top: 27px;
 }
 
 .main-sliders li {
@@ -617,6 +609,7 @@ header .login-clear {
   height: 7px;
   top: 39px;
   left: 54px;
+  margin: 1px;
   background-color: white;
 }
 
@@ -634,7 +627,7 @@ header .login-clear {
 }
 
 .slides-feature {
-  width: 502px;
+  width: 508px;
   margin-bottom: 19px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 47px;
@@ -647,7 +640,7 @@ header .login-clear {
 
 .feature-item {
   width: 479px;
-  padding-bottom: 35px;
+  padding-bottom: 28px;
 
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 15px;
@@ -677,12 +670,10 @@ header .login-clear {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  /* justify-content: space-between; */
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 300;
   line-height: 1.33;
-  /* letter-spacing: 0.36px; */
   text-align: left;
   color: #000000;
 }
@@ -729,11 +720,12 @@ header .login-clear {
   position: relative;
   display: block;
   width: 220px;
+  height: 40px;
   z-index: 1;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 800;
-  /* line-height: 1.33; */
+  line-height: 40px;
   letter-spacing: 3.6px;
   text-align: center;
   color: #000000;
@@ -741,14 +733,26 @@ header .login-clear {
 }
 
 .slides-detail::after {
+  display: block;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
   content: "";
   position: absolute;
-  width: 220px;
+  width: 100%;
   height: 8px;
-  bottom: 11px;
+  bottom: 50%;
   left: 0px;
   background-color: rgb(240, 196, 46);
   z-index: -1;
+}
+
+.slides-detail:hover::after {
+  height: 100%;
+}
+
+.slides-detail:focus {
+  color: rgb(0, 0, 0, 0.3);
 }
 
 .popular-list {
@@ -771,16 +775,14 @@ header .login-clear {
   justify-content: space-between;
   list-style: none;
   padding: 0;
-  margin-bottom: 98px;
+  margin-bottom: 174px;
 }
 
-
-.popular .icon-selfi {
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: end;
-  padding-bottom: 2px;
+span.popular-selfi {
+  padding-right: 32px;
 }
+
+.popular .popular-selfi {}
 
 .popular-item {
   width: 160px;
@@ -788,10 +790,31 @@ header .login-clear {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 34px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: rgb(247, 225, 150);
+}
+
+.popular-img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
 }
 
 .popular:hover .popular-item {
@@ -813,11 +836,15 @@ header .login-clear {
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  min-height: 160px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 160px;
+  min-height: 240px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -827,15 +854,10 @@ header .login-clear {
   color: #000000;
 }
 
-.popular .popular-a {
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  padding-top: 34px;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+.popular span {
+  width: 100%;
 }
+
 
 .popular-monopod {
   padding: 0;
@@ -849,8 +871,8 @@ header .login-clear {
   width: 100%;
   min-height: 320px;
   margin-bottom: 65px;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #e5e5e5), color-stop(10%, white));
   background-image: -o-linear-gradient(#e5e5e5 90%, white 10%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #e5e5e5), color-stop(10%, white));
   background-image: linear-gradient(#e5e5e5 90%, white 10%);
 
 }
@@ -932,9 +954,12 @@ header .login-clear {
   position: absolute;
   width: 160px;
   height: 8px;
-  top: 11px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   right: 117px;
-  z-index: -1;
+  z-index: 1;
   background-color: rgb(240, 196, 46);
 }
 
@@ -951,6 +976,10 @@ header .login-clear {
   justify-content: center;
   padding-right: 114px;
   min-height: 40px;
+}
+
+.controls-item label span {
+  z-index: 3;
 }
 
 .service input {
@@ -999,7 +1028,11 @@ header .login-clear {
 #delivery:checked~.service-slider-controls .delivery-label {
   background-color: black;
   color: yellow;
-  z-index: 1;
+  z-index: 99;
+}
+
+#delivery:checked~.service-slider-controls .controls-item:nth-child(1):before {
+  opacity: 0;
 }
 
 #garant:checked~.service-slider-controls .garant-label {
@@ -1008,12 +1041,19 @@ header .login-clear {
   z-index: -1;
 }
 
+#garant:checked~.service-slider-controls .controls-item:nth-child(2):before {
+  opacity: 0;
+}
+
 #contacts:checked~.service-slider-controls .contacts-label {
   background-color: black;
   color: yellow;
   z-index: 2;
 }
 
+#contacts:checked~.service-slider-controls .controls-item:nth-child(3):before {
+  opacity: 0;
+}
 
 
 .servise-item h2 {
@@ -1087,12 +1127,7 @@ header .login-clear {
 }
 
 /* TODO:
-0. плюсик в каталоге делать абсолют или  как то по другому ??
-1.перенсти фокус с ли на а - немогу это сделать(popular)
-2. бутоны на карточках товара - как убрать задний фон ?
-3. не могу сделать фокус и ховер на кнопки
-4. 3 слайд прыгает !
-5. точка ?
+разное в ие и в других
 */
 
 .logo-color {
@@ -1118,7 +1153,7 @@ header .login-clear {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 87px;
+  margin-bottom: 80px;
 }
 
 .map {
@@ -1146,12 +1181,12 @@ header .login-clear {
 }
 
 .text-column {
-  padding-bottom: 23px;
+  padding-bottom: 18px;
 }
 
 .map-delevery {
-  padding-top: 28px;
-  padding-left: 38px;
+  padding-top: 24px;
+  padding-left: 37px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 800;
@@ -1211,29 +1246,37 @@ header .login-clear {
 
 section .contacts-about {
   position: relative;
+  display: block;
   width: 260px;
-  margin-left: 25px;
+  padding: 0;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 800;
-  line-height: 1.33;
+  line-height: 40px;
   letter-spacing: 3.6px;
   text-align: center;
   color: #000000;
   text-transform: uppercase;
   z-index: 1;
-  /* как сделать текст чтобы проступал ,,?? */
 }
 
 .contacts-about::after {
   content: "";
+  display: block;
   position: absolute;
-  top: 8px;
-  left: -22px;
-  width: 260px;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
   height: 8px;
   background-color: rgb(240, 196, 46);
   z-index: -1;
+}
+
+.contacts-about:hover::after {
+  height: 100%;
 }
 
 .contacts-about-write {
@@ -1492,8 +1535,10 @@ section .contacts-about {
 
 .modal-map {
   display: none;
-  top: 15%;
+  top: 50%;
   left: 50%;
+  /* transform: translate(-50%, -50%); */
+  margin-top: -280px;
   margin-left: -480px;
   width: 960px;
   height: 559px;
@@ -1505,9 +1550,12 @@ section .contacts-about {
 .modal-write {
   display: none;
   width: 960px;
-  top: 15%;
+  height: 553px;
+  top: 50%;
   left: 50%;
+  /* transform: translate(-50%,-50%); */
   margin-left: -480px;
+  margin-top: -276px;
   padding: 75px 98px 100px 92px;
   -webkit-box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
   box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
@@ -1542,31 +1590,17 @@ section .contacts-about {
   border-radius: 50%;
 }
 
-/* .modal-close::before,
-.modal-close::after {
-  content: "";
-  position: absolute;
-  top: 6px;
-  right: -18px;
-  width: 52px;
-  height: 3px;
-  background-color: white;
-}
-
-.modal-close::before {
-  transform: rotate(45deg);
-}
-
-.modal-close::after {
-  transform: rotate(-45deg);
-} */
-
 .modal {
   position: fixed;
   color: black;
   background-color: white;
   z-index: 1;
 
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  border: none;
 }
 
 .feedback-form label {
@@ -1592,7 +1626,7 @@ section .contacts-about {
   line-height: 1.29;
   text-align: left;
   color: rgba(70, 70, 70, 0.4);
-  background-color: rgba(70, 70, 70, 0.2);
+  background-color: rgba(70, 70, 70, 0.1);
 }
 
 .feedback-form input:focus {
@@ -1629,7 +1663,7 @@ section .contacts-about {
   line-height: 1.29;
   text-align: left;
   color: rgba(70, 70, 70, 0.4);
-  background-color: rgba(70, 70, 70, 0.2);
+  background-color: rgba(70, 70, 70, 0.1);
 }
 
 .feedback-textarea textarea:focus {
@@ -1659,7 +1693,7 @@ main h1 {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  margin-bottom: 45px;
+  margin-bottom: 42px;
   margin-left: 5px;
 }
 
@@ -1677,7 +1711,6 @@ main h1 {
 
 .breadcrumbs a {
   padding-left: 16px;
-  /*стрелочки нарисовать*/
   font-family: 'Open Sans', "Arial", sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -1707,8 +1740,8 @@ main h1 {
   -ms-flex-align: center;
   align-items: center;
   background-color: #ebebeb;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(28%, #d9d9d9), color-stop(25%, transparent));
   background-image: -o-linear-gradient(left, #d9d9d9 28%, transparent 25%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(28%, #d9d9d9), color-stop(25%, transparent));
   background-image: linear-gradient(90deg, #d9d9d9 28%, transparent 25%);
   /*,linear-gradient(-90deg, white 1%, transparent 0%); */
 }
@@ -1717,6 +1750,7 @@ main h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: 72px;
 }
 
 .filters h2 {
@@ -1791,17 +1825,14 @@ main h1 {
   display: -ms-flexbox;
   display: flex;
   width: 327px;
-  min-height: 71px;
+  min-height: 72px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 
   background-color: #d9d9d9;
   padding-left: 62px;
-
-  /* flex-shrink: 0; */
-  /* margin-left: -140px; */
-}
+ }
 
 .wrapper-left {
   width: 833px;
@@ -1878,10 +1909,8 @@ main h1 {
   fill: rgb(167, 165, 166);
 }
 
-.sorting-arrow li:focus {
-  /* fill:rgb(35, 31, 32); почему не работает ?*/
-  fill: red;
-  color: red;
+.arrow:focus {
+  fill:black;
   opacity: 1;
 }
 
@@ -1898,7 +1927,6 @@ main h1 {
 
 .filter-container-left {
   width: 327px;
-  /* margin-left: -140px; */
   background-color: #ebebeb;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -1913,10 +1941,10 @@ main h1 {
   background-color: #ebebeb;
   background-image:
     /* linear-gradient(90deg, white 30%, transparent 25%),*/
-    -webkit-gradient(linear, right top, left top, color-stop(80%, white), color-stop(25%, transparent));
+    -o-linear-gradient(right, white 80%, transparent 25%);
   background-image:
     /* linear-gradient(90deg, white 30%, transparent 25%),*/
-    -o-linear-gradient(right, white 80%, transparent 25%);
+    -webkit-gradient(linear, right top, left top, color-stop(80%, white), color-stop(25%, transparent));
   background-image:
     /* linear-gradient(90deg, white 30%, transparent 25%),*/
     linear-gradient(-90deg, white 80%, transparent 25%);
@@ -1926,7 +1954,6 @@ main h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* background-color: white; */
 }
 
 .catalog-monopod {
@@ -1958,7 +1985,7 @@ main h1 {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding-bottom: 0;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .monopod-list li {
@@ -1978,6 +2005,7 @@ main h1 {
 .show {
   display: none;
   position: relative;
+  height: 12px;
   padding: 0;
   font-family: "Gilroy", "Arial", sans-serif;
   text-transform: uppercase;
@@ -1993,11 +2021,12 @@ main h1 {
 
 .show::before {
   content: "";
+  display: block;
   position: absolute;
-  width: 200px;
+  width: 100%;
   height: 8px;
-  bottom: 8px;
-  right: -15px;
+  top: 50%;
+  right: 0;
   background-color: rgb(240, 196, 46);
   z-index: -1;
 }
@@ -2017,21 +2046,33 @@ main h1 {
 
 .monopod .point,
 .monopod .show {
-  width: 160px;
+  width: 200px;
   margin-bottom: 33px;
   border: none;
+  background: none;
 }
 
 
 .monopod .actions {
   position: absolute;
-  top: 30%;
-  left: 50%;
-  margin-left: -120px;
-  width: 200px;
-  min-height: 58px;
-  padding: 40px;
-
+  top: 13px;
+  left: 0;
+  width: 100%;
+  min-height: 360px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 100px;
   z-index: 10;
 }
 
@@ -2048,8 +2089,14 @@ main h1 {
   right: 24px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -2076,7 +2123,7 @@ main h1 {
 
 .price-sort legend {
   padding-top: 87px;
-  margin-bottom: 38px;
+  margin-bottom: 37px;
 }
 
 .price-range {
@@ -2085,7 +2132,7 @@ main h1 {
   font-size: 14px;
   font-weight: 300;
   line-height: 1.71;
-  text-align: center;
+  text-align: left;
   color: rgba(0, 0, 0, 0.2);
 }
 
@@ -2103,7 +2150,7 @@ main h1 {
 }
 
 .range-controls .bar {
-  width: 55%;
+  width: 56%;
   height: 2px;
   background-color: #91c92f;
 }
@@ -2116,22 +2163,22 @@ main h1 {
 .range-toogle {
   position: absolute;
   top: -10px;
-  width: 4px;
-  height: 4px;
+  width: 22px;
+  height: 21px;
+  z-index: 1;
   border-radius: 50%;
   -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
-  background: red;
-  /* почеу не видно центр ?  */
-  border: 10px solid #ffffff;
+  background: grey;
+  border: 9px solid #ffffff;
 }
 
 .range-toogle-min {
-  left: 0;
+  left: -7px;
 }
 
 .range-toogle-max {
-  left: 55%;
+  left: 53%;
 }
 
 .price-controls label {
@@ -2141,7 +2188,7 @@ main h1 {
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 300;
-  line-height: 1.71;
+  line-height: 1.1;
 }
 
 .price-controls input {
@@ -2157,7 +2204,7 @@ main h1 {
 
 .price-controls .max-price,
 .price-controls .min-price {
-  width: 100px;
+  width: 88px;
   text-align: left;
   vertical-align: center;
 }
@@ -2191,11 +2238,11 @@ main h1 {
 }
 
 .bluetooth-sort {
-  margin-bottom: 10px;
+  margin-bottom: 1px;
 }
 
 .bluetooth {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .bluetooth-sort::before {
@@ -2217,7 +2264,7 @@ main h1 {
 }
 
 .demonstrate {
-  margin-left: 45px;
+  margin-left: 13px;
 }
 
 .filter ul {
@@ -2279,7 +2326,7 @@ main h1 {
   display: inline-block;
   width: 26px;
   height: 26px;
-  margin-right: 1.2em;
+  margin-right: 11px;
   vertical-align: middle;
 }
 
@@ -2293,7 +2340,6 @@ main h1 {
 
 .check-input:checked+.radio:focus {
   opacity: 1;
-  /* да как так то  */
 }
 
 .radio {
@@ -2311,8 +2357,8 @@ main h1 {
   list-style: none;
 }
 
-.monopod:hover {
-  opacity: 0.7;
+.monopod:hover .actions {
+  background: rgb(238, 238, 238, 0.8);
 }
 
 .monopod:hover .show,
@@ -2381,7 +2427,7 @@ main h1 {
 }
 
 .pagination-items {
-  width: 80px;
+  width: 139px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
