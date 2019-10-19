@@ -1509,6 +1509,8 @@ section .contacts-about {
   z-index: 2;
 
   border: none;
+  border-style: none;
+
 }
 
 .modal-write {
