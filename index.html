@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
-  <!--сделать нормалайз полностью-->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/styleMin.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+
 </head>
 
 <body>
@@ -207,7 +208,8 @@
           <li class="popular">
             <a class="popular-icon" href="catalog-monopod.html">
               <span class="popular-item">
-                <img src="img/popular-2.svg" class="popular-img popular-selfi" alt="Монопод для селфи" width="86" height="117">
+                <img src="img/popular-2.svg" class="popular-img popular-selfi" alt="Монопод для селфи" width="86"
+                  height="117">
               </span>
               <span class="popular-selfi">
                 Моноподы для селфи
@@ -217,7 +219,7 @@
           <li class="popular">
             <a class="popular-icon" href="#">
               <span class="popular-item">
-                <img src="img/popular-3.svg" class="popular-img"  alt="Экшен-камеры" width="71" height="87">
+                <img src="img/popular-3.svg" class="popular-img" alt="Экшен-камеры" width="71" height="87">
               </span>
               <span> Экшен-камеры</span>
             </a>
@@ -233,7 +235,7 @@
           <li class="popular">
             <a class="popular-icon" href="#">
               <span class="popular-item">
-                <img src="img/popular-5.svg" class="popular-img"  alt="Умные часы" width="55" height="98">
+                <img src="img/popular-5.svg" class="popular-img" alt="Умные часы" width="55" height="98">
               </span>
               <span> Умные часы</span>
             </a>
@@ -242,7 +244,7 @@
           <li class="popular">
             <a class="popular-icon" href="#">
               <span class="popular-item">
-                <img src="img/poppular-6.svg" class="popular-img"  alt="Квадрокоптеры" width="132" height="69">
+                <img src="img/poppular-6.svg" class="popular-img" alt="Квадрокоптеры" width="132" height="69">
               </span>
               <span>Квадрокоптеры</span>
             </a>
@@ -505,11 +507,12 @@
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
-
-    <!-- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A66a842096b577af37d8c13de2e5053c4c467d14bfd5ffc179665cc005a4d2714&amp;source=constructor"
-      width="960" height="559" frameborder="0" allowfullscreen>
-    </iframe> -->
-
+    <p>
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A66a842096b577af37d8c13de2e5053c4c467d14bfd5ffc179665cc005a4d2714&amp;source=constructor"
+        width="960" height="559" frameborder="0" allowfullscreen>
+      </iframe>
+    </p>
     <p>
       <img src="img/map-big-jpg.jpg" alt="Офис компании по адресу ул.Строителей 15" width="960" height="559">
     </p>
@@ -517,92 +520,9 @@
       <span class="visually-hidden">Закрыть</span>
     </button>
   </section>
-  <script src="js/firstjs.js"></script>
-  <script src="js/mapjs.js"></script>
-
-  <!-- <script>
-    var link = document.querySelector(".contacts-about-write");
-    var popup = document.querySelector(".modal-write");
-    var close = popup.querySelector(".modal-close");
-
-    var linkMap = document.querySelector(".contacts-about-us");
-    var mopup = document.querySelector(".modal-map");
-    var mclose = mopup.querySelector(".modal-close");
+  <script src="js/jsMin.js"></script>
 
 
-    var form = popup.querySelector(".feedback-form");
-    var login = popup.querySelector("[name=fullname]");
-    var email = popup.querySelector("[name=email]");
-    var message = popup.querySelector("[name=message]")
-
-    var isStorageSupport = true;
-    var storage = "";
-    var mail = "";
-
-    try {
-      storage = localStorage.getItem("login");
-      mail = localStorage.getItem("email");
-    } catch (err) {
-      isStorageSupport = false;
-    }
-
-    link.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-      if (storage) {
-        login.value = storage;
-        message.focus();
-      } else {
-        login.focus(); //узнать что бы курсор тоже там был
-      }
-    });
-    linkMap.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      mopup.classList.add("modal-show");
-    })
-
-    close.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.remove("modal-show");
-      popup.classList.remove("modal-error");
-    });
-
-    mclose.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      mopup.classList.remove("modal-show");
-    })
-
-    form.addEventListener("submit", function (evt) {
-      if (!login.value || !email.value || !message.value) {
-        evt.preventDefault();
-        popup.classList.add("modal-error");
-      } else {
-        if (isStorageSupport) {
-          localStorage.setItem("login", login.value);
-          localStorage.setItem("email", email.value);
-        }
-      }
-    });
-
-    window.addEventListener("keydown", function (evt) {
-      if (evt.keyCode === 27) {
-        evt.preventDefault();
-        if (popup.classList.contains("modal-show")) {
-          popup.classList.remove("modal-show");
-          popup.classList.remove("modal-error");
-        }
-      }
-    });
-    window.addEventListener("keydown",function(evt) {
-      if(evt.keyCode===27){
-        evt.preventDefault();
-        if(mopup.classList.contains("modal-show")){
-          mopup.classList.remove("modal-show");
-        }
-      }
-    })
-
-  </script> -->
 </body>
 
 </html>

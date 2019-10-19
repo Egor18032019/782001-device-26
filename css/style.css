@@ -233,7 +233,6 @@ header .login-clear {
   display: flex;
   width: 100%;
   padding-top: 5px;
-  /* padding-bottom: 15px; */
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -430,7 +429,6 @@ header .login-clear {
   width: 167px;
   height: 131px;
   margin: 0;
-  /* z-index: 1; */
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 179px;
   font-weight: 800;
@@ -463,7 +461,6 @@ header .login-clear {
   height: 18px;
   padding: 0%;
   margin: 0;
-  /* text-align: center; */
   font-size: 0;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -494,24 +491,12 @@ header .login-clear {
   vertical-align: middle;
   width: 13px;
   height: 13px;
-  /* padding: 8px; */
   border: 1px solid #000000;
 
   border-radius: 50%;
   cursor: pointer;
 }
 
-/* .main-sliders-controls label::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 12px;
-  height: 12px;
-  border: 1px solid #000000;
-  border-radius: 50%;
-
-} */
 
 .slider input {
   display: none;
@@ -545,33 +530,10 @@ header .login-clear {
   z-index: 2;
   width: 6px;
   height: 6px;
-  /* margin: -5px; */
   background-color: inherit;
   border: 1.5px solid black;
   border-radius: 50%;
 }
-
-/* #control-first:checked~.main-sliders-controls .slider-1::after,
-#control-two:checked~.main-sliders-controls .slider-2::after,
-#control-three:checked~.main-sliders-controls .slider-3::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 3;
-  width: 1px;
-  height: 1px;
-  margin: -5px;
-  background-color: inherit;
-  border: 1px solid red;
-  border-radius: 50%;
-} */
-
-
-
-
-
-
 
 .main-sliders {
   display: -webkit-box;
@@ -782,11 +744,15 @@ span.popular-selfi {
   padding-right: 32px;
 }
 
-.popular .popular-selfi {}
+img.popular-selfi {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+
+}
 
 .popular-item {
   width: 160px;
-  min-height: 160px;
+  height: 160px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -800,22 +766,9 @@ span.popular-selfi {
   background-color: rgb(247, 225, 150);
 }
 
-.popular-img {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.popular-img {}
 
-}
+.popular-icon {}
 
 .popular:hover .popular-item {
   background-color: rgb(240, 196, 46);
@@ -975,7 +928,7 @@ span.popular-selfi {
   -ms-flex-pack: center;
   justify-content: center;
   padding-right: 114px;
-  min-height: 40px;
+  height: 40px;
 }
 
 .controls-item label span {
@@ -1117,18 +1070,14 @@ span.popular-selfi {
 .logo-color {
   position: absolute;
   top: 45%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  left: -50%;
+  -webkit-transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
   -webkit-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
-
-/* TODO:
-разное в ие и в других
-*/
 
 .logo-color {
   opacity: 0;
@@ -1159,7 +1108,6 @@ span.popular-selfi {
 .map {
   position: relative;
   width: 462px;
-  /* margin-right: 139px; */
 }
 
 .map::before,
@@ -1191,7 +1139,6 @@ span.popular-selfi {
   font-size: 16px;
   font-weight: 800;
   line-height: 2.5;
-  /* letter-spacing: 0.5px; */
   text-align: left;
   color: #000000;
 }
@@ -1537,7 +1484,6 @@ section .contacts-about {
   display: none;
   top: 50%;
   left: 50%;
-  /* transform: translate(-50%, -50%); */
   margin-top: -280px;
   margin-left: -480px;
   width: 960px;
@@ -1547,13 +1493,30 @@ section .contacts-about {
   z-index: 1;
 }
 
+.modal-map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  margin: 0;
+}
+
+.modal-map iframe {
+  width: 960px;
+  height: 559px;
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+
 .modal-write {
   display: none;
   width: 960px;
   height: 553px;
   top: 50%;
   left: 50%;
-  /* transform: translate(-50%,-50%); */
   margin-left: -480px;
   margin-top: -276px;
   padding: 75px 98px 100px 92px;
@@ -1588,6 +1551,7 @@ section .contacts-about {
   border: none;
   cursor: pointer;
   border-radius: 50%;
+  z-index: 99;
 }
 
 .modal {
@@ -1636,7 +1600,6 @@ section .contacts-about {
 
 .feedback-textarea input:invalid {
   background-color: rgb(245, 217, 217);
-  /* почему не закрашиват ?? */
 }
 
 .feedback-person {
@@ -1743,7 +1706,6 @@ main h1 {
   background-image: -o-linear-gradient(left, #d9d9d9 28%, transparent 25%);
   background-image: -webkit-gradient(linear, left top, right top, color-stop(28%, #d9d9d9), color-stop(25%, transparent));
   background-image: linear-gradient(90deg, #d9d9d9 28%, transparent 25%);
-  /*,linear-gradient(-90deg, white 1%, transparent 0%); */
 }
 
 .filters .container {
@@ -1832,7 +1794,7 @@ main h1 {
 
   background-color: #d9d9d9;
   padding-left: 62px;
- }
+}
 
 .wrapper-left {
   width: 833px;
@@ -1910,7 +1872,7 @@ main h1 {
 }
 
 .arrow:focus {
-  fill:black;
+  fill: black;
   opacity: 1;
 }
 
@@ -1940,14 +1902,11 @@ main h1 {
   width: 100%;
   background-color: #ebebeb;
   background-image:
-    /* linear-gradient(90deg, white 30%, transparent 25%),*/
-    -o-linear-gradient(right, white 80%, transparent 25%);
+    -o-linear-gradient(right, white 70%, transparent 25%);
   background-image:
-    /* linear-gradient(90deg, white 30%, transparent 25%),*/
-    -webkit-gradient(linear, right top, left top, color-stop(80%, white), color-stop(25%, transparent));
+    -webkit-gradient(linear, right top, left top, color-stop(70%, white), color-stop(25%, transparent));
   background-image:
-    /* linear-gradient(90deg, white 30%, transparent 25%),*/
-    linear-gradient(-90deg, white 80%, transparent 25%);
+    linear-gradient(-90deg, white 70%, transparent 25%);
 }
 
 .market .container {
@@ -1971,7 +1930,6 @@ main h1 {
   background-color: white;
   padding-top: 40px;
   padding-left: 35px;
-  /* margin-right: auto; */
   margin-left: auto;
 }
 
@@ -2394,7 +2352,6 @@ main h1 {
 
 .monopod-price {
   width: 84px;
-  /* margin-left: 57px; */
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 300;
