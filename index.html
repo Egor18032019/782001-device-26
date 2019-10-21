@@ -6,8 +6,8 @@
   <title>HTML Academy: Девайс</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styleMin.css">
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <!-- <link rel="stylesheet" href="css/styleMin.css"> -->
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -490,12 +490,12 @@
         </p>
         <p>
           <label class="email" for="person-mail">Ваш e-mail:</label>
-          <input type="email" name="email" id="person-mail" placeholder="email@example.com">
+          <input type="email" name="email" id="person-mail" placeholder="email@example.com" required>
         </p>
       </div>
       <div class="feedback-textarea">
         <label for="message">Текст письма:</label>
-        <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
+        <textarea name="message" id="message" placeholder="В свободной форме" required></textarea>
       </div>
       <button type="submit" class="button modal-send">Отправить</button>
     </form>
@@ -507,9 +507,7 @@
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <p>
-      <iframe
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A66a842096b577af37d8c13de2e5053c4c467d14bfd5ffc179665cc005a4d2714&amp;source=constructor"
-        width="960" height="559" allowfullscreen>
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A66a842096b577af37d8c13de2e5053c4c467d14bfd5ffc179665cc005a4d2714&amp;source=constructor" width="960" height="559" frameborder="0">
       </iframe>
     </p>
     <p>

@@ -60,7 +60,8 @@ a {
   z-index: 2;
 }
 
-.button:hover::before {
+.button:hover::before,
+.show:hover::before {
   height: 100%;
 }
 
@@ -99,7 +100,7 @@ header.container {
   background-color: rgb(247, 225, 150);
   padding-left: 60px;
   padding-right: 55px;
-  padding-bottom: 8px;
+  padding-bottom: 9px;
 }
 
 .header-logo {
@@ -499,7 +500,11 @@ header .login-clear {
 
 
 .slider input {
-  display: none;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 #control-first:checked~.main-sliders .slides-first {
@@ -525,8 +530,9 @@ header .login-clear {
 #control-three:checked~.main-sliders-controls .slider-3::before {
   content: "";
   position: absolute;
-  left: 3px;
-  top: 2.5px;
+  left: 48%;
+  top: 48%;
+  transform: translate(-48%, -48%);
   z-index: 2;
   width: 6px;
   height: 6px;
@@ -541,8 +547,8 @@ header .login-clear {
   display: flex;
   list-style: none;
   margin: 0;
-  padding-left: 22px;
-  padding-top: 27px;
+  padding-left: 20px;
+  padding-top: 22px;
 }
 
 .main-sliders li {
@@ -936,7 +942,11 @@ img.popular-selfi {
 }
 
 .service input {
-  display: none;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .servise-item {
@@ -1102,7 +1112,7 @@ img.popular-selfi {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 81px;
 }
 
 .map {
@@ -1125,11 +1135,11 @@ img.popular-selfi {
 }
 
 .map-row {
-  padding-bottom: 15px;
+  padding-bottom: 13px;
 }
 
 .text-column {
-  padding-bottom: 18px;
+  padding-bottom: 20px;
 }
 
 .map-delevery {
@@ -1141,6 +1151,21 @@ img.popular-selfi {
   line-height: 2.5;
   text-align: left;
   color: #000000;
+  list-style: none;
+  padding-left: 0;
+
+}
+
+.map-delevery li::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid black;
+margin-left: 2px;
+margin-right: 26px;
+
 }
 
 .about {
@@ -1157,7 +1182,7 @@ img.popular-selfi {
 
 .about-map,
 .map-text {
-  margin-bottom: 60px;
+  margin-bottom: 54px;
 }
 
 .about-map {
@@ -1178,7 +1203,7 @@ img.popular-selfi {
 }
 
 .delevery-text {
-  padding-bottom: 20px;
+  padding-bottom: 24px;
 }
 
 .map p,
@@ -1390,7 +1415,6 @@ section .contacts-about {
 }
 
 .footer-navi a {
-  opacity: 0.7;
   font-family: 'Open Sans', "Arial", sans-serif;
   font-size: 15px;
   font-weight: 300;
@@ -1412,7 +1436,7 @@ section .contacts-about {
 
 .footer-login {
   margin-left: auto;
-  padding-right: 42px;
+  padding-right: 35px;
 }
 
 .footer-login .login-clear {
@@ -1497,8 +1521,6 @@ section .contacts-about {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
-
   margin: 0;
 }
 
@@ -1507,7 +1529,6 @@ section .contacts-about {
   height: 559px;
   position: relative;
   z-index: 2;
-
   border: none;
   border-style: none;
 
@@ -1522,6 +1543,7 @@ section .contacts-about {
   margin-left: -480px;
   margin-top: -276px;
   padding: 75px 98px 100px 92px;
+  z-index: 4;
   -webkit-box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
   box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
 }
@@ -1560,7 +1582,7 @@ section .contacts-about {
   position: fixed;
   color: black;
   background-color: white;
-  z-index: 1;
+  z-index: 4;
 
 }
 
@@ -1594,14 +1616,22 @@ section .contacts-about {
   color: rgba(70, 70, 70, 0.4);
   background-color: rgba(70, 70, 70, 0.1);
 }
-
-.feedback-form input:focus {
-  background-color: #ffffff;
-  color: #464646;
+.feedback-form input:hover,
+.feedback-form textarea:hover{
+  background-color: rgb(234, 234, 234);
+  color: rgb(195, 195, 195);
 }
 
-.feedback-textarea input:invalid {
-  background-color: rgb(245, 217, 217);
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  background-color: #ffffff;
+  color: #464646;
+  border: 2px solid rgb(247, 226, 150);
+}
+
+.feedback-textarea input:invalid:not(:placeholder-shown) {
+  background-color: red;
+  border: 1px solid green;
 }
 
 .feedback-person {
@@ -1622,7 +1652,7 @@ section .contacts-about {
   width: 100%;
   min-height: 156px;
   padding: 20px;
-
+  resize: none;
   font-family: 'Open Sans', "Arial", sans-serif;
   font-size: 14px;
   line-height: 1.29;
@@ -1648,8 +1678,8 @@ main h1 {
 }
 
 .container .monopod-title {
-  padding-left: 62px;
-  padding-top: 5px;
+  padding-left: 61px;
+  padding-top: 6px;
   margin-bottom: 20px;
 }
 
@@ -1965,7 +1995,7 @@ main h1 {
 .show {
   display: none;
   position: relative;
-  height: 12px;
+  height: 40px;
   padding: 0;
   font-family: "Gilroy", "Arial", sans-serif;
   text-transform: uppercase;
@@ -1987,6 +2017,7 @@ main h1 {
   height: 8px;
   top: 50%;
   right: 0;
+  transform: translateY(-50%);
   background-color: rgb(240, 196, 46);
   z-index: -1;
 }
@@ -2014,6 +2045,7 @@ main h1 {
 
 
 .monopod .actions {
+  display: none;
   position: absolute;
   top: 13px;
   left: 0;
@@ -2240,6 +2272,7 @@ main h1 {
 /* Костомные чекбоксы */
 
 .check-input {
+  display: none;
   position: absolute;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2248,17 +2281,19 @@ main h1 {
 
 .check::before {
   content: "";
+  width: 27px;
+  height: 23px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background: none;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   display: inline-block;
-  width: 23px;
-  height: 23px;
-  margin-right: 1.2em;
-  vertical-align: middle;
 }
 
 .check-input:disabled+.check {
   opacity: 0.3;
+
 }
 
 /* когда чекет */
@@ -2271,10 +2306,11 @@ main h1 {
 .check-input:active+.check,
 .check-input:checked+.check {
   font-weight: 600;
-  opacity: 1;
+  /* opacity: 1; */
 }
 
-.check-input:checked+.check:hover {
+.check-input:checked+.check:hover,
+.check:hover {
   opacity: 0.6;
 }
 
@@ -2318,11 +2354,12 @@ main h1 {
 }
 
 .monopod:hover .actions {
+  display: flex;
   background: rgb(238, 238, 238, 0.8);
 }
 
 .monopod:hover .show,
-.monopod:hover .point {
+.monopod:hover .point{
   display: block;
 }
 
