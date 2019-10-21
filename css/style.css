@@ -13,8 +13,7 @@
   font-weight: 300;
   font-display: swap;
 }
-/* проверить js на закрытие у карты
-хром поставить и проверить..*/
+
 *,
 *::after,
 *::before {
@@ -1639,8 +1638,8 @@ section .contacts-about {
 }
 
 .feedback-form input:invalid {
-  background-color: red;
-  border: 1px solid green;
+  background-color: rgb(246, 218, 218);
+
 }
 
 .feedback-person {
