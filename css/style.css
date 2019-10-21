@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Gilroy";
+  font-family: 'Gilroy';
   src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
     url("../fonts/gilroyextrabold.woff") format("woff");
   font-weight: 800;
@@ -7,13 +7,14 @@
 }
 
 @font-face {
-  font-family: "Gilroy";
+  font-family: 'Gilroy';
   src: url("../fonts/gilroylight.woff2") format("woff2"),
     url("../fonts/gilroylight.woff") format("woff");
   font-weight: 300;
   font-display: swap;
 }
-
+/* проверить js на закрытие у карты
+хром поставить и проверить..*/
 *,
 *::after,
 *::before {
@@ -29,7 +30,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', "Arial", sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
@@ -50,7 +51,7 @@ a {
   background-color: #ebebeb;
   border: none;
   text-transform: uppercase;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 40px;
@@ -100,7 +101,7 @@ header.container {
   background-color: rgb(247, 225, 150);
   padding-left: 60px;
   padding-right: 55px;
-  padding-bottom: 9px;
+  padding-bottom: 33px;
 }
 
 .header-logo {
@@ -120,11 +121,11 @@ header.container {
 
 .slider {
 
-  background-image: -o-linear-gradient(rgb(247, 225, 150) 27%, white 0);
+  background-image: -o-linear-gradient(rgb(247, 225, 150) 23%, white 0);
 
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(27%, rgb(247, 225, 150)), color-stop(0, white));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(23%, rgb(247, 225, 150)), color-stop(0, white));
 
-  background-image: linear-gradient(rgb(247, 225, 150) 27%, white 0);
+  background-image: linear-gradient(rgb(247, 225, 150) 23%, white 0);
 }
 
 .main-navigation {
@@ -209,7 +210,7 @@ header.container {
 }
 
 .login-clear {
-  font-family: 'Open Sans', "Arial", sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 15px;
   font-weight: 300;
   font-style: normal;
@@ -234,7 +235,7 @@ header .login-clear {
   display: flex;
   width: 100%;
   padding-top: 5px;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 1.33;
@@ -306,7 +307,7 @@ header .login-clear {
   background-color: rgb(247, 225, 150);
   z-index: 2;
   text-transform: none;
-  font-family: 'Open Sans', "Arial", sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 15px;
   font-weight: 300;
   line-height: 2.4;
@@ -371,7 +372,7 @@ header .login-clear {
 
   width: 100%;
   padding-top: 1px;
-  font-family: 'Open Sans', "Arial", sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 15px;
   font-weight: 300;
   line-height: 2;
@@ -430,7 +431,7 @@ header .login-clear {
   width: 167px;
   height: 131px;
   margin: 0;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 179px;
   font-weight: 800;
   line-height: 1;
@@ -505,6 +506,8 @@ header .login-clear {
   width: 1px;
   height: 1px;
   margin: -1px;
+  top:350px;
+  right: 200px;
 }
 
 #control-first:checked~.main-sliders .slides-first {
@@ -523,6 +526,11 @@ header .login-clear {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+#control-first:focus~.main-sliders-controls .slider-1,
+#control-two:focus~.main-sliders-controls .slider-2,
+#control-three:focus~.main-sliders-controls .slider-3{
+border: 1px solid orange;
 }
 
 #control-first:checked~.main-sliders-controls .slider-1::before,
@@ -548,7 +556,7 @@ header .login-clear {
   list-style: none;
   margin: 0;
   padding-left: 20px;
-  padding-top: 22px;
+  padding-top: 0;
 }
 
 .main-sliders li {
@@ -597,7 +605,7 @@ header .login-clear {
 .slides-feature {
   width: 508px;
   margin-bottom: 19px;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 47px;
   font-weight: 800;
   line-height: 1.19;
@@ -610,7 +618,7 @@ header .login-clear {
   width: 479px;
   padding-bottom: 28px;
 
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 15px;
   font-weight: 300;
   line-height: 2;
@@ -638,7 +646,7 @@ header .login-clear {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 36px;
   font-weight: 300;
   line-height: 1.33;
@@ -671,7 +679,7 @@ header .login-clear {
   justify-content: space-between;
   width: 100%;
   padding-top: 7px;
-  font-family: 'Open Sans', "Arial", sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 13px;
   font-weight: 300;
   line-height: 1.54;
@@ -690,7 +698,7 @@ header .login-clear {
   width: 220px;
   height: 40px;
   z-index: 1;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 40px;
@@ -804,7 +812,7 @@ img.popular-selfi {
   flex-direction: column;
   width: 160px;
   min-height: 240px;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 1.33;
@@ -878,7 +886,7 @@ img.popular-selfi {
   width: 277px;
   margin-top: -15px;
   padding: 0;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 800;
   letter-spacing: 3.6px;
@@ -895,7 +903,7 @@ img.popular-selfi {
   position: relative;
   min-height: 40px;
   text-transform: uppercase;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 800;
   letter-spacing: 3.6px;
@@ -1022,7 +1030,7 @@ img.popular-selfi {
 .servise-item h2 {
   margin-top: -43px;
   margin-bottom: 26px;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 47px;
   font-weight: 800;
   line-height: 1.29;
@@ -1032,7 +1040,7 @@ img.popular-selfi {
 }
 
 .servise-item p {
-  font-family: 'Open Sans', "Arial", sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 15px;
   font-weight: 300;
   line-height: 2;
@@ -1145,7 +1153,7 @@ img.popular-selfi {
 .map-delevery {
   padding-top: 24px;
   padding-left: 37px;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 2.5;
@@ -1193,7 +1201,7 @@ margin-right: 26px;
 .map h2,
 .about h2 {
   padding-bottom: 5px;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 47px;
   font-weight: 800;
   line-height: 1.02;
@@ -1208,7 +1216,7 @@ margin-right: 26px;
 
 .map p,
 .about p {
-  font-family: 'Open Sans', "Arial", sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 15px;
   font-weight: 300;
   line-height: 2;
@@ -1221,7 +1229,7 @@ section .contacts-about {
   display: block;
   width: 260px;
   padding: 0;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 40px;
@@ -1289,7 +1297,7 @@ section .contacts-about {
 }
 
 .name {
-  font-family: 'Open Sans', "Arial", sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 15px;
   font-weight: 300;
   font-style: normal;
@@ -1415,7 +1423,7 @@ section .contacts-about {
 }
 
 .footer-navi a {
-  font-family: 'Open Sans', "Arial", sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 15px;
   font-weight: 300;
   font-style: normal;
@@ -1453,6 +1461,7 @@ section .contacts-about {
 
 .footer-login span {
   padding-right: 8px;
+  padding-left: 8px;
 
 }
 
@@ -1471,7 +1480,7 @@ section .contacts-about {
 .footer-center address,
 .footer-telephone a {
   font-style: normal;
-  font-family: 'Open Sans', "Arial", sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 15px;
   font-weight: 300;
   line-height: 2;
@@ -1495,7 +1504,7 @@ section .contacts-about {
 
 .footer-service a {
   text-transform: uppercase;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 1.33;
@@ -1592,7 +1601,7 @@ section .contacts-about {
 }
 
 .feedback-form label {
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 800;
 
@@ -1608,7 +1617,7 @@ section .contacts-about {
   display: -ms-flexbox;
   display: flex;
   padding-left: 20px;
-  font-family: 'Open Sans', "Arial", sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 14px;
 
   line-height: 1.29;
@@ -1629,7 +1638,7 @@ section .contacts-about {
   border: 2px solid rgb(247, 226, 150);
 }
 
-.feedback-textarea input:invalid:not(:placeholder-shown) {
+.feedback-form input:invalid {
   background-color: red;
   border: 1px solid green;
 }
@@ -1653,7 +1662,7 @@ section .contacts-about {
   min-height: 156px;
   padding: 20px;
   resize: none;
-  font-family: 'Open Sans', "Arial", sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 1.29;
   text-align: left;
@@ -1668,7 +1677,7 @@ section .contacts-about {
 
 main h1 {
   padding-left: 201px;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 47px;
   font-weight: 800;
   line-height: 1.02;
@@ -1706,7 +1715,7 @@ main h1 {
 
 .breadcrumbs a {
   padding-left: 16px;
-  font-family: 'Open Sans', "Arial", sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.71;
@@ -1755,7 +1764,7 @@ main h1 {
   -ms-flex-align: center;
   align-items: center;
   text-transform: uppercase;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 1.5;
@@ -1777,7 +1786,7 @@ main h1 {
   -ms-flex-pack: justify;
   justify-content: space-between;
   list-style: none;
-  font-family: 'Open Sans', "Arial", sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 14px;
   font-weight: normal;
   font-style: normal;
@@ -1876,7 +1885,7 @@ main h1 {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  font-family: 'Open Sans', "Arial", sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 0px;
   line-height: 1.29;
   text-align: left;
@@ -1893,7 +1902,9 @@ main h1 {
   min-height: 10px;
 
 }
-
+.sorting-arrow .arrow-check {
+  fill: black;
+}
 .sorting-arrow a {
   width: 11px;
   min-height: 10px;
@@ -1910,7 +1921,7 @@ main h1 {
 
 .filters h2 {
   text-transform: uppercase;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 2.5;
@@ -1997,7 +2008,7 @@ main h1 {
   position: relative;
   height: 40px;
   padding: 0;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   text-transform: uppercase;
   text-align: center;
   vertical-align: center;
@@ -2025,7 +2036,7 @@ main h1 {
 .point {
   display: none;
   padding: 0;
-  font-family: 'Open Sans', "Arial", sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 13px;
   font-weight: 300;
   letter-spacing: 0.13px;
@@ -2120,7 +2131,7 @@ main h1 {
 
 .price-range {
   width: 201px;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.71;
@@ -2177,7 +2188,7 @@ main h1 {
   display: inline-block;
   vertical-align: top;
   cursor: pointer;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.1;
@@ -2202,7 +2213,7 @@ main h1 {
 }
 
 .filter legend {
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 12px;
@@ -2247,7 +2258,7 @@ main h1 {
 }
 
 .bluetooth-list {
-  font-family: 'Open Sans', "Arial", sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 2.86;
@@ -2370,7 +2381,7 @@ main h1 {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 1.33;
@@ -2391,7 +2402,7 @@ main h1 {
 
 .monopod-price {
   width: 84px;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
@@ -2438,7 +2449,7 @@ main h1 {
 }
 
 .pagination-list a {
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 1.5;
@@ -2480,7 +2491,7 @@ main h1 {
 }
 
 .pagination-item a {
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 1.5;
@@ -2491,7 +2502,7 @@ main h1 {
 }
 
 .pagination-current a {
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 1.5;
